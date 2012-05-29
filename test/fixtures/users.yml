@@ -1,0 +1,39 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  prac_no: 1
+  userid: MyString
+  password: MyString
+  name: MyString
+  customer_code: MyString
+  prac_access: MyString
+  allow_all_pracs: MyString
+  revoked: MyString
+  email: MyString
+  res3: MyString
+  res4: MyString
+  res5: MyString
+  res6: MyString
+  res7: MyString
+  res8: MyString
+  res9: MyString
+  res10: 
+
+two:
+  prac_no: 1
+  userid: MyString
+  password: MyString
+  name: MyString
+  customer_code: MyString
+  prac_access: MyString
+  allow_all_pracs: MyString
+  revoked: MyString
+  email: MyString
+  res3: MyString
+  res4: MyString
+  res5: MyString
+  res6: MyString
+  res7: MyString
+  res8: MyString
+  res9: MyString
+  res10: 

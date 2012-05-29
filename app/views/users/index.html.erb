@@ -1,0 +1,55 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Prac no</th>
+    <th>Userid</th>
+    <th>Password</th>
+    <th>Name</th>
+    <th>Customer code</th>
+    <th>Prac access</th>
+    <th>Allow all pracs</th>
+    <th>Revoked</th>
+    <th>Email</th>
+    <th>Res3</th>
+    <th>Res4</th>
+    <th>Res5</th>
+    <th>Res6</th>
+    <th>Res7</th>
+    <th>Res8</th>
+    <th>Res9</th>
+    <th>Res10</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.prac_no %></td>
+    <td><%= user.userid %></td>
+    <td><%= user.password %></td>
+    <td><%= user.name %></td>
+    <td><%= user.customer_code %></td>
+    <td><%= user.prac_access %></td>
+    <td><%= user.allow_all_pracs %></td>
+    <td><%= user.revoked %></td>
+    <td><%= user.email %></td>
+    <td><%= user.res3 %></td>
+    <td><%= user.res4 %></td>
+    <td><%= user.res5 %></td>
+    <td><%= user.res6 %></td>
+    <td><%= user.res7 %></td>
+    <td><%= user.res8 %></td>
+    <td><%= user.res9 %></td>
+    <td><%= user.res10 %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_user_path %>

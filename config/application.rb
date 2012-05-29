@@ -38,5 +38,8 @@ module Acm1
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+	config.active_record.timestamped_migrations = false	
+	
   end
 end

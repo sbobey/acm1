@@ -1,0 +1,85 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :prac_no %><br />
+    <%= f.text_field :prac_no %>
+  </div>
+  <div class="field">
+    <%= f.label :userid %><br />
+    <%= f.text_field :userid %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_code %><br />
+    <%= f.text_field :customer_code %>
+  </div>
+  <div class="field">
+    <%= f.label :prac_access %><br />
+    <%= f.text_field :prac_access %>
+  </div>
+  <div class="field">
+    <%= f.label :allow_all_pracs %><br />
+    <%= f.text_field :allow_all_pracs %>
+  </div>
+  <div class="field">
+    <%= f.label :revoked %><br />
+    <%= f.text_field :revoked %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :res3 %><br />
+    <%= f.text_field :res3 %>
+  </div>
+  <div class="field">
+    <%= f.label :res4 %><br />
+    <%= f.text_field :res4 %>
+  </div>
+  <div class="field">
+    <%= f.label :res5 %><br />
+    <%= f.text_field :res5 %>
+  </div>
+  <div class="field">
+    <%= f.label :res6 %><br />
+    <%= f.text_field :res6 %>
+  </div>
+  <div class="field">
+    <%= f.label :res7 %><br />
+    <%= f.text_field :res7 %>
+  </div>
+  <div class="field">
+    <%= f.label :res8 %><br />
+    <%= f.text_field :res8 %>
+  </div>
+  <div class="field">
+    <%= f.label :res9 %><br />
+    <%= f.text_field :res9 %>
+  </div>
+  <div class="field">
+    <%= f.label :res10 %><br />
+    <%= f.text_field :res10 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
