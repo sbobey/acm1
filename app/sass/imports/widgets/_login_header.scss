@@ -1,0 +1,18 @@
+.login_header {
+	@extend .site_header;
+	background: url(#{$imgDir}loginscreenswl.png) no-repeat 50% 0 $bravo_grey;
+	border-bottom-width: 5px;
+	@include selector(height, 190);
+}
+
+.login_logo {
+	@extend .logo;
+	@include selector(font-size, 32);
+	@include selector(top, 150);
+	@include selector(padding-top, 40);
+	@include selector(padding-right, 40);
+	padding-bottom: 0;
+	@include selector(padding-left, 40);
+	left: #{30 / $em}em;
+}
+

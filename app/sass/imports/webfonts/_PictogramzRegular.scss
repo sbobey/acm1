@@ -1,0 +1,21 @@
+/* med2 Locally Loaded Web Fonts Styles */
+/* ------------------------------------- */
+
+//http://www.dafont.com/pictogramz.font
+
+@font-face {
+    font-family: 'PictogramzRegular';
+    src: url('webfonts/pictogramz-webfont.eot');
+    src: url('webfonts/pictogramz-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/pictogramz-webfont.woff') format('woff'),
+         url('webfonts/pictogramz-webfont.ttf') format('truetype'),
+         url('webfonts/pictogramz-webfont.svg#PictogramzRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// Font Family References
+// ----------------------
+
+//font-family: 'PictogramzRegular';

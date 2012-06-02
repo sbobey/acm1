@@ -1,0 +1,121 @@
+.srp_table {
+	width: 100%;
+	//background: $white;
+	background: url(#{$imgDir}no_search_badge.png) 50% 50% no-repeat $white;
+	min-height: #{500 / $em}em;
+	//background: $white;
+}
+.no_badge {
+	background: $white !important;
+}
+
+.results_table {
+	width: #{960 / $em}em;
+	background: $white;
+	margin: 0 auto;
+	padding-bottom: #{20 / $em}em;
+	font-weight: bold;
+	line-height: #{35 / $em}em;
+	border-spacing: 0;
+	a {
+		display: block;
+		color: $primary_text;
+		&:hover {
+			text-decoration: none;
+			color: $white;
+		}
+	}
+	.patient_id {
+		//@include grid(12,1.5);
+		//padding-left: 10px;
+		text-align: center;
+		width: #{96 / $em}em;
+	}
+	.last_name {
+		//@include grid(12,1.85);
+		padding-left: #{10 / $em}em;
+		width: #{110 / $em}em;
+	}
+	.first_name {
+		//@include grid(12,1.40);
+		padding-left: 10px;
+		width: 107px;
+	}
+	.mi {
+		//@include grid(12,1);
+		width: 54px;
+		text-align: center;
+	}
+	.ssn {
+		//@include grid(12,1.9);
+		width: 138px;
+		text-align: center;
+	}
+	.sex {
+		//@include grid(12,1.08);
+		width: 53px;
+		text-align: center;
+	}
+	.dob {
+		//@include grid(12,1.45);
+		width: 95px;
+		text-align: center;
+	}
+	.source {
+		//@include grid(12,2);
+		padding-left: 10px;
+		width: 133px;
+	}
+	.notes {
+		//@include grid(12,1.25);
+		text-align: center;
+		font-family: $icofont_alpha;
+		@extend .x_large;
+		padding-top: 5px;
+		a {
+			text-indent: -35px;
+		}
+	}
+	.ledger {
+		table {
+			width: 100%;
+			border-spacing: 0;
+		}
+		&:nth-child(2n+1) {
+			background: transparentize($charlie_color, 0.8);
+		}
+		.primary_result {
+			&:hover {
+				background: $charlie_grey;
+				a {
+					color: $white;
+				}
+			}
+		}
+		.secondary_result {
+			@extend .primary_result;
+		}
+	}
+	td {
+		margin: 0 !important;
+		padding: 0 2px;
+	}
+}
+
+.srp_results_count {
+	padding: #{10 / $em}rem 0;
+	width: 100%;
+	float: left;
+	font-weight: bold;
+	p {
+		width: #{940 / $em}rem;
+		margin: 0 auto;
+	}
+}
+
+.no_results {
+	text-align: center;
+	width: 200px;
+	margin: 0 auto;
+	padding-top: 300px;
+}

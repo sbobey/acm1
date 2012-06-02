@@ -1,0 +1,21 @@
+/* med2 Locally Loaded Web Fonts Styles */
+/* ------------------------------------- */
+
+//http://www.dafont.com/phones.font
+
+@font-face {
+    font-family: 'PhonesNormalA';
+    src: url('webfonts/phones-webfont.eot');
+    src: url('webfonts/phones-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/phones-webfont.woff') format('woff'),
+         url('webfonts/phones-webfont.ttf') format('truetype'),
+         url('webfonts/phones-webfont.svg#PhonesNormalA') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// Font Family References
+// ----------------------
+
+//font-family: 'PhonesNormalA';

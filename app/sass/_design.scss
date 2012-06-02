@@ -1,0 +1,124 @@
+///////// global //////////
+
+body {
+	background: $bravo_grey;
+}
+
+.loginbody {
+	background: $alpha_grey;
+}
+
+.site_footer {
+	@include selector(height, 80);
+	@include selector(padding-top, 20);
+	color: $white;
+	border-top: 3px solid $charlie_color;
+	p {
+		@include selector(width, 960);
+		margin: 0 auto;
+	}
+}
+
+.login_body {
+	width: 100%;
+	@include linear_gradient_w3c ($white, #{$white 0%, $white 93%, $hotel_grey 100%});
+	@include linear_gradient_legacy_ie ($white, $white);
+	height: #{370 / $em}rem;
+	.ie8 & {
+		height: 330px;
+	}
+	label {
+		font-weight: normal;
+		display: inline-block;
+	}
+}
+
+.login_form {
+	@include selector(width, 360);
+	//@include selector(margin-left, 100);
+	margin-left: #{100 / $em}em;
+	.ie7 & {
+		margin-left: 50px;
+		ul, button {
+			margin-left: 50px;
+		}
+	}
+	
+	@include selector(padding-top, 130);
+	ul {
+		width: 100%;
+		float: left;
+		@include selector(margin-bottom, 20);
+	}
+	li {
+		float: left;
+		padding-right: #{50 / $em}em;
+	}
+	a {
+		color: $delta_color;
+	}
+}
+
+.login_footer {
+	@extend .site_footer;
+	border: 0;
+	padding: 0;
+	.sub_footer {
+		background: url(#{$imgDir}sub_footer.gif);
+		width: 100%;
+		height: #{80 / $em}em;
+		.ie8 & {
+			margin-top: -20px;
+		}
+	}
+	.copyright {
+		p {
+			margin: 0;
+			width: auto;
+		}
+		@include selector(padding-top, 10);
+		padding-right: 0;
+		@include selector(padding-bottom, 30);
+		@include selector(padding-left, 100);
+		
+	}
+}
+
+.scroll_box {
+	height: 320px;
+	overflow-y: auto;
+	width: 100%;
+}
+
+
+.admin_body {
+	width: 100%;
+	@include linear_gradient_w3c ($white, #{$white 0%, $white 93%, $hotel_grey 100%});
+	@include linear_gradient_legacy_ie ($white, $white);
+	min-height: #{430 / $em}em;
+	padding-bottom: #{70 / $em}em;
+}
+
+.alert_box {
+	span {
+		@extend .icofont_alpha;
+		color: transparentize($charlie_color, 0.5);
+		@include selector(margin-right, 10);
+		@include selector(margin-left, 20);
+		display: inline-block;
+		@include selector(margin-top, 4);
+		@include selector(line-height, 10);
+	}
+	border: 1px solid transparentize($charlie_color, 0.5);
+	background: transparentize($charlie_color, 0.9);
+	@include selector(width, 250);
+	margin: #{100 / $em}em auto 0;
+	@include selector(line-height, 40);
+	font-weight: bold;
+}
+
+.hide {
+	display: none !important;
+}
+
+

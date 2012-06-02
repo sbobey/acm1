@@ -1,0 +1,11 @@
+<%= render :partial => 'shared/head' %>
+<body class="loginbody" onLoad="document.getElementById('email').focus()">
+	<section class="screen_container">
+		<%= render :partial => "shared/login_header" %>
+		
+		<%= yield %>
+		
+		<%= render :partial => "shared/login_footer" %>
+	</section>
+</body>
+<%= render :partial => 'shared/tail' %>

@@ -1,0 +1,95 @@
+.site_header {
+	background: url(#{$imgDir}hda_header_bkg_swril.png) no-repeat 50% 33%, $bravo_grey;
+	.ie8 & {
+		background: url(#{$imgDir}hda_header_bkg_swril.png) no-repeat 50% 33%;
+	}
+	border-bottom: 3px solid $charlie_color;
+	@extend .clearfix;
+	@include selector(height, 70);
+}
+
+.utility_nav {
+	color: $white;
+	@include selector(margin-top, 30);
+	@include selector(line-height, 20);
+	
+	a {
+		color: $white;
+		@include text_shadow(0 2px 2px, $shadow_color);
+		&:hover{
+			text-decoration: none;
+			color: $href_color;
+		}
+	}
+	
+	li {
+		@include selector(margin-right, 20);
+		float: left;
+		&[role*=icon] {
+			font-family: $icofont_alpha;
+			text-transform: lowercase;
+			font-size: #{25 / $em}em;
+		}
+		&[role*=fax] {
+			font-family: $icofont_bravo;
+		}
+		&[role*=admin] {
+			text-transform: uppercase;
+		}
+		&[role*=search] {
+			text-transform: uppercase;
+		}
+		&[role*=email] {
+			font-family: $icofont_charlie;
+		}
+		&[role*=username] {
+			font-size: #{$heading_4 / $em}em;
+			font-weight: bold;
+			margin-right: #{30 / $em}em;
+			margin-top: #{3 / $em}em;
+		}
+	}
+}
+
+
+// refactor this into a reusable object
+// need to repurpose for the log in screen
+.logo {
+	background: $white;
+	@include border_radius (#{6 / $em}em #{6 / $em}em 0 0);
+	padding: #{8 / $em}em #{30 / $em}em #{8 / $em}em #{15 / $em}em;
+	font-weight: bold;
+	top: #{18 / $em}em;
+	left: #{60 / $em}em;
+	float: left;
+	position: relative;
+	z-index: 100;
+	font-family: $webfont_alpha;
+	@extend .uppercase;
+	span {
+		font-size: #{18 / $em}em;
+		line-height: 1em;
+	}
+	
+	.health {
+		color: $bravo_color;
+		
+	}
+	.data {
+		color: $charlie_color;
+		
+	}
+	.archiver {
+		font-family: $webfont_bravo;
+		color: $delta_color;
+		letter-spacing: -1px;
+	}
+}
+// refactor this into a reusable object
+// need to repurpose for the log in screen
+
+
+.utility_nav {
+	float: right;
+	@extend .uppercase;
+}

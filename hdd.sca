@@ -1,1 +1,1 @@
-rails generate scaffold User prac_no:integer userid:string password:string name:string customer_code:string prac_access:string allow_all_pracs:string revoked:string email:string res3:string res4:string res5:string res6:string res7:string res8:string res9:string res10:string
+rails generate scaffold Add addcode:string cptcode:string Desc:string units:string fee:string

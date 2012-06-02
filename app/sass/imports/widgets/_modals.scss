@@ -1,0 +1,502 @@
+$modal_background_color: $white;
+
+@mixin patient_data_spacing {
+	.file {
+		width: 90px;
+	}
+	.status {
+		width: 60px;
+		text-align: center;
+	}
+	.type {
+		width: 270px;
+		.ie8 & {
+			width: 250px;
+		}
+	}
+	.desc {
+		width: 150px;
+	}
+	.date {
+		width: 50px;
+		text-align: center;
+	}
+	.category {
+		width: 100px;
+		text-align: center;
+	}
+	.note_text {
+		width: 580px;
+		.ie8 & {
+			width: 540px
+		}
+	}
+	.cpt {
+		width: 70px;
+		text-align: center;
+	}
+	.cpt_desc {
+		width: 180px;
+		.ie8 & {
+			width: 160px;
+		}
+	}
+	.unit {
+		width: 40px;
+		text-align: center;
+	}
+	.doctor {
+		width: 140px;
+	}
+	.diag {
+		width: 55px;
+	}
+	.pos {
+		width: 25px;
+		text-align: center;
+	}
+	.pri {
+		width: 30px;
+		text-align: center;
+	}
+	.plan_name {
+		width: 190px;
+		.ie8 & {
+			width: 170px;
+		}	
+	}
+	.policy_id {
+		width: 100px;
+		text-align: center;
+
+	}
+	.group {
+		width: 85px;
+		text-align: center;
+	}
+	.policy_td {
+		width: 80px;
+		text-align: center;
+	}
+	.subscriber_name {
+		width: 135px;
+	}
+	.phone {
+		width: 90px;
+	}
+	.date, .servdt, .postdt {
+		width: 75px;
+		text-align: center;
+
+	}
+	.time {
+		width: 40px;
+		text-align: center;
+	}
+	.provider {
+		width: 150px;
+	}
+	.provider_code {
+		width: 60px;
+		text-align: center;
+	}
+	.rsn {
+		width: 60px;
+		text-align: center;
+	}
+	.rsn_desc {
+		width: 180px;
+	}
+	.facility {
+		width: 140px;
+	}
+	.guar_id {
+		width: 60px;
+		text-align: center;
+	}
+	.name {
+		width: 150px;
+	}
+	.addr {
+		width: 160px;
+		.ie8 & {
+			width: 140px;
+		}
+	}
+	.city {
+		width: 110px;
+	}
+	.state {
+		width: 30px;
+		text-align: center;
+	}
+	.zip {
+		width: 70px;
+	}
+	.ledger {
+		width: 20px;
+		text-align: center;
+	}
+	.tran_type {
+		width: 40px;
+		text-align: center;
+	}
+	.tran_desc {
+		width: 380px;
+	}
+	.tran_prov {
+		width: 150px;
+	}	
+	.amount {
+		width: 70px;
+		text-align: right;
+    }
+	
+}
+
+.ui-dialog {
+	padding: #{10 / $em}em;
+	@include box_shadow(0 0 #{30 / $em}em, $shadow_color);
+	.ui-dialog-titlebar {
+		display: none;
+		visibility: hidden;
+	}
+	.ui-dialog-content {
+		padding: 0;
+	}
+	.modal_header {
+		width: 100%;
+		float: left;
+	}
+	li {
+		float: left;
+	}
+	.detail_header {
+		width: 75%;
+		float: left;
+		@extend .headings_3;
+		li {
+			padding-right: #{10 / $heading_3}em;
+			margin-right: #{10 / $heading_3}em;
+			border-right: 1px solid $echo_grey;
+			&:last-child {
+				border: 0;
+			}
+		}
+	}
+	.action_buttons {
+		float: right;
+		@include secondary_button;
+	}
+	.close {
+		float: right;
+		@extend .xxx_large;
+		font-family: $icofont_alpha;
+		background: transparent !important;
+		&:nth-child(n+2) {
+			@include linear_gradient_legacy_ie(#ffffff, #ffffff);
+		}
+		border: 0;
+		margin: 0 #{10 / $em}em 0 0;
+		padding: 0;
+		&:hover {
+			background: transparent;
+			&:nth-child(n+2) {
+				@include linear_gradient_legacy_ie(#ffffff, #ffffff);
+			}
+			color: $href_color;
+		}
+	}
+}
+
+.modal_buttons {
+	margin-top: #{20 / $em}em;
+	float: right;
+	@include secondary_button;
+	margin-right: #{20 / $em}em;
+}
+
+.ui-widget-content {
+	background: $modal_background_color;
+	border-color: $charlie_grey;
+	color: $primary_text;
+	@include primary_font_family;
+	
+}
+
+.ui-widget-header {
+	border: 0;
+	background: $modal_background_color;
+	color: $primary_text;
+	@include primary_font_family;
+}
+
+.ui-corner-all {
+	@include border_radius(#{6 / $em}em);
+	.ie8 & {
+		border: 1px solid
+	}
+}
+
+
+.modal_display_header_bar {
+	margin-bottom: #{10 / $em}em;
+	@extend .default_header_bar;
+	padding: 0;
+	
+	a {
+		color: $bravo_color;
+		display: block;
+		&:hover {
+			text-decoration: none;
+			background: $charlie_grey;
+			color: $white;
+		}
+	}
+	
+	tr {		
+		th {
+			text-align: left;
+			text-indent: #{10 / $em}em;
+		}
+		.created_by {
+			@include grid(12,2);
+		}
+		.user_id {
+			@include grid(12,2);
+		}
+		.subject {
+			@include grid(12,6);
+		}
+		.category {
+			@include grid(12,2);
+		}
+	}
+}
+.modal_display_header_bar2 {
+	margin-bottom: #{2 / $em}em;
+	@extend .default_header_bar;
+	padding: 0;
+	
+	th {
+		//float: none;
+		padding: 0 #{5 / $em}em;
+	}
+	
+	a {
+		color: $bravo_color;
+		display: block;
+		&:hover {
+			text-decoration: none;
+			background: $charlie_grey;
+			color: $white;
+		}
+	}
+}
+.modal_data_display {
+	width: 100%;
+	tr {
+		&:nth-child(odd) {
+			background: transparentize($charlie_color, 0.9);
+		}
+		&:nth-child(even) {
+			background: $white;
+		}
+	}
+	th, td {
+		color: $primary_text;
+		text-align: left;
+		padding: #{5 / $em}em;
+		line-height: 1.3em;
+		border-right: 1px solid $hotel_grey;
+		border-left: 1px solid $white;
+		font-weight: bold;
+		text-align: left;
+		margin: 0 !important;
+		&:first-child {
+			border-left: 0;
+		}
+		&:last-child {
+			border-right: 0;
+		}
+        float: left;
+	}
+	td {
+		border-right: 1px solid transparent;
+		border-left: 1px solid transparent;
+	}
+}
+
+.modal_list_display {
+	tr {
+		@extend .modal_display_header_bar;
+		background: $white;
+		padding: 0;
+		margin: 0;
+		
+		@extend .clearfix;
+		a {
+			display: block;
+			color: $primary_text;
+			&:hover {
+				text-decoration: none;
+				color: $white;
+			}
+		}
+		&:nth-child(2n+1) {
+			background: transparentize($charlie_color, 0.8);
+		}
+		&:hover {
+			background: $charlie_grey;
+			a {
+				color: $white;
+			}
+		}
+		
+		td {
+			color: $primary_text;
+			text-align: left;
+			text-indent: #{10 / $em}em;
+		}
+		
+		.created_by {
+			@include grid(12,2);
+		}
+		.user_id {
+			@include grid(12,2);
+		}
+		.subject {
+			@include grid(12,6);
+		}
+		.category {
+			@include grid(12,2);
+		}
+	}
+}
+
+.header_icon {
+	float: right;
+	margin-right: #{10 / $em}em;
+	font-family: $icofont_delta;
+	@extend .large;
+	line-height: 2em;
+}
+
+.demographic_info {
+	dt {
+		float: left;
+		font-weight: bold;
+		margin-right: #{5 / $em}em;
+	}
+	h4 {
+		margin-bottom: #{5 / $em}em;
+	}
+	div {
+		@include grid(12,3,percent);
+		&:first-child {
+			@extend .alpha;
+		}
+		&:last-child {
+			@extend .omega;
+		}
+	}
+	@extend .clearfix;
+	margin-bottom: #{20 / $em}em;
+}
+
+.patient_display_data {
+	float: left;
+	height: 330px;
+	width: 85%;
+	@extend .scroll_box;
+	@include patient_data_spacing;
+	.modal_data_display {
+		width: 100%;
+		.header {
+			background: scale-color($india_grey, $lightness: 51%);
+		}
+		th {
+			line-height: #{35 / $em}em;
+			border-right: 1px solid $hotel_grey;
+			border-left: 1px solid $white;
+			font-weight: bold;
+			color: $bravo_color;
+			&:last-child {
+				border-right: 0;
+			}
+		}
+	}
+	table {
+		width: 100%;
+	}
+	.ledger {
+		font-family: $icofont_alpha;
+		font-size: 1.3em;
+	}
+}
+
+.bookmark_nav {
+	@include grid(12,2,percent);
+	@include alpha;
+	@include omega;
+	li {
+		width: 100%;
+		&:first-child {
+			a {
+				@include border_radius(5px 5px 0 0);
+			}
+		}
+		&:last-child {
+			a {
+				@include border_radius(0 0 5px 5px);
+			}
+		}
+	}
+	a {
+		padding: #{5 / $em}em #{15 / $em}em #{5 / $em}em #{10 / $em}em;
+		.ie8 & {
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		background: scale-color($india_grey, $lightness: 51%);
+		border: 1px solid $white;
+		border-width: 2px 0;
+		display: block;
+		float: left;
+		width: 60%;
+		color: $alpha_grey;
+		font-weight: bold;
+		line-height: 1.8em;
+		&:first-child {
+			border-top-width: 0;
+		}
+		&:hover, &.selected {
+			background: $delta_color_delta;
+			color: $white;	
+			text-decoration: none;
+			font-weight: bold;
+			+ span {
+				font-family: $icofont_delta;
+				font-size: 20px;
+				margin-left: -1px;
+				line-height: 30px;
+				color: $delta_color_delta;
+				float: left;
+			}
+		}
+		&.selected {
+			+ span {
+				&:after {
+					content: "1";
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

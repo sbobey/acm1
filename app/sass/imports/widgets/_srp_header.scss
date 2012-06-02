@@ -1,0 +1,100 @@
+.default_header_bar {
+	float: left;
+	width: 100%;
+	@include selector(padding-top, 10);
+	padding-right: 0;
+	@include selector(padding-bottom, 10);
+	padding-left: 0;
+	background: scale-color($india_grey, $lightness: 51%);
+	ul {	
+		@include selector(width, 960);
+		margin: 0 auto;
+	}
+	li, th, td {
+		float: left;
+		@include selector(line-height, 35);
+		border-right: 1px solid $hotel_grey;
+		border-left: 1px solid $white;
+		font-weight: bold;
+		color: $bravo_color;
+		text-align: center;
+		margin: 0 !important;
+		&:first-child {
+			border-left: 0;
+		}
+		&:last-child {
+			border-right: 0;
+		}
+	}
+}
+
+.default_header {
+	th {
+		background: scale-color($india_grey, $lightness: 51%);
+		border-right: 1px solid $hotel_grey;
+		padding: #{10 / $em}em 5px;
+		&:last-child {
+			border-right: 0;
+		}
+	}
+}
+
+.srp_header {
+	@extend .default_header_bar;
+	border-top: 1px solid $white;
+	border-bottom: 1px solid $white;
+	
+	.patient_id {
+		@include grid(12,1.5, combo, $grid_padding: 0);
+	}
+	.last_name {
+		@include grid(12,1.75);
+	}
+	.first_name {
+		@include grid(12,1.75);
+	}
+	.mi {
+		@include grid(12,1);
+	}
+	.ssn {
+		@include grid(12,2);
+		input {
+			text-align: center !important;
+		}
+	}
+	.sex {
+		@include grid(12,1);
+	}
+	.dob {
+		@include grid(12,1.5);
+		input {
+			text-align: center !important;
+		}
+	}
+	.source {
+		@include grid(12,2);
+	}
+	.notes {
+		@include grid(12,1.25);
+	}
+}
+
+
+.srp_search {
+	@extend .srp_header;
+	background: scale-color($hotel_grey, $lightness: 40%);
+	
+	input {
+		margin-bottom: 0;
+		width: 90%;
+		.gecko & {
+			width: 70%;
+		}
+	}
+	select {
+		margin-bottom: 0;
+	}
+	li {
+		border-color: scale-color($hotel_grey, $lightness: 40%);
+	}	
+}

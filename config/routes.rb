@@ -1,5 +1,21 @@
 Acm1::Application.routes.draw do
-  resources :users
+  
+  get "/axle" => "axle#grids"
+  get "/axle/text" => "axle#text"
+  get "/axle/abstract_colors" => "axle#abstract_colors"
+  get "/axle/semantic_colors" => "axle#semantic_colors"
+  get "/axle/widgets" => "axle#widgets"
+  get "/axle/forms" => "axle#forms"
+  get "/axle/buttons" => "axle#buttons"
+  get "/axle/widgets/srp_header" => "axle#widgets_srpheader"
+ 
+  match "/users/login"        => "users#login"
+  match "/users/auth/"        => "users#auth"
+  match "/users/setuser/"        => "users#setuser"
+  match "/users/logout"		  => "users#logout"
+  
+  root :to => "users#login"
+ 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
