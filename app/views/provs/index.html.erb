@@ -1,0 +1,39 @@
+<h1>Listing provs</h1>
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Lname</th>
+    <th>Fname</th>
+    <th>Mname</th>
+    <th>Cat1</th>
+    <th>Cat2</th>
+    <th>Cat3</th>
+    <th>Cat4</th>
+    <th>Cat5</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @provs.each do |prov| %>
+  <tr>
+    <td><%= prov.code %></td>
+    <td><%= prov.lname %></td>
+    <td><%= prov.fname %></td>
+    <td><%= prov.mname %></td>
+    <td><%= prov.cat1 %></td>
+    <td><%= prov.cat2 %></td>
+    <td><%= prov.cat3 %></td>
+    <td><%= prov.cat4 %></td>
+    <td><%= prov.cat5 %></td>
+    <td><%= link_to 'Show', prov %></td>
+    <td><%= link_to 'Edit', edit_prov_path(prov) %></td>
+    <td><%= link_to 'Destroy', prov, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Prov', new_prov_path %>

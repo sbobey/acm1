@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  code: MyString
+  lname: MyString
+  fname: MyString
+  mname: MyString
+  cat1: MyString
+  cat2: MyString
+  cat3: MyString
+  cat4: MyString
+  cat5: 
+
+two:
+  code: MyString
+  lname: MyString
+  fname: MyString
+  mname: MyString
+  cat1: MyString
+  cat2: MyString
+  cat3: MyString
+  cat4: MyString
+  cat5: 

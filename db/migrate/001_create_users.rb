@@ -1,12 +1,11 @@
 class CreateUsers < ActiveRecord::Migration
   def self.up
     create_table :users, :id => true do |t|
-      t.integer :prac_no
       t.string :userid, :limit => 50
       t.string :password, :limit => 50
       t.string :name, :limit => 50
       t.string :customer_code, :limit => 50
-      t.string :prac_access, :limit => 255
+      t.string :prac_access, :limit => 50
       t.string :allow_all_pracs, :limit => 10
       t.string :revoked, :limit => 10
       t.string :email, :limit => 50

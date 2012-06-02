@@ -1,0 +1,405 @@
+<%= form_for(@case) do |f| %>
+  <% if @case.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@case.errors.count, "error") %> prohibited this case from being saved:</h2>
+
+      <ul>
+      <% @case.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :caseid %><br />
+    <%= f.text_field :caseid %>
+  </div>
+  <div class="field">
+    <%= f.label :patid1 %><br />
+    <%= f.text_field :patid1 %>
+  </div>
+  <div class="field">
+    <%= f.label :plname %><br />
+    <%= f.text_field :plname %>
+  </div>
+  <div class="field">
+    <%= f.label :pfname %><br />
+    <%= f.text_field :pfname %>
+  </div>
+  <div class="field">
+    <%= f.label :pmname %><br />
+    <%= f.text_field :pmname %>
+  </div>
+  <div class="field">
+    <%= f.label :psortname %><br />
+    <%= f.text_field :psortname %>
+  </div>
+  <div class="field">
+    <%= f.label :pdob %><br />
+    <%= f.date_select :pdob %>
+  </div>
+  <div class="field">
+    <%= f.label :psex %><br />
+    <%= f.text_field :psex %>
+  </div>
+  <div class="field">
+    <%= f.label :patid3 %><br />
+    <%= f.text_field :patid3 %>
+  </div>
+  <div class="field">
+    <%= f.label :procedure %><br />
+    <%= f.text_field :procedure %>
+  </div>
+  <div class="field">
+    <%= f.label :diagnosis %><br />
+    <%= f.text_field :diagnosis %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :physical_state %><br />
+    <%= f.text_field :physical_state %>
+  </div>
+  <div class="field">
+    <%= f.label :cpt_surg %><br />
+    <%= f.text_field :cpt_surg %>
+  </div>
+  <div class="field">
+    <%= f.label :cpt_anes %><br />
+    <%= f.text_field :cpt_anes %>
+  </div>
+  <div class="field">
+    <%= f.label :diag1 %><br />
+    <%= f.text_field :diag1 %>
+  </div>
+  <div class="field">
+    <%= f.label :diag2 %><br />
+    <%= f.text_field :diag2 %>
+  </div>
+  <div class="field">
+    <%= f.label :diag3 %><br />
+    <%= f.text_field :diag3 %>
+  </div>
+  <div class="field">
+    <%= f.label :diag4 %><br />
+    <%= f.text_field :diag4 %>
+  </div>
+  <div class="field">
+    <%= f.label :ins_cat %><br />
+    <%= f.text_field :ins_cat %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br />
+    <%= f.text_field :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br />
+    <%= f.text_field :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :postop_block %><br />
+    <%= f.text_field :postop_block %>
+  </div>
+  <div class="field">
+    <%= f.label :postop_block_req %><br />
+    <%= f.text_field :postop_block_req %>
+  </div>
+  <div class="field">
+    <%= f.label :interscalene %><br />
+    <%= f.text_field :interscalene %>
+  </div>
+  <div class="field">
+    <%= f.label :interscalene_cat %><br />
+    <%= f.text_field :interscalene_cat %>
+  </div>
+  <div class="field">
+    <%= f.label :interscalene_sense %><br />
+    <%= f.text_field :interscalene_sense %>
+  </div>
+  <div class="field">
+    <%= f.label :supraclav %><br />
+    <%= f.text_field :supraclav %>
+  </div>
+  <div class="field">
+    <%= f.label :supraclav_cat %><br />
+    <%= f.text_field :supraclav_cat %>
+  </div>
+  <div class="field">
+    <%= f.label :supraclav_sense %><br />
+    <%= f.text_field :supraclav_sense %>
+  </div>
+  <div class="field">
+    <%= f.label :infraclav %><br />
+    <%= f.text_field :infraclav %>
+  </div>
+  <div class="field">
+    <%= f.label :infraclav_cat %><br />
+    <%= f.text_field :infraclav_cat %>
+  </div>
+  <div class="field">
+    <%= f.label :infraclav_sense %><br />
+    <%= f.text_field :infraclav_sense %>
+  </div>
+  <div class="field">
+    <%= f.label :femoral %><br />
+    <%= f.text_field :femoral %>
+  </div>
+  <div class="field">
+    <%= f.label :femoral_cat %><br />
+    <%= f.text_field :femoral_cat %>
+  </div>
+  <div class="field">
+    <%= f.label :femoral_sense %><br />
+    <%= f.text_field :femoral_sense %>
+  </div>
+  <div class="field">
+    <%= f.label :sciatic %><br />
+    <%= f.text_field :sciatic %>
+  </div>
+  <div class="field">
+    <%= f.label :sciatic_cat %><br />
+    <%= f.text_field :sciatic_cat %>
+  </div>
+  <div class="field">
+    <%= f.label :sciatic_sense %><br />
+    <%= f.text_field :sciatic_sense %>
+  </div>
+  <div class="field">
+    <%= f.label :axillary %><br />
+    <%= f.text_field :axillary %>
+  </div>
+  <div class="field">
+    <%= f.label :axillary_sense %><br />
+    <%= f.text_field :axillary_sense %>
+  </div>
+  <div class="field">
+    <%= f.label :block_res1 %><br />
+    <%= f.text_field :block_res1 %>
+  </div>
+  <div class="field">
+    <%= f.label :block_res1_cat %><br />
+    <%= f.text_field :block_res1_cat %>
+  </div>
+  <div class="field">
+    <%= f.label :block_res1_sense %><br />
+    <%= f.text_field :block_res1_sense %>
+  </div>
+  <div class="field">
+    <%= f.label :block_res2 %><br />
+    <%= f.text_field :block_res2 %>
+  </div>
+  <div class="field">
+    <%= f.label :block_res2_cat %><br />
+    <%= f.text_field :block_res2_cat %>
+  </div>
+  <div class="field">
+    <%= f.label :block_res2_sense %><br />
+    <%= f.text_field :block_res2_sense %>
+  </div>
+  <div class="field">
+    <%= f.label :block_res3 %><br />
+    <%= f.text_field :block_res3 %>
+  </div>
+  <div class="field">
+    <%= f.label :block_res3_cat %><br />
+    <%= f.text_field :block_res3_cat %>
+  </div>
+  <div class="field">
+    <%= f.label :block_res3_sense %><br />
+    <%= f.text_field :block_res3_sense %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc1 %><br />
+    <%= f.text_field :addproc1 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc2 %><br />
+    <%= f.text_field :addproc2 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc3 %><br />
+    <%= f.text_field :addproc3 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc4 %><br />
+    <%= f.text_field :addproc4 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc5 %><br />
+    <%= f.text_field :addproc5 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc6 %><br />
+    <%= f.text_field :addproc6 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc7 %><br />
+    <%= f.text_field :addproc7 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc8 %><br />
+    <%= f.text_field :addproc8 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc9 %><br />
+    <%= f.text_field :addproc9 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc10 %><br />
+    <%= f.text_field :addproc10 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc11 %><br />
+    <%= f.text_field :addproc11 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc12 %><br />
+    <%= f.text_field :addproc12 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc13 %><br />
+    <%= f.text_field :addproc13 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc14 %><br />
+    <%= f.text_field :addproc14 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc15 %><br />
+    <%= f.text_field :addproc15 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc16 %><br />
+    <%= f.text_field :addproc16 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc17 %><br />
+    <%= f.text_field :addproc17 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc18 %><br />
+    <%= f.text_field :addproc18 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc19 %><br />
+    <%= f.text_field :addproc19 %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc20 %><br />
+    <%= f.text_field :addproc20 %>
+  </div>
+  <div class="field">
+    <%= f.label :surg_anes_mode %><br />
+    <%= f.text_field :surg_anes_mode %>
+  </div>
+  <div class="field">
+    <%= f.label :baseic_units %><br />
+    <%= f.text_field :baseic_units %>
+  </div>
+  <div class="field">
+    <%= f.label :time_units %><br />
+    <%= f.text_field :time_units %>
+  </div>
+  <div class="field">
+    <%= f.label :mod_units %><br />
+    <%= f.text_field :mod_units %>
+  </div>
+  <div class="field">
+    <%= f.label :line_units %><br />
+    <%= f.text_field :line_units %>
+  </div>
+  <div class="field">
+    <%= f.label :total_units %><br />
+    <%= f.text_field :total_units %>
+  </div>
+  <div class="field">
+    <%= f.label :surgical_amount %><br />
+    <%= f.text_field :surgical_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :addproc14_days %><br />
+    <%= f.text_field :addproc14_days %>
+  </div>
+  <div class="field">
+    <%= f.label :otherproc %><br />
+    <%= f.text_field :otherproc %>
+  </div>
+  <div class="field">
+    <%= f.label :otherproc_desc %><br />
+    <%= f.text_field :otherproc_desc %>
+  </div>
+  <div class="field">
+    <%= f.label :otherproc_cpt %><br />
+    <%= f.text_field :otherproc_cpt %>
+  </div>
+  <div class="field">
+    <%= f.label :otherproc_amount %><br />
+    <%= f.text_field :otherproc_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :otherproc2 %><br />
+    <%= f.text_field :otherproc2 %>
+  </div>
+  <div class="field">
+    <%= f.label :otherproc2_desc %><br />
+    <%= f.text_field :otherproc2_desc %>
+  </div>
+  <div class="field">
+    <%= f.label :otherproc2_cpt %><br />
+    <%= f.text_field :otherproc2_cpt %>
+  </div>
+  <div class="field">
+    <%= f.label :otherproc2_amount %><br />
+    <%= f.text_field :otherproc2_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :total_amount %><br />
+    <%= f.text_field :total_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :loc %><br />
+    <%= f.text_field :loc %>
+  </div>
+  <div class="field">
+    <%= f.label :servdt %><br />
+    <%= f.date_select :servdt %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :exported %><br />
+    <%= f.text_field :exported %>
+  </div>
+  <div class="field">
+    <%= f.label :status2 %><br />
+    <%= f.text_field :status2 %>
+  </div>
+  <div class="field">
+    <%= f.label :status3 %><br />
+    <%= f.text_field :status3 %>
+  </div>
+  <div class="field">
+    <%= f.label :patid2 %><br />
+    <%= f.text_field :patid2 %>
+  </div>
+  <div class="field">
+    <%= f.label :patid3 %><br />
+    <%= f.text_field :patid3 %>
+  </div>
+  <div class="field">
+    <%= f.label :total_minutes %><br />
+    <%= f.text_field :total_minutes %>
+  </div>
+  <div class="field">
+    <%= f.label :total_time %><br />
+    <%= f.text_field :total_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

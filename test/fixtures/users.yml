@@ -1,7 +1,6 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  prac_no: 1
   userid: MyString
   password: MyString
   name: MyString
@@ -20,7 +19,6 @@ one:
   res10: 
 
 two:
-  prac_no: 1
   userid: MyString
   password: MyString
   name: MyString

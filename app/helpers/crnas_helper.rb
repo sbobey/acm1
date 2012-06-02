@@ -1,0 +1,2 @@
+module CrnasHelper
+end

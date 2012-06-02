@@ -1,0 +1,31 @@
+<h1>Listing addps</h1>
+
+<table>
+  <tr>
+    <th>Addcode</th>
+    <th>Cptcode</th>
+    <th>Desc</th>
+    <th>Units</th>
+    <th>Fee</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @addps.each do |addp| %>
+  <tr>
+    <td><%= addp.addcode %></td>
+    <td><%= addp.cptcode %></td>
+    <td><%= addp.Desc %></td>
+    <td><%= addp.units %></td>
+    <td><%= addp.fee %></td>
+    <td><%= link_to 'Show', addp %></td>
+    <td><%= link_to 'Edit', edit_addp_path(addp) %></td>
+    <td><%= link_to 'Destroy', addp, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Addp', new_addp_path %>

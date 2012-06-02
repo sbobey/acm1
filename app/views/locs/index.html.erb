@@ -1,0 +1,35 @@
+<h1>Listing locs</h1>
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Name</th>
+    <th>Cat1</th>
+    <th>Cat2</th>
+    <th>Cat3</th>
+    <th>Cat4</th>
+    <th>Cat5</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @locs.each do |loc| %>
+  <tr>
+    <td><%= loc.code %></td>
+    <td><%= loc.name %></td>
+    <td><%= loc.cat1 %></td>
+    <td><%= loc.cat2 %></td>
+    <td><%= loc.cat3 %></td>
+    <td><%= loc.cat4 %></td>
+    <td><%= loc.cat5 %></td>
+    <td><%= link_to 'Show', loc %></td>
+    <td><%= link_to 'Edit', edit_loc_path(loc) %></td>
+    <td><%= link_to 'Destroy', loc, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Loc', new_loc_path %>

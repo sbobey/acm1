@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  addcode: MyString
+  cptcode: MyString
+  Desc: MyString
+  units: MyString
+  fee: 
+
+two:
+  addcode: MyString
+  cptcode: MyString
+  Desc: MyString
+  units: MyString
+  fee: 

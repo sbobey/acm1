@@ -1,0 +1,39 @@
+<h1>Listing surgs</h1>
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Lname</th>
+    <th>Fname</th>
+    <th>Mname</th>
+    <th>Cat1</th>
+    <th>Cat2</th>
+    <th>Cat3</th>
+    <th>Cat4</th>
+    <th>Cat5</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @surgs.each do |surg| %>
+  <tr>
+    <td><%= surg.code %></td>
+    <td><%= surg.lname %></td>
+    <td><%= surg.fname %></td>
+    <td><%= surg.mname %></td>
+    <td><%= surg.cat1 %></td>
+    <td><%= surg.cat2 %></td>
+    <td><%= surg.cat3 %></td>
+    <td><%= surg.cat4 %></td>
+    <td><%= surg.cat5 %></td>
+    <td><%= link_to 'Show', surg %></td>
+    <td><%= link_to 'Edit', edit_surg_path(surg) %></td>
+    <td><%= link_to 'Destroy', surg, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Surg', new_surg_path %>

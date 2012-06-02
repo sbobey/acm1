@@ -1,0 +1,37 @@
+<%= form_for(@addp) do |f| %>
+  <% if @addp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@addp.errors.count, "error") %> prohibited this addp from being saved:</h2>
+
+      <ul>
+      <% @addp.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :addcode %><br />
+    <%= f.text_field :addcode %>
+  </div>
+  <div class="field">
+    <%= f.label :cptcode %><br />
+    <%= f.text_field :cptcode %>
+  </div>
+  <div class="field">
+    <%= f.label :Desc %><br />
+    <%= f.text_field :Desc %>
+  </div>
+  <div class="field">
+    <%= f.label :units %><br />
+    <%= f.text_field :units %>
+  </div>
+  <div class="field">
+    <%= f.label :fee %><br />
+    <%= f.text_field :fee %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,215 @@
+<h1>Listing cases</h1>
+
+<table>
+  <tr>
+    <th>Caseid</th>
+    <th>Patid1</th>
+    <th>Plname</th>
+    <th>Pfname</th>
+    <th>Pmname</th>
+    <th>Psortname</th>
+    <th>Pdob</th>
+    <th>Psex</th>
+    <th>Patid3</th>
+    <th>Procedure</th>
+    <th>Diagnosis</th>
+    <th>Position</th>
+    <th>Physical state</th>
+    <th>Cpt surg</th>
+    <th>Cpt anes</th>
+    <th>Diag1</th>
+    <th>Diag2</th>
+    <th>Diag3</th>
+    <th>Diag4</th>
+    <th>Ins cat</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th>Postop block</th>
+    <th>Postop block req</th>
+    <th>Interscalene</th>
+    <th>Interscalene cat</th>
+    <th>Interscalene sense</th>
+    <th>Supraclav</th>
+    <th>Supraclav cat</th>
+    <th>Supraclav sense</th>
+    <th>Infraclav</th>
+    <th>Infraclav cat</th>
+    <th>Infraclav sense</th>
+    <th>Femoral</th>
+    <th>Femoral cat</th>
+    <th>Femoral sense</th>
+    <th>Sciatic</th>
+    <th>Sciatic cat</th>
+    <th>Sciatic sense</th>
+    <th>Axillary</th>
+    <th>Axillary sense</th>
+    <th>Block res1</th>
+    <th>Block res1 cat</th>
+    <th>Block res1 sense</th>
+    <th>Block res2</th>
+    <th>Block res2 cat</th>
+    <th>Block res2 sense</th>
+    <th>Block res3</th>
+    <th>Block res3 cat</th>
+    <th>Block res3 sense</th>
+    <th>Addproc1</th>
+    <th>Addproc2</th>
+    <th>Addproc3</th>
+    <th>Addproc4</th>
+    <th>Addproc5</th>
+    <th>Addproc6</th>
+    <th>Addproc7</th>
+    <th>Addproc8</th>
+    <th>Addproc9</th>
+    <th>Addproc10</th>
+    <th>Addproc11</th>
+    <th>Addproc12</th>
+    <th>Addproc13</th>
+    <th>Addproc14</th>
+    <th>Addproc15</th>
+    <th>Addproc16</th>
+    <th>Addproc17</th>
+    <th>Addproc18</th>
+    <th>Addproc19</th>
+    <th>Addproc20</th>
+    <th>Surg anes mode</th>
+    <th>Baseic units</th>
+    <th>Time units</th>
+    <th>Mod units</th>
+    <th>Line units</th>
+    <th>Total units</th>
+    <th>Surgical amount</th>
+    <th>Addproc14 days</th>
+    <th>Otherproc</th>
+    <th>Otherproc desc</th>
+    <th>Otherproc cpt</th>
+    <th>Otherproc amount</th>
+    <th>Otherproc2</th>
+    <th>Otherproc2 desc</th>
+    <th>Otherproc2 cpt</th>
+    <th>Otherproc2 amount</th>
+    <th>Total amount</th>
+    <th>Loc</th>
+    <th>Servdt</th>
+    <th>Status</th>
+    <th>Exported</th>
+    <th>Status2</th>
+    <th>Status3</th>
+    <th>Patid2</th>
+    <th>Patid3</th>
+    <th>Total minutes</th>
+    <th>Total time</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cases.each do |case| %>
+  <tr>
+    <td><%= case.caseid %></td>
+    <td><%= case.patid1 %></td>
+    <td><%= case.plname %></td>
+    <td><%= case.pfname %></td>
+    <td><%= case.pmname %></td>
+    <td><%= case.psortname %></td>
+    <td><%= case.pdob %></td>
+    <td><%= case.psex %></td>
+    <td><%= case.patid3 %></td>
+    <td><%= case.procedure %></td>
+    <td><%= case.diagnosis %></td>
+    <td><%= case.position %></td>
+    <td><%= case.physical_state %></td>
+    <td><%= case.cpt_surg %></td>
+    <td><%= case.cpt_anes %></td>
+    <td><%= case.diag1 %></td>
+    <td><%= case.diag2 %></td>
+    <td><%= case.diag3 %></td>
+    <td><%= case.diag4 %></td>
+    <td><%= case.ins_cat %></td>
+    <td><%= case.start_time %></td>
+    <td><%= case.end_time %></td>
+    <td><%= case.postop_block %></td>
+    <td><%= case.postop_block_req %></td>
+    <td><%= case.interscalene %></td>
+    <td><%= case.interscalene_cat %></td>
+    <td><%= case.interscalene_sense %></td>
+    <td><%= case.supraclav %></td>
+    <td><%= case.supraclav_cat %></td>
+    <td><%= case.supraclav_sense %></td>
+    <td><%= case.infraclav %></td>
+    <td><%= case.infraclav_cat %></td>
+    <td><%= case.infraclav_sense %></td>
+    <td><%= case.femoral %></td>
+    <td><%= case.femoral_cat %></td>
+    <td><%= case.femoral_sense %></td>
+    <td><%= case.sciatic %></td>
+    <td><%= case.sciatic_cat %></td>
+    <td><%= case.sciatic_sense %></td>
+    <td><%= case.axillary %></td>
+    <td><%= case.axillary_sense %></td>
+    <td><%= case.block_res1 %></td>
+    <td><%= case.block_res1_cat %></td>
+    <td><%= case.block_res1_sense %></td>
+    <td><%= case.block_res2 %></td>
+    <td><%= case.block_res2_cat %></td>
+    <td><%= case.block_res2_sense %></td>
+    <td><%= case.block_res3 %></td>
+    <td><%= case.block_res3_cat %></td>
+    <td><%= case.block_res3_sense %></td>
+    <td><%= case.addproc1 %></td>
+    <td><%= case.addproc2 %></td>
+    <td><%= case.addproc3 %></td>
+    <td><%= case.addproc4 %></td>
+    <td><%= case.addproc5 %></td>
+    <td><%= case.addproc6 %></td>
+    <td><%= case.addproc7 %></td>
+    <td><%= case.addproc8 %></td>
+    <td><%= case.addproc9 %></td>
+    <td><%= case.addproc10 %></td>
+    <td><%= case.addproc11 %></td>
+    <td><%= case.addproc12 %></td>
+    <td><%= case.addproc13 %></td>
+    <td><%= case.addproc14 %></td>
+    <td><%= case.addproc15 %></td>
+    <td><%= case.addproc16 %></td>
+    <td><%= case.addproc17 %></td>
+    <td><%= case.addproc18 %></td>
+    <td><%= case.addproc19 %></td>
+    <td><%= case.addproc20 %></td>
+    <td><%= case.surg_anes_mode %></td>
+    <td><%= case.baseic_units %></td>
+    <td><%= case.time_units %></td>
+    <td><%= case.mod_units %></td>
+    <td><%= case.line_units %></td>
+    <td><%= case.total_units %></td>
+    <td><%= case.surgical_amount %></td>
+    <td><%= case.addproc14_days %></td>
+    <td><%= case.otherproc %></td>
+    <td><%= case.otherproc_desc %></td>
+    <td><%= case.otherproc_cpt %></td>
+    <td><%= case.otherproc_amount %></td>
+    <td><%= case.otherproc2 %></td>
+    <td><%= case.otherproc2_desc %></td>
+    <td><%= case.otherproc2_cpt %></td>
+    <td><%= case.otherproc2_amount %></td>
+    <td><%= case.total_amount %></td>
+    <td><%= case.loc %></td>
+    <td><%= case.servdt %></td>
+    <td><%= case.status %></td>
+    <td><%= case.exported %></td>
+    <td><%= case.status2 %></td>
+    <td><%= case.status3 %></td>
+    <td><%= case.patid2 %></td>
+    <td><%= case.patid3 %></td>
+    <td><%= case.total_minutes %></td>
+    <td><%= case.total_time %></td>
+    <td><%= link_to 'Show', case %></td>
+    <td><%= link_to 'Edit', edit_case_path(case) %></td>
+    <td><%= link_to 'Destroy', case, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Case', new_case_path %>

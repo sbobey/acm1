@@ -1,5 +1,19 @@
 Acm1::Application.routes.draw do
   
+  resources :cases
+
+  resources :surgs
+
+  resources :locs
+
+  resources :addps
+
+  resources :provs
+
+  resources :crnas
+
+  resources :users
+
   get "/axle" => "axle#grids"
   get "/axle/text" => "axle#text"
   get "/axle/abstract_colors" => "axle#abstract_colors"

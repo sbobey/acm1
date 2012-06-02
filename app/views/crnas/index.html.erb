@@ -1,0 +1,39 @@
+<h1>Listing crnas</h1>
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Lname</th>
+    <th>Fname</th>
+    <th>Mname</th>
+    <th>Cat1</th>
+    <th>Cat2</th>
+    <th>Cat3</th>
+    <th>Cat4</th>
+    <th>Cat5</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @crnas.each do |crna| %>
+  <tr>
+    <td><%= crna.code %></td>
+    <td><%= crna.lname %></td>
+    <td><%= crna.fname %></td>
+    <td><%= crna.mname %></td>
+    <td><%= crna.cat1 %></td>
+    <td><%= crna.cat2 %></td>
+    <td><%= crna.cat3 %></td>
+    <td><%= crna.cat4 %></td>
+    <td><%= crna.cat5 %></td>
+    <td><%= link_to 'Show', crna %></td>
+    <td><%= link_to 'Edit', edit_crna_path(crna) %></td>
+    <td><%= link_to 'Destroy', crna, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Crna', new_crna_path %>
