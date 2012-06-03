@@ -7,7 +7,7 @@ one:
   pfname: MyString
   pmname: MyString
   psortname: MyString
-  pdob: 2012-06-02
+  pdob: 2012-06-03
   psex: MyString
   patid3: MyString
   procedure: MyString
@@ -89,7 +89,7 @@ one:
   otherproc2_amount: MyString
   total_amount: MyString
   loc: MyString
-  servdt: 2012-06-02
+  servdt: 2012-06-03
   status: MyString
   exported: MyString
   status2: MyString
@@ -97,7 +97,10 @@ one:
   patid2: MyString
   patid3: MyString
   total_minutes: 1
-  total_time: 
+  total_time: MyString
+  surg_provider: MyString
+  anes_provider: MyString
+  crna_provider: 
 
 two:
   caseid: MyString
@@ -106,7 +109,7 @@ two:
   pfname: MyString
   pmname: MyString
   psortname: MyString
-  pdob: 2012-06-02
+  pdob: 2012-06-03
   psex: MyString
   patid3: MyString
   procedure: MyString
@@ -188,7 +191,7 @@ two:
   otherproc2_amount: MyString
   total_amount: MyString
   loc: MyString
-  servdt: 2012-06-02
+  servdt: 2012-06-03
   status: MyString
   exported: MyString
   status2: MyString
@@ -196,4 +199,7 @@ two:
   patid2: MyString
   patid3: MyString
   total_minutes: 1
-  total_time: 
+  total_time: MyString
+  surg_provider: MyString
+  anes_provider: MyString
+  crna_provider: 

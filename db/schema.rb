@@ -119,6 +119,9 @@ ActiveRecord::Schema.define(:version => 7) do
     t.string   "patid2",             :limit => 50
     t.integer  "total_minutes"
     t.string   "total_time",         :limit => 50
+    t.string   "surg_provider",      :limit => 50
+    t.string   "anes_provider",      :limit => 50
+    t.string   "crna_provider",      :limit => 50
     t.datetime "created_at"
     t.datetime "updated_at"
   end

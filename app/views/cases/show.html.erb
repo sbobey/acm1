@@ -485,6 +485,21 @@
   <%= @case.total_time %>
 </p>
 
+<p>
+  <b>Surg provider:</b>
+  <%= @case.surg_provider %>
+</p>
+
+<p>
+  <b>Anes provider:</b>
+  <%= @case.anes_provider %>
+</p>
+
+<p>
+  <b>Crna provider:</b>
+  <%= @case.crna_provider %>
+</p>
+
 
 <%= link_to 'Edit', edit_case_path(@case) %> |
 <%= link_to 'Back', cases_path %>

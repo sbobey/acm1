@@ -99,6 +99,9 @@
     <th>Patid3</th>
     <th>Total minutes</th>
     <th>Total time</th>
+    <th>Surg provider</th>
+    <th>Anes provider</th>
+    <th>Crna provider</th>
     <th></th>
     <th></th>
     <th></th>
@@ -203,6 +206,9 @@
     <td><%= case.patid3 %></td>
     <td><%= case.total_minutes %></td>
     <td><%= case.total_time %></td>
+    <td><%= case.surg_provider %></td>
+    <td><%= case.anes_provider %></td>
+    <td><%= case.crna_provider %></td>
     <td><%= link_to 'Show', case %></td>
     <td><%= link_to 'Edit', edit_case_path(case) %></td>
     <td><%= link_to 'Destroy', case, :confirm => 'Are you sure?', :method => :delete %></td>

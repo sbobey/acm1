@@ -1816,10 +1816,12 @@ input[type=text], input[type=password], select, textarea {
   -o-border-radius: 0.25em;
   -ms-border-radius: 0.25em;
   border-radius: 0.25em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 1em;
   padding-top: 5px;
   padding-bottom: 5px;
-  margin-bottom: 0.5px;
-  margin-bottom: 1.0em;
+  margin-bottom: 0.5em;
   color: #333333; }
   .ie8 input[type=text], .ie9 input[type=text], .ie8 input[type=password], .ie9 input[type=password], .ie8 select, .ie9 select, .ie8 textarea, .ie9 textarea {
     height: 40px; }
@@ -1992,7 +1994,9 @@ input[disabled], textarea[disabled], select[disabled], .disabled {
     box-shadow: 0 0 0 transparent; }
 
 input[type=file], dl.horizontal_selectors, dl.vertical_selectors {
-  margin-bottom: 1.0em; }
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 0.5em; }
 
 label {
   display: block;
@@ -2007,7 +2011,8 @@ label {
   label:first-child {
     margin-top: 0; }
   fieldset label {
-    margin-top: 1.667em; }
+    margin-top: 1.667em;
+    margin-top: 0.833em; }
 
 input[type=checkbox] {
   display: inline;
@@ -2116,6 +2121,18 @@ body {
   filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='white', endColorstr='white');
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='white')";
   min-height: 35.833em;
+  padding-bottom: 5.833em; }
+
+.case_body {
+  width: 100%;
+  background: white;
+  background: -webkit-linear-gradient(top, white 0%, white 93%, #cccccc 100%);
+  background: -moz-linear-gradient(top, white 0%, white 93%, #cccccc 100%);
+  background: -o-linear-gradient(top, white 0%, white 93%, #cccccc 100%);
+  background: -ms-linear-gradient(top, white 0%, white 93%, #cccccc 100%);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='white', endColorstr='white');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='white')";
+  min-height: 208.333em;
   padding-bottom: 5.833em; }
 
 .alert_box {
@@ -3256,3 +3273,158 @@ body {
       width: 200px; }
     .admin_view .table_data .catdesc {
       width: 200px; }
+
+.case_view {
+  margin: 0 auto;
+  width: 80em;
+  padding-top: 1.667em; }
+  .case_view .center {
+    text-align: center; }
+  .case_view .ico_prac_access {
+    text-align: center; }
+  .case_view .blank {
+    width: 25px;
+    border: 0; }
+  .case_view .icofont_alpha, .case_view .alert_box span, .alert_box .case_view span {
+    width: 24px !important;
+    text-transform: none;
+    line-height: 0.5em; }
+    .case_view .icofont_alpha a, .case_view .alert_box span a, .alert_box .case_view span a {
+      display: block; }
+      .case_view .icofont_alpha a:active, .case_view .alert_box span a:active, .alert_box .case_view span a:active, .case_view .icofont_alpha a:hover, .case_view .alert_box span a:hover, .alert_box .case_view span a:hover {
+        text-decoration: none; }
+  .case_view .form_block {
+    width: 60%; }
+  .case_view .bookmark_nav {
+    width: 100%;
+    margin-bottom: 1.667em; }
+  .case_view .left_controls {
+    float: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 1.042%;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 14.583%; }
+    .ie7 .case_view .left_controls {
+      width: 14.583%; }
+    .case_view .left_controls a {
+      margin-bottom: 0.833em; }
+      .case_view .left_controls a.button {
+        display: block;
+        float: left;
+        width: 60%; }
+      .case_view .left_controls a:last-of-type {
+        margin-bottom: 0; }
+  .case_view .table_data {
+    float: left;
+    width: 800px; }
+    .case_view .table_data .default_header tr {
+      background: #f3f3f3; }
+      .case_view .table_data .default_header tr th {
+        line-height: 30px; }
+    .case_view .table_data .pracno {
+      width: 60px;
+      text-align: center; }
+    .case_view .table_data .name {
+      width: 120px; }
+    .case_view .table_data .addr {
+      width: 220px; }
+      .ie8 .case_view .table_data .addr {
+        width: 200px; }
+    .case_view .table_data .city {
+      width: 120px; }
+    .case_view .table_data .state {
+      width: 50px; }
+    .case_view .table_data .zip {
+      width: 50px;
+      text-align: center; }
+    .case_view .table_data .source_code {
+      width: 94px; }
+    .case_view .table_data .userid {
+      width: 100px; }
+    .case_view .table_data .status {
+      width: 50px; }
+    .case_view .table_data .email {
+      width: 290px; }
+      .ie8 .case_view .table_data .email {
+        width: 270px; }
+    .case_view .table_data .admin {
+      width: 50px; }
+    .case_view .table_data .access {
+      width: 115px; }
+    .case_view .table_data .catcode {
+      width: 200px; }
+    .case_view .table_data .catdesc {
+      width: 200px; }
+  .case_view .column1 {
+    margin: 0 auto;
+    width: 33.333em;
+    padding-top: 1.667em;
+    float: left; }
+  .case_view .column2 {
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 1.667em;
+    float: left; }
+  .case_view .pxfull {
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;
+    width: 390px; }
+  .case_view .px375 {
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;
+    width: 365px; }
+  .case_view .px350 {
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;
+    width: 340px; }
+  .case_view .px300 {
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;
+    width: 290px; }
+  .case_view .px250 {
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;
+    width: 240px; }
+  .case_view .px200 {
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;
+    width: 190px; }
+  .case_view .px150 {
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;
+    width: 140px; }
+  .case_view .px125 {
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;
+    width: 115px; }
+  .case_view .px100 {
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;
+    width: 90px; }
+  .case_view .px50 {
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;
+    width: 40px; }
+  .case_view .px25 {
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;
+    width: 15px; }
+  .case_view hr {
+    float: left;
+    margin-left: 20;
+    margin-right: 20px;
+    width: 250px; }

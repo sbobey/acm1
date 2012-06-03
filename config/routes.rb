@@ -28,7 +28,7 @@ Acm1::Application.routes.draw do
   match "/users/setuser/"        => "users#setuser"
   match "/users/logout"		  => "users#logout"
   
-  root :to => "users#login"
+  root :to => "cases#new"
  
 
   # The priority is based upon order of creation:

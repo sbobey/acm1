@@ -99,6 +99,14 @@ body {
 	padding-bottom: #{70 / $em}em;
 }
 
+.case_body {
+	width: 100%;
+	@include linear_gradient_w3c ($white, #{$white 0%, $white 93%, $hotel_grey 100%});
+	@include linear_gradient_legacy_ie ($white, $white);
+	min-height: #{2500 / $em}em;
+	padding-bottom: #{70 / $em}em;
+}
+
 .alert_box {
 	span {
 		@extend .icofont_alpha;

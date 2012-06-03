@@ -1,0 +1,184 @@
+.case_view {
+	margin: 0 auto;
+	width: #{960 / $em}em;
+	padding-top: #{20 / $em}em;
+	
+	.center {
+		text-align: center;
+	}
+	
+	.ico_prac_access {
+		//@extend .icofont_alpha;
+		//font-family: $icofont_alpha !important;
+		//font-size: 1.667em;
+		//text-transform: none;
+		//width: 36px !important;
+		text-align: center;
+	}
+	
+	.blank { 
+		width: 25px;
+		border: 0; }
+	
+	.icofont_alpha {
+		width: 24px !important;
+		text-transform: none;
+		line-height: 0.5em;
+		a {
+			display: block;
+			&:active, &:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	
+	.form_block {
+		width: 60%;
+	}
+	
+	.bookmark_nav {
+		width: 100%;
+		margin-bottom: #{20 / $em}em;
+	}
+	
+	.left_controls {
+		@include grid(12,2,percent);
+		a {
+			margin-bottom: #{10 / $em}em;
+			&.button {
+				display: block;
+				float: left;
+				width: 60%;
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	.table_data {
+		float: left;
+		width: 800px;
+		.default_header {
+			tr {
+				background: scale-color($india_grey, $lightness: 51%);
+				th {
+					line-height: 30px;
+				}
+			}
+		}
+		.pracno { width: 60px; text-align: center; }
+		.name { width: 120px; }
+		.addr { 
+			width: 220px;
+			.ie8 & {
+				width: 200px;
+			} 
+		}
+		.city { width: 120px; }
+		.state { width: 50px; }
+		.zip { width: 50px; text-align: center; }
+		.source_code { width: 94px; }
+		.userid { width: 100px; }
+		.status { width: 50px; }
+		.email { 
+			width: 290px; 
+			.ie8 & {
+				width: 270px;
+			}
+		}
+		.admin { width: 50px; }
+		.access { width: 115px; }
+		.catcode {width: 200px; }
+		.catdesc {width: 200px; }
+	}
+	.column1 {
+		margin: 0 auto;
+		width: #{400 / $em}em;
+		padding-top: #{20 / $em}em;
+		float:left;
+	}
+	.column2 {
+		margin: 0 auto;
+		width: 100%;
+		padding-top: #{20 / $em}em;
+		float:left;
+	}
+	
+	.pxfull {
+	    float:left;
+		margin-left: 0;
+		margin-right: 10px;
+		width:390px;
+	}
+	.px375 {
+	    float:left;
+		margin-left: 0;
+		margin-right: 10px;
+		width:365px;
+	}	
+	
+	.px350 {
+	    float:left;
+		margin-left: 0;
+		margin-right: 10px;
+		width:340px;
+	}	
+	.px300 {
+	    float:left;
+		margin-left: 0;
+		margin-right: 10px;
+		width:290px;
+	}	
+	.px250 {
+	    float:left;
+		margin-left: 0;
+		margin-right: 10px;
+		width:240px;
+	}	
+	.px200 {
+	    float:left;
+		margin-left: 0;
+		margin-right: 10px;
+		width:190px;
+	}	
+	.px150 {
+	    float:left;
+		margin-left: 0;
+		margin-right: 10px;
+		width:140px;
+	}
+	.px125 {
+	    float:left;
+		margin-left: 0;
+		margin-right: 10px;
+		width:115px;
+	}
+		.px100 {
+	    float:left;
+		margin-left: 0;
+		margin-right: 10px;
+		width:90px;
+	}	
+	.px50 {
+	    float:left;
+		margin-left: 0;
+		margin-right: 10px;
+		width:40px;
+	}
+	.px25 {
+	    float:left;
+		margin-left: 0;
+		margin-right: 10px;
+		width:15px;
+	}
+	
+	hr {
+	    float:left;
+		margin-left: 20;
+		margin-right: 20px;
+		width:250px;
+	}
+
+	
+}

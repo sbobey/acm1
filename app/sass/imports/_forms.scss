@@ -5,7 +5,10 @@
 // ---------------------------------------
 
 @mixin field_input_spacing() {
-	margin-bottom: 1.0em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 0.5em;
+	
 }
 		
 @mixin field_focus() {
@@ -87,6 +90,7 @@
 	}
 	input[type=checkbox] {
 		float: none;
+	
 	}
 	input[type=radio] {
 		margin-right: 0.5em;
