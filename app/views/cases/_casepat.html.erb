@@ -1,0 +1,42 @@
+<%= form_for(@case) do |f| %>
+  <% if @case.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@case.errors.count, "error") %> prohibited this case from being saved:</h2>
+
+      <ul>
+      <% @case.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div id="caseinfo_pat"> 
+	<%= f.label :'PatientID:', {:class => "px250"} %>
+    <%= f.label :'CaseID:', {:class => "px550"} %>
+	
+    <%= f.text_field :patid1, {:class => "px150"} %>
+    <%= f.text_field :caseid, {:class => "px150", :disabled => "true"} %>
+	<label class="px100">&nbsp</label>
+	
+    <%= f.label :'LastName:' , {:class => "px150"} %>
+    <%= f.label :'FirstName:' , {:class => "px150"} %>
+    <%= f.label :'Middle:' , {:class => "px100"} %>
+
+	
+    <%= f.text_field :plname, {:class => "px150"} %>
+    <%= f.text_field :pfname, {:class => "px150"} %>
+    <%= f.text_field :pmname, {:class => "px50"} %>
+	<label class="px50">&nbsp</label>
+	
+    <%= f.hidden_field :psortname %>
+	
+    <%= f.label :'DOB:', {:class => "px100"} %>
+	<%= f.label :'Sex:', {:class => "px100"} %>
+    <%= f.label :'Ins category', {:class => "px200"} %>
+    <%= f.text_field :pdob, {:class => "px100"} %>
+    <%= f.text_field :psex, {:class => "px100"} %>
+	<%= f.text_field :ins_cat, {:class => "px200"} %>
+    </div>
+
+<% end %>	

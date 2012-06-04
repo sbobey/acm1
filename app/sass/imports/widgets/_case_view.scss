@@ -1,7 +1,7 @@
 .case_view {
 	margin: 0 auto;
-	width: #{960 / $em}em;
-	padding-top: #{20 / $em}em;
+	width: 960px;
+    
 	
 	.center {
 		text-align: center;
@@ -92,93 +92,156 @@
 		.catcode {width: 200px; }
 		.catdesc {width: 200px; }
 	}
-	.column1 {
-		margin: 0 auto;
-		width: #{400 / $em}em;
-		padding-top: #{20 / $em}em;
-		float:left;
-	}
-	.column2 {
-		margin: 0 auto;
-		width: 100%;
-		padding-top: #{20 / $em}em;
-		float:left;
-	}
 	
 	.pxfull {
 	    float:left;
 		margin-left: 0;
-		margin-right: 10px;
-		width:390px;
+		margin-right: 34px;
+		width:750px;
 	}
-	.px375 {
+	.px550 {
 	    float:left;
 		margin-left: 0;
-		margin-right: 10px;
-		width:365px;
-	}	
-	
+		margin-right: 50px;
+		width:500px;
+	}
+	.px550t {
+	    float:left;
+		margin-left: 0;
+		margin-right: 34px;
+		width:500px;
+	}
+	.px500 {
+	    float:left;
+		margin-left: 0;
+		margin-right: 50px;
+		width:450px;
+	}
+	.px500t {
+	    float:left;
+		margin-left: 0;
+		margin-right: 34px;
+		width:450px;
+	}
+	.px450 {
+	    float:left;
+		margin-left: 0;
+		margin-right: 50px;
+		width:400px;
+	}
+	.px450y {
+	    float:left;
+		margin-left: 0;
+		margin-right: 34px;
+		width:400px;
+	}
+	.px400 {
+	    float:left;
+		margin-left: 0;
+		margin-right: 50px;
+		width:350px;
+	}
+	.px400t {
+	    float:left;
+		margin-left: 0;
+		margin-right: 34px;
+		width:350px;
+	}
 	.px350 {
 	    float:left;
 		margin-left: 0;
-		margin-right: 10px;
-		width:340px;
-	}	
+		margin-right: 50px;
+		width:300px;
+	}
+	.px350t {
+	    float:left;
+		margin-left: 0;
+		margin-right: 34px;
+		width:300px;
+	}
 	.px300 {
 	    float:left;
 		margin-left: 0;
-		margin-right: 10px;
-		width:290px;
+		margin-right: 50px;
+		width:250px;
+	}
+	.px300t {
+	    float:left;
+		margin-left: 0;
+		margin-right: 34px;
+		width:250px;
 	}	
 	.px250 {
 	    float:left;
 		margin-left: 0;
-		margin-right: 10px;
-		width:240px;
+		margin-right: 50px;
+		width:200px;
+	}
+	.px250t {
+	    float:left;
+		margin-left: 0;
+		margin-right: 34px;
+		width:200px;
 	}	
 	.px200 {
 	    float:left;
 		margin-left: 0;
-		margin-right: 10px;
-		width:190px;
+		margin-right: 50px;
+		width:150px;
+	}
+	.px200t {
+	    float:left;
+		margin-left: 0;
+		margin-right: 34px;
+		width:150px;
 	}	
 	.px150 {
 	    float:left;
 		margin-left: 0;
-		margin-right: 10px;
-		width:140px;
-	}
-	.px125 {
-	    float:left;
-		margin-left: 0;
-		margin-right: 10px;
-		width:115px;
-	}
-		.px100 {
-	    float:left;
-		margin-left: 0;
-		margin-right: 10px;
-		width:90px;
+		margin-right: 50px;
+		width:100px;
 	}	
+	.px150t {
+	    float:left;
+		margin-left: 0;
+		margin-right: 34px;
+		width:100px;
+	}	
+	.px100 {
+	    float:left;
+		margin-left: 0;
+		margin-right: 50px;
+		width:50px;
+	}	
+	.px100t {
+	    float:left;
+		margin-left: 0;
+		margin-right: 34px;
+		width:50px;
+	}
+	.pxcheck {
+	    float:left;
+		margin-left: 0;
+		margin-right: 25px;
+		width:25px;
+	}
 	.px50 {
 	    float:left;
 		margin-left: 0;
-		margin-right: 10px;
-		width:40px;
-	}
+		margin-right: 25px;
+		width:25px;
+	}	
 	.px25 {
 	    float:left;
 		margin-left: 0;
-		margin-right: 10px;
-		width:15px;
-	}
-	
-	hr {
-	    float:left;
-		margin-left: 20;
-		margin-right: 20px;
-		width:250px;
+		margin-right: 25px;
+		width:25px;
 	}
 
+    label {
+		line-height: 25px;
+		margin-bottm:5px;
+	}	
+	
 	
 }

@@ -1,0 +1,42 @@
+
+
+function load_pat_section(){
+	$('#casescrolldiv').scrollTop(450);
+//	$('#case_servdt').focus();
+	var myvar = document.activeElement;
+}
+
+function load_surg_section(){
+	$('#require_addp').focus();
+}
+
+
+$(document.activeElement)
+
+
+
+function dlogmainclose(){
+   $('#dialogmaindiv').dialog('destroy').remove();
+}
+
+function dlogmain(){
+   var $dialogmain = $('<div id=dialogmaindiv></div>')
+        .html('\
+        ')
+                .dialog({
+                autoOpen: false,
+                title: '',
+                position: 'center',
+                height: 500,
+                width: 940,
+				modal: false,
+				resizable: false,
+                open: function(event, ui) { jQuery('.ui-dialog-titlebar-close').hide(); 
+                                          },
+                });
+
+   $dialogmain.dialog('open');
+}
+dlogmain();
+$('#dialogmaindiv').html("<%= escape_javascript(render :partial => 'cases/addcase')%>");
+$('#casescrolldiv').html("<%= escape_javascript(render :partial => 'cases/form')%>");

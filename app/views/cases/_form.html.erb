@@ -12,85 +12,102 @@
     </div>
   <% end %>
 
-  <div class="column1">
-    <div id="caseinfo_pat"> 
-    <%= f.label :'PatientID:', {:class => "px150"} %>
-    <%= f.label :'CaseID:', {:class => "px250"} %>
-	
-    <%= f.text_field :patid1, {:class => "px150"} %>
-    <%= f.text_field :caseid, {:class => "px150", :disabled => "true"} %>
-	<label class="px100">&nbsp</label>
-	
-    <%= f.label :'LastName:' , {:class => "px150"} %>
-    <%= f.label :'FirstName:' , {:class => "px150"} %>
-    <%= f.label :'Middle:' , {:class => "px100"} %>
 
+    <%= f.label :'PatientID:', {:class => "px250"} %>
+    <%= f.label :'CaseID:', {:class => "px250"} %>
+	<label class="px300t">&nbsp</label><br/>
+
+	<%= f.text_field :patid1, {:class => "px250"} %>
+    <%= f.text_field :caseid, {:class => "px250", :disabled => "true"} %>
+	<label class="px300t">&nbsp</label>
 	
-    <%= f.text_field :plname, {:class => "px150"} %>
-    <%= f.text_field :pfname, {:class => "px150"} %>
-    <%= f.text_field :pmname, {:class => "px50"} %>
-	<label class="px50">&nbsp</label>
+    <%= f.label :'LastName:' , {:class => "px250"} %>
+    <%= f.label :'FirstName:' , {:class => "px250"} %>
+    <%= f.label :'Middle:' , {:class => "px100"} %>
+	<label class="px200t">&nbsp</label>
 	
+    <%= f.text_field :plname, {:class => "px250"} %>
+    <%= f.text_field :pfname, {:class => "px250"} %>
+    <%= f.text_field :pmname, {:class => "px100"} %>
+	<label class="px200t">&nbsp</label>
+
     <%= f.hidden_field :psortname %>
 	
-    <%= f.label :'DOB:', {:class => "px100"} %>
-	<%= f.label :'Sex:', {:class => "px100"} %>
+    <%= f.label :'DOB:', {:class => "px150"} %>
+	<%= f.label :'Sex:', {:class => "px150"} %>
     <%= f.label :'Ins category', {:class => "px200"} %>
-    <%= f.text_field :pdob, {:class => "px100"} %>
-    <%= f.text_field :psex, {:class => "px100"} %>
-	<%= f.text_field :ins_cat, {:class => "px200"} %>
-    </div>
-    <label class="px50">&nbsp</label><hr><label class="px50">&nbsp</label>
+	<label class="px300t">&nbsp</label>
 	
-	<div id="caseinfo_surg">
-    <%= f.label :servdt, {:class => "px200"}  %>
-    <%= f.label :surgon, {:class => "px200"} %><br />
-    <%= f.text_field :servdt, {:class => "px200"}  %>
-    <%= f.text_field :surg_provider, {:class => "px200"} %>
-		
-    <%= f.label :anes_provider, {:class => "px200"} %><br />
-    <%= f.label :crna_provider, {:class => "px200"} %><br />
-    <%= f.text_field :anes_provider, {:class => "px200"} %>
-    <%= f.text_field :crna_provider, {:class => "px200"} %>
- 
+    <%= f.text_field :pdob, {:class => "px150"} %>
+    <%= f.text_field :psex, {:class => "px150"} %>
+	<%= f.text_field :ins_cat, {:class => "px200"} %>
+	<label class="px300t">&nbsp</label>
+	<label class="pxfull">&nbsp</label>
+	<label class="pxfull">&nbsp</label>
+	<label class="pxfull">&nbsp</label>
+	<label class="pxfull">&nbsp</label>
+	<label class="pxfull">&nbsp</label>
+	<label class="pxfull">&nbsp</label>
+	<label class="pxfull">&nbsp</label>
+	<label class="pxfull">&nbsp</label>
+
+
+	
+	
+    <%= f.label :servdt, {:class => "px150"}  %>
+    <%= f.label :surgon, {:class => "px250"} %>
+	<label class="px400t">&nbsp</label>
+	
+	<%= f.text_field :servdt, {:class => "px150"}  %>
+    <%= f.text_field :surg_provider, {:class => "px250"} %>
+	<label class="px400t">&nbsp</label>
+	
+    <%= f.label :anes_provider, {:class => "px250"} %>
+    <%= f.label :crna_provider, {:class => "px250"} %>	
+	<label class="px300t">&nbsp</label>
+	
+    <%= f.text_field :anes_provider, {:class => "px250"} %>
+    <%= f.text_field :crna_provider, {:class => "px250"} %>
+ 	<label class="px300t">&nbsp</label>
+
 	<%= f.label :procedure, {:class => "pxfull"} %>
     <%= f.text_field :procedure, {:class => "pxfull"}  %>
 
     <%= f.label :diagnosis, {:class => "pxfull"}  %>
     <%= f.text_field :diagnosis, {:class => "pxfull"}  %>
 
-    <%= f.label :loc, {:class => "px150"}  %>
-    <%= f.label :start_time, {:class => "px100"} %>
-    <%= f.label :end_time, {:class => "px150"} %>
-	
-    <%= f.text_field :loc, {:class => "px150"}  %>
-    <%= f.text_field :start_time, {:class => "px100"} %>
-    <%= f.text_field :end_time, {:class => "px100"} %>
-	<label class="px50">&nbsp</label>
+    <%= f.label :loc, {:class => "px250"}  %>
+    <%= f.label :start_time, {:class => "px200"} %>
+    <%= f.label :end_time, {:class => "px200"} %>
+ 	<label class="px150t">&nbsp</label>
+		
+    <%= f.text_field :loc, {:class => "px250"}  %>
+    <%= f.text_field :start_time, {:class => "px200"} %>
+    <%= f.text_field :end_time, {:class => "px200"} %>
+	<label class="px150t">&nbsp</label>
 
-    <%= f.label :anes_mode, {:class => "px150"}  %>
-	<%= f.label :position, {:class => "px150"}  %>
-    <%= f.label :physical_state, {:class => "px100"} %>
-    <%= f.text_field :surg_anes_mode , {:class => "px150"}%>
-    <%= f.text_field :position , {:class => "px150"}%>
-    <%= f.text_field :physical_state, {:class => "px100"} %>
-	</div>
-    <label class="px50">&nbsp</label><hr><label class="px50">&nbsp</label>
-	<label class="pxfull">&nbsp</label>
+    <%= f.label :'anes mode', {:class => "px250"}  %>
+	<%= f.label :'position', {:class => "px200"}  %>
+	<label class="px200">Physical state</label>
+	<label class="px150t">&nbsp</label>
+		
+    <%= f.text_field :surg_anes_mode , {:class => "px250"}%>
+    <%= f.text_field :position , {:class => "px200"}%>
+    <%= f.text_field :physical_state, {:class => "px200"}%>
+ 	<label class="px150t">&nbsp</label>
+ 	<label class="pxfull">&nbsp</label>
+ 	<label class="pxfull">&nbsp</label>
+
 	
 	
-	<div id="caseinfo_post">
     <%= f.label :'postop block indicated:', {:class => "px200"} %>
     <%= f.check_box :postop_block, {:class => "px25"} %>
 	<label class="px150">&nbsp</label>
-	<label class="px25">&nbsp</label>
 	
-    <%= f.label :'Requested by', {:class => "px125"}  %>
+    <%= f.label :'Requested by', {:class => "px150"}  %>
     <%= f.text_field :postop_block_req, {:class => "px250"}  %>
 	<label class="px25">&nbsp</label>
 
-	
-	
 	<label class="pxfull">&nbsp</label>
     <%= f.label :Interscalene, {:class => "px150"}  %>
     <%= f.check_box :interscalene, {:class => "px50"}  %>
@@ -112,8 +129,6 @@
 	<label class="px250">&nbsp</label>
 	<label class="px25">&nbsp</label>
 
-	
-	
 	<label class="pxfull">&nbsp</label>
     <%= f.label :supraclav, {:class => "px150"}  %>
     <%= f.check_box :supraclav, {:class => "px50"}  %>
@@ -134,8 +149,6 @@
 	<%= f.radio_button :supraclav_sense, "2", {:class => "px50"}   %>
 	<label class="px250">&nbsp</label>
 	<label class="px25">&nbsp</label>
-
-	
  	
 	<label class="pxfull">&nbsp</label>
     <%= f.label :infraclav, {:class => "px150"}  %>
@@ -158,8 +171,6 @@
 	<label class="px250">&nbsp</label>
 	<label class="px25">&nbsp</label>
 
-	
-
 	<label class="pxfull">&nbsp</label>
     <%= f.label :femoral, {:class => "px150"}  %>
     <%= f.check_box :femoral, {:class => "px50"}  %>
@@ -181,8 +192,6 @@
 	<label class="px250">&nbsp</label>
 	<label class="px25">&nbsp</label>
 
-	
-	
 	<label class="pxfull">&nbsp</label>
     <%= f.label :sciatic, {:class => "px150"}  %>
     <%= f.check_box :sciatic, {:class => "px50"}  %>
@@ -204,8 +213,6 @@
 	<label class="px250">&nbsp</label>
 	<label class="px25">&nbsp</label>
 	
-	
-	
 	<label class="pxfull">&nbsp</label>
     <%= f.label :axillary, {:class => "px150"}  %>
     <%= f.check_box :sciatic, {:class => "px50"}  %>
@@ -222,16 +229,11 @@
 	<%= f.radio_button :axillary_sense, "2", {:class => "px50"}   %>
 	<label class="px250">&nbsp</label>
 	<label class="px25">&nbsp</label>
-	</div>
 	
 	
-    <label class="px50">&nbsp</label><hr><label class="px50">&nbsp</label>
-	<label class="pxfull">&nbsp</label>
-	
-	<div id=caseinfo_addp>
 	
 		<input type="checkbox" class="px25" id="require_addp">
-		<label class="px375">Additional Procedures:</label>
+		<label class="px350">Additional Procedures:</label>
 	
 		<label class="px25">&nbsp</label>
 		<%= f.check_box :addproc1, {:class => "px25"} %>
@@ -313,7 +315,8 @@
 		<%= f.check_box :otherproc2, {:class => "px25"}  %>
 		<label class="px50">Other2</label>
 	    <%= f.text_field :otherproc2_desc, {:class => "px300"} %>
-	</div>
+
+
 		
 	   
     <%= f.hidden_field :patid3 %>
@@ -341,67 +344,60 @@
     <%= f.hidden_field :patid2 %>
     <%= f.hidden_field :patid3 %>
 
-	<div id="caseinfo_code" style="display:none">
-	
-    <%= f.label :baseic_units %>
-    <%= f.text_field :baseic_units %>
 
-    <%= f.label :time_units %>
-    <%= f.text_field :time_units %>
-
-    <%= f.label :mod_units %>
-    <%= f.text_field :mod_units %>
-
-    <%= f.label :line_units %>
-    <%= f.text_field :line_units %>
-
-    <%= f.label :total_units %>
-    <%= f.text_field :total_units %>
-
-    <%= f.label :surgical_amount %>
-    <%= f.text_field :surgical_amount %>
-
-    <%= f.label :otherproc_cpt %>
-    <%= f.text_field :otherproc_cpt %>
-
-    <%= f.label :otherproc_amount %>
-    <%= f.text_field :otherproc_amount %>
-
-
-    <%= f.label :otherproc2_cpt %>
-    <%= f.text_field :otherproc2_cpt %>
 
 	
-    <%= f.label :otherproc2_amount %>
-    <%= f.text_field :otherproc2_amount %>
+    <%#= f.label :baseic_units %>
+    <%#= f.text_field :baseic_units %>
+
+    <%#= f.label :time_units %>
+    <%#= f.text_field :time_units %>
+
+    <%#= f.label :mod_units %>
+    <%#= f.text_field :mod_units %>
+
+    <%#= f.label :line_units %>
+    <%#= f.text_field :line_units %>
+
+    <%#= f.label :total_units %>
+    <%#= f.text_field :total_units %>
+
+    <%#= f.label :surgical_amount %>
+    <%#= f.text_field :surgical_amount %>
+
+    <%#= f.label :otherproc_cpt %>
+    <%#= f.text_field :otherproc_cpt %>
+
+    <%#= f.label :otherproc_amount %>
+    <%#= f.text_field :otherproc_amount %>
 
 
-    <%= f.label :total_amount %>
-    <%= f.text_field :total_amount %>
+    <%#= f.label :otherproc2_cpt %>
+    <%#= f.text_field :otherproc2_cpt %>
 
 	
-    <%= f.label :status %>
-    <%= f.text_field :status %>
+    <%#= f.label :otherproc2_amount %>
+    <%#= f.text_field :otherproc2_amount %>
+
+
+    <%#= f.label :total_amount %>
+    <%#= f.text_field :total_amount %>
 
 	
-    <%= f.label :total_minutes %>
-    <%= f.text_field :total_minutes %>
+    <%#= f.label :status %>
+    <%#= f.text_field :status %>
 
-    <%= f.label :total_time %>
-    <%= f.text_field :total_time %>
-    </div>
-	</div>
+	
+    <%#= f.label :total_minutes %>
+    <%#= f.text_field :total_minutes %>
 
-   	<div class="column2">
-		<p>dlkas sadasd asd asd asd as das d as das d as das d asd a sd asd as dasd</p>
+    <%#= f.label :total_time %>
+    <%#= f.text_field :total_time %>
+	
+
 		<div class="actions">
-			<%= f.submit %>
+			<%#= f.submit %>
 		</div>
-	</div>
-	
-	<div class="column1">
-		<p>asdadas asdasdasd asdasdasdas dasdasdasd asdasdasd asdasdasd asdasdasda sd </p>
-	</div>
 
 <% end %>
 

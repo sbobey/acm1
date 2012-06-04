@@ -1,5 +1,27 @@
 class CasesController < ApplicationController
-  # GET /cases
+ 
+  def addcase
+  
+   @case = Case.new
+  
+	respond_to do |format|
+      format.js 
+      format.xml  { render :xml => @cases }
+    end
+  end	
+ 
+ 
+  def menu
+	
+	respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @cases }
+    end
+  end
+
+
+
+ # GET /cases
   # GET /cases.xml
   def index
     @cases = Case.all

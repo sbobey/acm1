@@ -1,6 +1,5 @@
 Acm1::Application.routes.draw do
   
-  resources :cases
 
   resources :surgs
 
@@ -25,11 +24,16 @@ Acm1::Application.routes.draw do
  
   match "/users/login"        => "users#login"
   match "/users/auth/"        => "users#auth"
-  match "/users/setuser/"        => "users#setuser"
+  match "/users/setuser/"     => "users#setuser"
   match "/users/logout"		  => "users#logout"
+  match "/cases/menu"		  => "cases#menu"
+  match "/cases/addcase"	  => "cases#addcase"
   
-  root :to => "cases#new"
+  resources :cases
  
+  root :to => "cases#menu"
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

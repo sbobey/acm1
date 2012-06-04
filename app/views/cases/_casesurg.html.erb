@@ -1,0 +1,49 @@
+<%= form_for(@case) do |f| %>
+  <% if @case.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@case.errors.count, "error") %> prohibited this case from being saved:</h2>
+
+      <ul>
+      <% @case.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+	<div id="caseinfo_surg">
+    <%= f.label :servdt, {:class => "px200"}  %>
+    <%= f.label :surgon, {:class => "px200"} %><br />
+    <%= f.text_field :servdt, {:class => "px200"}  %>
+    <%= f.text_field :surg_provider, {:class => "px200"} %>
+		
+    <%= f.label :anes_provider, {:class => "px200"} %><br />
+    <%= f.label :crna_provider, {:class => "px200"} %><br />
+    <%= f.text_field :anes_provider, {:class => "px200"} %>
+    <%= f.text_field :crna_provider, {:class => "px200"} %>
+ 
+	<%= f.label :procedure, {:class => "pxfull"} %>
+    <%= f.text_field :procedure, {:class => "pxfull"}  %>
+
+    <%= f.label :diagnosis, {:class => "pxfull"}  %>
+    <%= f.text_field :diagnosis, {:class => "pxfull"}  %>
+
+    <%= f.label :loc, {:class => "px150"}  %>
+    <%= f.label :start_time, {:class => "px100"} %>
+    <%= f.label :end_time, {:class => "px150"} %>
+	
+    <%= f.text_field :loc, {:class => "px150"}  %>
+    <%= f.text_field :start_time, {:class => "px100"} %>
+    <%= f.text_field :end_time, {:class => "px100"} %>
+	<label class="px50">&nbsp</label>
+
+    <%= f.label :anes_mode, {:class => "px150"}  %>
+	<%= f.label :position, {:class => "px150"}  %>
+    <%= f.label :physical_state, {:class => "px100"} %>
+    <%= f.text_field :surg_anes_mode , {:class => "px150"}%>
+    <%= f.text_field :position , {:class => "px150"}%>
+    <%= f.text_field :physical_state, {:class => "px100"} %>
+	</div>
+
+<% end %>	
