@@ -1853,7 +1853,7 @@ input[type=text], input[type=password], select, textarea {
     margin-top: -0.5em; }
   input[type=text][id*=city], input[type=password][id*=city], select[id*=city], textarea[id*=city] {
     width: 30%; }
-  input[type=text][id*=state], input[type=password][id*=state], select[id*=state], textarea[id*=state] {
+  input[type=text][id*=statefield], input[type=password][id*=statefield], select[id*=statefield], textarea[id*=statefield] {
     width: 10%;
     margin-left: 1.667em; }
   input[type=text][id*=zip], input[type=password][id*=zip], select[id*=zip], textarea[id*=zip] {
@@ -2020,6 +2020,14 @@ input[type=checkbox] {
   margin-left: 1.667em; }
   input[type=checkbox]:first-of-type {
     margin-left: 0; }
+
+input.check50px {
+  display: inline;
+  float: left;
+  margin-left: 0px;
+  margin-right: 37px;
+  margin-top: 5px;
+  margin-bottom: 14px; }
 
 body {
   background: #333333; }
@@ -3363,6 +3371,26 @@ body {
     margin-left: 0;
     margin-right: 34px;
     width: 750px; }
+  .case_view .px725t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 675px; }
+  .case_view .px675t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 625px; }
+  .case_view .px650 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 600px; }
+  .case_view .px650t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 600px; }
   .case_view .px550 {
     float: left;
     margin-left: 0;
@@ -3388,7 +3416,7 @@ body {
     margin-left: 0;
     margin-right: 50px;
     width: 400px; }
-  .case_view .px450y {
+  .case_view .px450t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
@@ -3403,6 +3431,16 @@ body {
     margin-left: 0;
     margin-right: 34px;
     width: 350px; }
+  .case_view .px375 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 325px; }
+  .case_view .px375t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 325px; }
   .case_view .px350 {
     float: left;
     margin-left: 0;
@@ -3413,6 +3451,16 @@ body {
     margin-left: 0;
     margin-right: 34px;
     width: 300px; }
+  .case_view .px325 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 275px; }
+  .case_view .px325t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 275px; }
   .case_view .px300 {
     float: left;
     margin-left: 0;
@@ -3478,6 +3526,67 @@ body {
     margin-left: 0;
     margin-right: 25px;
     width: 25px; }
+  .case_view .indent25 {
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    width: 25px; }
+  .case_view .px75n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 55px; }
+  .case_view .px75nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 55px; }
+  .case_view .px100n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 80px; }
+  .case_view .px100nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 80px; }
+  .case_view .px150n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 130px; }
+  .case_view .px150nr {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    text-align: right;
+    width: 130px; }
+  .case_view .px150nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 130px; }
+  .case_view .px200n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 180px; }
+  .case_view .px200nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 180px; }
+  .case_view .px250n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 230px; }
+  .case_view .px250nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 230px; }
   .case_view label {
     line-height: 25px;
     margin-bottm: 5px; }
