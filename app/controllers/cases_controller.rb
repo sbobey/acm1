@@ -1,10 +1,17 @@
 class CasesController < ApplicationController
  
-  def addcase
-  
-   @case = Case.new
-  
+ 
+  def admin
 	respond_to do |format|
+      format.html 
+      format.xml  { render :xml => @cases }
+    end
+  end	
+ 
+ 
+  def addcase
+    @case = Case.new
+ 	respond_to do |format|
       format.js 
       format.xml  { render :xml => @cases }
     end
@@ -12,7 +19,6 @@ class CasesController < ApplicationController
  
  
   def menu
-	
 	respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @cases }

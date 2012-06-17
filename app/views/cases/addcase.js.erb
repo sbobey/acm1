@@ -1,19 +1,45 @@
 
-
 function load_pat_section(){
-	$('#casescrolldiv').scrollTop(450);
-//	$('#case_servdt').focus();
+ 	$('#casescrolldiv').scrollTop(0);
+	$('#case_patid1').focus();
 	var myvar = document.activeElement;
 }
 
 function load_surg_section(){
-	$('#require_addp').focus();
+	$('#casescrolldiv').scrollTop(450);
+	$('#case_servdt').focus();
+	var myvar = document.activeElement;
 }
 
+function load_block_section(){
+	$('#casescrolldiv').scrollTop(890);
+	$('#post_op_block_check').focus();
+	var myvar = document.activeElement;
+}
 
-$(document.activeElement)
+function load_block_section2(){
+	$('#casescrolldiv').scrollTop(1340);
+	$('#case_femoral').focus();
+	var myvar = document.activeElement;
+}
 
+function load_proc_section(){
+	$('#casescrolldiv').scrollTop(1785);
+	$('#require_addp_check').focus();
+	var myvar = document.activeElement;
+}
 
+function load_proc_section2(){
+	$('#casescrolldiv').scrollTop(2200);
+	$('#case_addproc13').focus();
+	var myvar = document.activeElement;
+}
+
+function load_code_section(){
+	$('#casescrolldiv').scrollTop(2620);
+	$('#case_cpt_surg').focus();
+	var myvar = document.activeElement;
+}
 
 function dlogmainclose(){
    $('#dialogmaindiv').dialog('destroy').remove();

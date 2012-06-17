@@ -28,6 +28,7 @@ Acm1::Application.routes.draw do
   match "/users/logout"		  => "users#logout"
   match "/cases/menu"		  => "cases#menu"
   match "/cases/addcase"	  => "cases#addcase"
+  match "/cases/admin"	      => "cases#admin"
   
   resources :cases
  
