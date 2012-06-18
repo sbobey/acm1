@@ -24,11 +24,12 @@ Acm1::Application.routes.draw do
  
   match "/users/login"        => "users#login"
   match "/users/auth/"        => "users#auth"
-  match "/users/setuser/"     => "users#setuser"
   match "/users/logout"		  => "users#logout"
+  match "/users/destroy"	  => "users#destroy"
   match "/cases/menu"		  => "cases#menu"
   match "/cases/addcase"	  => "cases#addcase"
   match "/cases/admin"	      => "cases#admin"
+  match "/cases/setuser"	  => "cases#setuser"
   
   resources :cases
  

@@ -409,6 +409,7 @@ $modal_background_color: $white;
 	height: 330px;
 	width: 85%;
 	@extend .scroll_box;
+	@extend .scroll_box;
 	@include patient_data_spacing;
 	.modal_data_display {
 		width: 100%;

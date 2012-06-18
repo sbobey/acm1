@@ -1,0 +1,4 @@
+$('#adminbanner').html("<%= escape_javascript('ADMIN - Users')%>");
+$('#adminheader').html("<%= escape_javascript(render :partial => 'cases/userhd')%>");
+$('#adminbuttons').html("<%= escape_javascript(render :partial => 'cases/userbuttons')%>");
+$('#adminlist').html("<%= escape_javascript(render :partial => 'cases/user', :collection => @users)%>");

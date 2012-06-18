@@ -1,9 +1,20 @@
 class CasesController < ApplicationController
  
+   def setuser
+	puts "BEGIN setuser:"
+    @users = User.all
+    puts "Size: "
+    puts @users.size	
+	respond_to do |format|
+      format.js 
+      format.xml  { render :xml => @cases }
+    end
+   end
+ 
  
   def admin
 	respond_to do |format|
-      format.html 
+      format.js 
       format.xml  { render :xml => @cases }
     end
   end	

@@ -1,4 +1,122 @@
-<%= form_for(@user) do |f| %>
+
+<head>
+<script type="text/javascript">
+
+function edit_delete_button(){
+	alert("Delete Button");
+   $.get("/users/destroy",{id:<%= @user.id %> });
+}	
+
+
+function edit_back_button(){
+	dlogmain2close();
+	dlogmain2();
+	$('#dialogmaindiv2').html("<%= escape_javascript(render :partial => 'cases/adminscreen')%>");
+	$.get("/cases/setuser"); 	
+}
+
+function onchange_add(){
+    if ( document.getElementById('addcheck').checked){
+       document.getElementById('allow_add').value= '1';
+    }else{
+       document.getElementById('allow_add').value= '0';
+    }
+}   
+function onchange_mod(){
+    if ( document.getElementById('modcheck').checked){
+       document.getElementById('allow_mod').value= '1';
+    }else{
+       document.getElementById('allow_mod').value= '0';
+    }
+}   
+
+function onchange_del(){
+    if ( document.getElementById('delcheck').checked){
+       document.getElementById('allow_del').value= '1';
+    }else{
+       document.getElementById('allow_del').value= '0';
+    }
+}
+
+function onchange_admin(){
+    if ( document.getElementById('admincheck').checked){
+       document.getElementById('admin_field').value= '1';
+    }else{
+       document.getElementById('admin_field').value= '0';
+    }
+}
+   
+function set_status(){
+   t = document.getElementById('status_select').value;
+   document.getElementById('status_field').value = t;
+}
+
+function init(){
+   t = document.getElementById('usersid').value;
+   if (t.length == 0){
+      document.getElementById('addcheck').checked=0;
+      document.getElementById('modcheck').checked=0;
+      document.getElementById('delcheck').checked=0;
+      document.getElementById('allow_add').value=0;
+      document.getElementById('allow_mod').value=0;
+      document.getElementById('allow_del').value=0;
+	  
+      document.getElementById('status_select').value=1;
+      document.getElementById('status_field').value=1;
+
+      document.getElementById('admincheck').checked=0;
+      document.getElementById('admin_field').value=0;
+
+   }else{
+   
+      t = document.getElementById('allow_add').value;
+	  if (t == '1'){  
+         document.getElementById('addcheck').checked=1;
+	  }else{
+         document.getElementById('addcheck').checked=0;
+      }
+	  
+      t = document.getElementById('allow_mod').value;
+	  if (t == '1'){  
+         document.getElementById('modcheck').checked=1;
+	  }else{
+         document.getElementById('modcheck').checked=0;
+      }
+	  
+      t = document.getElementById('allow_del').value;
+	  if (t == '1'){  
+         document.getElementById('delcheck').checked=1;
+	  }else{
+         document.getElementById('delcheck').checked=0;
+      }
+	  
+      t = document.getElementById('status_field').value;
+	  if (t == '1'){  
+         document.getElementById('status_select').value=1;
+	  }else{
+         document.getElementById('status_select').value=0;
+      }
+	  
+      t = document.getElementById('admin_field').value;
+	  if (t == '1'){  
+         document.getElementById('admincheck').checked=1;
+	  }else{
+         document.getElementById('admincheck').checked=0;
+      }
+	  	  
+    }
+}    
+
+window.onload=init;
+
+</script>
+</head>
+
+<% stats = [['Active',1], %>
+<%          ['Inactive',0]] %>
+
+
+<%= form_for(@user, :remote => true) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -10,72 +128,65 @@
       </ul>
     </div>
   <% end %>
+<div>
+    <%= f.hidden_field :id, :id => 'usersid' %>
 
-  <div class="field">
-    <%= f.label :userid %><br />
+    <label for="userid">UserID:</label>
     <%= f.text_field :userid %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
+
+    <label for="password">Password: </label>
     <%= f.text_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br />
+
+    <label for="name">Last Name: </label>
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :customer_code %><br />
-    <%= f.text_field :customer_code %>
-  </div>
-  <div class="field">
-    <%= f.label :prac_access %><br />
-    <%= f.text_field :prac_access %>
-  </div>
-  <div class="field">
-    <%= f.label :allow_all_pracs %><br />
-    <%= f.text_field :allow_all_pracs %>
-  </div>
-  <div class="field">
-    <%= f.label :revoked %><br />
-    <%= f.text_field :revoked %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :res3 %><br />
-    <%= f.text_field :res3 %>
-  </div>
-  <div class="field">
-    <%= f.label :res4 %><br />
-    <%= f.text_field :res4 %>
-  </div>
-  <div class="field">
-    <%= f.label :res5 %><br />
-    <%= f.text_field :res5 %>
-  </div>
-  <div class="field">
-    <%= f.label :res6 %><br />
+	
+    <label for="res6">First Name: </label>
     <%= f.text_field :res6 %>
+
+    <%= f.hidden_field :customer_code %>
+
+    <span><label for="admincheck"><input type="checkbox" id="admincheck" name="admin" onchange="onchange_admin()"/>Admin User</label></span>
+   
+    <%= f.hidden_field :prac_access, :id => 'admin_field' %>
+
+    <%= f.hidden_field :allow_all_pracs %>
+
+    <label for="revoked">Status: </label>
+    <%= select_tag(:status, options_for_select(stats,1), :id => 'status_select', :onchange => 'set_status()', :style => "width:200px") %>
+    <%= f.hidden_field :revoked, :id => 'status_field' %>
+
+    <label for="email">Email: </label>
+    <%= f.text_field :email %>
+
+
+	<!--<label>User Note Permissions:</label>
+    <span>
+	    <input type="checkbox" id="addcheck" name="Add" onchange="onchange_add()"/><label for="addcheck">Create</label>
+	    <input type="checkbox" id="modcheck" name="Mod" onchange="onchange_mod()"/><label for="modcheck">Modify</label>
+	    <input type="checkbox" id="delcheck" name="Del" onchange="onchange_del()"/><label for="delcheck">Delete</label>
+	</span>-->
+
+    <%= f.hidden_field :res3, :id => 'allow_add' %>
+
+    <%= f.hidden_field :res4, :id => 'allow_mod' %>
+
+    <%= f.hidden_field :res5, :id => 'allow_del' %>
+
+    <p><%= f.submit %><%= link_to 'Delete', @user, :remote => true, :method => :delete, :class => 'button' %> <%= link_to_function 'Back', 'edit_back_button()', :class => 'button' %></p>
+   
+  <div class="modal_buttons" style="width: 150px">
+     <button onclick="");">Save</button><button class="button" onclick="">Cancel</button>
   </div>
-  <div class="field">
-    <%= f.label :res7 %><br />
-    <%= f.text_field :res7 %>
+    
   </div>
-  <div class="field">
-    <%= f.label :res8 %><br />
-    <%= f.text_field :res8 %>
-  </div>
-  <div class="field">
-    <%= f.label :res9 %><br />
-    <%= f.text_field :res9 %>
-  </div>
-  <div class="field">
-    <%= f.label :res10 %><br />
-    <%= f.text_field :res10 %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>  
 <% end %>
+
+
+
+
+
+
+
+
+

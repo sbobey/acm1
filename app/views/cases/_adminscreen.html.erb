@@ -1,31 +1,32 @@
-<div id="patient_data">
-	<div class="modal_header">
-		<div class="detail_header">
-			<ul>
-				<li>ADMIN</li>
-			</ul>
+
+<div class="admin_view" id="adminview">
+
+  		<div class="modal_header">
+			<div id="adminbanner" class="detail_header">ADMIN</div>
+			<div class="action_buttons">
+				<!--<button onclick=""><span class="icofont_alpha">p</span>PRINT</button>--><button onclick="dlogmain2close()" class="close">X</button>
+			</div>
 		</div>
-		<div class="action_buttons">
-		    <!--<button onclick=""><span class="icofont_alpha">p</span>PRINT</button>--><button onclick="" class="close">X</button>
-		</div>
-	</div>
 	
-	<div class="patient_data" >
-		<nav class="bookmark_nav">
-			<ul>
-				<li><a id="polnav"  onclick="" data-remote="true" href="#">Patient Info</a><span></span></li>
-				<li><a id="apptnav" onclick="" data-remote="true" href="#">Surgery Info</a><span></span></li>
-				<li><a id="histnav" onclick="" data-remote="true" href="#">PostOp Info1</a><span></span></li>
-				<li><a id="guarnav" onclick="" data-remote="true" href="#">PostOP Info2</a><span></span></li>
-				<li><a id="comnav"  onclick="" data-remote="true" href="#">Add Procs1</a><span></span></li>
-				<li><a id="docnav"  onclick="" data-remote="true" href="#">Add Procs2</a><span></span></li>
-				<li><a id="imgnav"  onclick="" data-remote="true" href="#">Code Info</a><span></span></li>
-				<!--<li><a href="#" onclick=alert("Prescription Data Is Not Available")>Prescriptions</a><span></span></li>-->
-				<!--<li><a href="#" onclick=alert("Lab Data Is Not Available")">Labs</a><span></span></li>-->
-			</ul>
-		</nav>
-		<div id="admindisplaydiv" class="case_view" >
-			   <div id="adminscrolldiv" class="scroll_box"></div>
+        <div class="left_controls">
+            <nav class="bookmark_nav">
+                <ul>
+                    <li><a id="usernav"     onclick="setusernav()" data-remote="true" href="/cases/setuser">Users</a><span></span></li>
+                    <li><a id="surgprovnav" onclick="setsurgnav()" data-remote="true" href="/cases/setsurg">SURG Providers</a><span></span></li>
+                    <li><a id="anesprovnav" onclick="setanesnav()" data-remote="true" href="/cases/setanes">ANES Providers</a><span></span></li>
+                    <li><a id="crnaprovnav" onclick="setcrnanav()" data-remote="true" href="/cases/setcrna">CRNA Providers</a><span></span></li>
+                </ul>
+            </nav>
+			
+            <div id="adminbuttons"></div>
+				
 		</div>
-	</div>
+		
+		<div class="table_data">
+			<div id="adminscrolldiv class="scroll_box">
+					<table class="default_header modal_data_display" id="adminheader" style="table-layout:fixed;">
+					<table class="modal_data_display" id="adminlist" style="table-layout:fixed;"">			   
+			</div>
+		</div>
 </div>
+

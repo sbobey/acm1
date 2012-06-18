@@ -94,10 +94,11 @@ body {
 
 .admin_body {
 	width: 100%;
-	@include linear_gradient_w3c ($white, #{$white 0%, $white 93%, $hotel_grey 100%});
-	@include linear_gradient_legacy_ie ($white, $white);
-	min-height: #{430 / $em}em;
-	padding-bottom: #{70 / $em}em;
+	height: auto;
+//	@include linear_gradient_w3c ($white, #{$white 0%, $white 93%, $hotel_grey 100%});
+//	@include linear_gradient_legacy_ie ($white, $white);
+//	min-height: #{430 / $em}em;
+//	padding-bottom: #{70 / $em}em;
 }
 
 .case_body {

@@ -1,0 +1,30 @@
+
+function setusernav(){
+    $.get("/cases/setuser");	
+}
+
+function dlogmain2close(){
+   $('#dialogmaindiv2').dialog('destroy').remove();
+}
+
+function dlogmain2(){
+   var $dialogmain2 = $('<div id=dialogmaindiv2></div>')
+        .html('\
+        ')
+                .dialog({
+                autoOpen: false,
+                title: '',
+                position: 'center',
+                height: 500,
+                width: 940,
+				modal: false,
+				resizable: false,
+                open: function(event, ui) { jQuery('.ui-dialog-titlebar-close').hide(); 
+                                          },
+                });
+
+   $dialogmain2.dialog('open');
+}
+dlogmain2();
+$('#dialogmaindiv2').html("<%= escape_javascript(render :partial => 'cases/adminscreen')%>");
+setusernav();

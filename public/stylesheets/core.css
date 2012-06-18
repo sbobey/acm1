@@ -2114,7 +2114,7 @@ body {
     .ie8 .login_footer .copyright, .ie7 .login_footer .copyright {
       padding-left: 100px; }
 
-.scroll_box, .patient_display_data {
+.scroll_box, .patient_display_data, .admin_view .table_data {
   height: 420px;
   overflow-y: auto;
   width: 800px;
@@ -2122,15 +2122,7 @@ body {
 
 .admin_body {
   width: 100%;
-  background: white;
-  background: -webkit-linear-gradient(top, white 0%, white 93%, #cccccc 100%);
-  background: -moz-linear-gradient(top, white 0%, white 93%, #cccccc 100%);
-  background: -o-linear-gradient(top, white 0%, white 93%, #cccccc 100%);
-  background: -ms-linear-gradient(top, white 0%, white 93%, #cccccc 100%);
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='white', endColorstr='white');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='white')";
-  min-height: 35.833em;
-  padding-bottom: 5.833em; }
+  height: auto; }
 
 .case_body {
   width: 100%;
@@ -3199,9 +3191,9 @@ body {
       content: "1"; }
 
 .admin_view {
-  width: 80em;
-  margin: 0 auto;
-  padding-top: 1.667em; }
+  width: 100%;
+  height: 440px;
+  margin: 0 auto; }
   .admin_view .center {
     text-align: center; }
   .admin_view .ico_prac_access {
@@ -3230,7 +3222,8 @@ body {
     margin: 0 1.042%;
     padding-left: 0%;
     padding-right: 0%;
-    width: 14.583%; }
+    width: 14.583%;
+    margin: 0; }
     .ie7 .admin_view .left_controls {
       width: 14.583%; }
     .admin_view .left_controls a {
@@ -3282,6 +3275,267 @@ body {
       width: 200px; }
     .admin_view .table_data .catdesc {
       width: 200px; }
+  .admin_view .pxfull {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 750px; }
+  .admin_view .px725t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 675px; }
+  .admin_view .px675t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 625px; }
+  .admin_view .px650 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 600px; }
+  .admin_view .px650t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 600px; }
+  .admin_view .px550 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 500px; }
+  .admin_view .px550t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 500px; }
+  .admin_view .px500 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 450px; }
+  .admin_view .px500t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 450px; }
+  .admin_view .px450 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 400px; }
+  .admin_view .px450t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 400px; }
+  .admin_view .px440 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 390px; }
+  .admin_view .px440t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 390px; }
+  .admin_view .px400 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 350px; }
+  .admin_view .px400t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 350px; }
+  .admin_view .px375 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 325px; }
+  .admin_view .px375t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 325px; }
+  .admin_view .px350 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 300px; }
+  .admin_view .px350t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 300px; }
+  .admin_view .px340 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 290px; }
+  .admin_view .px340t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 290px; }
+  .admin_view .px325 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 275px; }
+  .admin_view .px325t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 275px; }
+  .admin_view .px300 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 250px; }
+  .admin_view .px300t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 250px; }
+  .admin_view .px250 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 200px; }
+  .admin_view .px250t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 200px; }
+  .admin_view .px200 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 150px; }
+  .admin_view .px200t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 150px; }
+  .admin_view .px150 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 100px; }
+  .admin_view .px150t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 100px; }
+  .admin_view .px100 {
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+    width: 50px; }
+  .admin_view .px100t {
+    float: left;
+    margin-left: 0;
+    margin-right: 34px;
+    width: 50px; }
+  .admin_view .pxcheck {
+    float: left;
+    margin-left: 0;
+    margin-right: 25px;
+    width: 25px; }
+  .admin_view .px50 {
+    float: left;
+    margin-left: 0;
+    margin-right: 25px;
+    width: 25px; }
+  .admin_view .px25 {
+    float: left;
+    margin-left: 0;
+    margin-right: 25px;
+    width: 25px; }
+  .admin_view .indent25 {
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    width: 25px; }
+  .admin_view .px75n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 55px; }
+  .admin_view .px75nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 55px; }
+  .admin_view .px100n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 80px; }
+  .admin_view .px100nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 80px; }
+  .admin_view .px125n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 105px; }
+  .admin_view .px125nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 105px; }
+  .admin_view .px150n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 130px; }
+  .admin_view .px150nr {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    text-align: right;
+    width: 130px; }
+  .admin_view .px150nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 130px; }
+  .admin_view .px160n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 140px; }
+  .admin_view .px160nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 140px; }
+  .admin_view .px200n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 180px; }
+  .admin_view .px200nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 180px; }
+  .admin_view .px250n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 230px; }
+  .admin_view .px250nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 230px; }
 
 .case_view {
   margin: 0 auto;

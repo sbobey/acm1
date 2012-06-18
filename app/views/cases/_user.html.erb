@@ -1,0 +1,30 @@
+
+
+                <% if user.revoked == "1" %>
+                <%    @mystatus = "Active" %>
+                <% else %>
+                <%    @mystatus = "Inactive" %>
+                <% end  %>
+
+				<% if user.prac_access == "1" %>
+                <%    @sysadmin = "Admin"     %>
+                <% else                       %>
+                <%    @sysadmin = "User"      %>
+                <% end                        %>
+
+				<tr>
+
+                    <% if user.res6.nil? %>
+                    <%      myname = user.name + "," %>
+                    <% else %>
+                    <%  myname = user.name + ", " + user.res6 %>
+                    <% end %>
+                                     
+					<td class="px250n">  <%= link_to myname, edit_user_path(user), :remote => true  %> </td>
+					<td class="px100n"> <%= user.userid      %> </td>
+					<td class="px100n"> <%= @mystatus        %> </td>
+					<td class="px250n">  <%= user.email       %> </td>
+					<td class="px100n">  <%= @sysadmin        %> </td>
+
+				</tr>
+
