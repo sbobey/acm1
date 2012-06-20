@@ -27,7 +27,7 @@ class ProvsController < ApplicationController
     @prov = Prov.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.js
       format.xml  { render :xml => @prov }
     end
   end
@@ -35,6 +35,11 @@ class ProvsController < ApplicationController
   # GET /provs/1/edit
   def edit
     @prov = Prov.find(params[:id])
+    respond_to do |format|
+      format.js
+      format.xml  { render :xml => @prov }
+    end
+	
   end
 
   # POST /provs
@@ -44,7 +49,7 @@ class ProvsController < ApplicationController
 
     respond_to do |format|
       if @prov.save
-        format.html { redirect_to(@prov, :notice => 'Prov was successfully created.') }
+        format.js
         format.xml  { render :xml => @prov, :status => :created, :location => @prov }
       else
         format.html { render :action => "new" }
@@ -60,7 +65,7 @@ class ProvsController < ApplicationController
 
     respond_to do |format|
       if @prov.update_attributes(params[:prov])
-        format.html { redirect_to(@prov, :notice => 'Prov was successfully updated.') }
+        format.js
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -76,7 +81,7 @@ class ProvsController < ApplicationController
     @prov.destroy
 
     respond_to do |format|
-      format.html { redirect_to(provs_url) }
+      format.js
       format.xml  { head :ok }
     end
   end

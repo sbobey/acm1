@@ -27,7 +27,7 @@ class SurgsController < ApplicationController
     @surg = Surg.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.js
       format.xml  { render :xml => @surg }
     end
   end
@@ -44,7 +44,7 @@ class SurgsController < ApplicationController
 
     respond_to do |format|
       if @surg.save
-        format.html { redirect_to(@surg, :notice => 'Surg was successfully created.') }
+        format.js
         format.xml  { render :xml => @surg, :status => :created, :location => @surg }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class SurgsController < ApplicationController
 
     respond_to do |format|
       if @surg.update_attributes(params[:surg])
-        format.html { redirect_to(@surg, :notice => 'Surg was successfully updated.') }
+        format.js
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -76,7 +76,7 @@ class SurgsController < ApplicationController
     @surg.destroy
 
     respond_to do |format|
-      format.html { redirect_to(surgs_url) }
+      format.js
       format.xml  { head :ok }
     end
   end

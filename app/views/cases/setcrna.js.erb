@@ -1,0 +1,4 @@
+$('#adminbanner').html("<%= escape_javascript('ADMIN - CRNA Providers')%>");
+$('#adminheader').html("<%= escape_javascript(render :partial => 'cases/crnahd')%>");
+$('#adminbuttons').html("<%= escape_javascript(render :partial => 'cases/crnabuttons')%>");
+$('#adminlist').html("<%= escape_javascript(render :partial => 'cases/crna', :collection => @crnas)%>");

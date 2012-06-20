@@ -1,5 +1,38 @@
 class CasesController < ApplicationController
+
+   def setcrna
+	puts "BEGIN setcrna:"
+    @crnas = Crna.all
+    puts "Size: "
+    puts @crnas.size	
+	respond_to do |format|
+      format.js 
+      format.xml  { render :xml => @cases }
+    end
+   end
  
+   def setprov
+	puts "BEGIN setprov:"
+    @provs = Prov.all
+    puts "Size: "
+    puts @provs.size	
+	respond_to do |format|
+      format.js 
+      format.xml  { render :xml => @cases }
+    end
+   end
+ 
+   def setsurg
+	puts "BEGIN setsurg:"
+    @surgs = Surg.all
+    puts "Size: "
+    puts @surgs.size	
+	respond_to do |format|
+      format.js 
+      format.xml  { render :xml => @cases }
+    end
+   end
+  
    def setuser
 	puts "BEGIN setuser:"
     @users = User.all

@@ -27,7 +27,7 @@ class CrnasController < ApplicationController
     @crna = Crna.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.js
       format.xml  { render :xml => @crna }
     end
   end
@@ -35,6 +35,11 @@ class CrnasController < ApplicationController
   # GET /crnas/1/edit
   def edit
     @crna = Crna.find(params[:id])
+	
+    respond_to do |format|
+      format.js
+      format.xml  { render :xml => @crna }
+    end
   end
 
   # POST /crnas
@@ -44,7 +49,7 @@ class CrnasController < ApplicationController
 
     respond_to do |format|
       if @crna.save
-        format.html { redirect_to(@crna, :notice => 'Crna was successfully created.') }
+        format.js
         format.xml  { render :xml => @crna, :status => :created, :location => @crna }
       else
         format.html { render :action => "new" }
@@ -60,7 +65,7 @@ class CrnasController < ApplicationController
 
     respond_to do |format|
       if @crna.update_attributes(params[:crna])
-        format.html { redirect_to(@crna, :notice => 'Crna was successfully updated.') }
+        format.js
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -76,7 +81,7 @@ class CrnasController < ApplicationController
     @crna.destroy
 
     respond_to do |format|
-      format.html { redirect_to(crnas_url) }
+      format.js
       format.xml  { head :ok }
     end
   end

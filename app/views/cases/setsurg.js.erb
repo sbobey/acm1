@@ -1,0 +1,4 @@
+$('#adminbanner').html("<%= escape_javascript('ADMIN - Surgeons')%>");
+$('#adminheader').html("<%= escape_javascript(render :partial => 'cases/surghd')%>");
+$('#adminbuttons').html("<%= escape_javascript(render :partial => 'cases/surgbuttons')%>");
+$('#adminlist').html("<%= escape_javascript(render :partial => 'cases/surg', :collection => @surgs)%>");
