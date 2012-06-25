@@ -1,5 +1,16 @@
 class CasesController < ApplicationController
 
+   def setloc
+	puts "BEGIN setloc:"
+    @locs = Loc.all
+    puts "Size: "
+    puts @locs.size	
+	respond_to do |format|
+      format.js 
+      format.xml  { render :xml => @cases }
+    end
+   end
+
    def setcrna
 	puts "BEGIN setcrna:"
     @crnas = Crna.all

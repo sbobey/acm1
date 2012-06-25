@@ -10,46 +10,54 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="modal_header">
+	<div class="detail_header">
+		<ul>
+			<li>EDIT - Surgeon</li>
+		</ul>
+	</div>
+	<div class="action_buttons">
+	    <!--<button onclick=""><span class="icofont_alpha">p</span>PRINT</button>--><button onclick="dlogmainclose();" class="close">X</button>
+	</div>
+  </div>
+ 
+  <div class="case_view" style="width:940px"> 
+	<div style="width:800px;">
+  
+  
+        <label class="px50">Code:</label>
+		<%= f.text_field :code, {:class => "px100n"} %>
+		<label class="px650t">&nbsp</label>  
+		  
+		<label class="px250">Last Name:</label> 
+		<label class="px250">First Name:</label>
+		<label class="px100">Middle:</label> 
+		<label class="px200t">&nbsp</label> 
 
-  <div class="field">
-    <%= f.label :code %><br />
-    <%= f.text_field :code %>
-  </div>
-  <div class="field">
-    <%= f.label :lname %><br />
-    <%= f.text_field :lname %>
-  </div>
-  <div class="field">
-    <%= f.label :fname %><br />
-    <%= f.text_field :fname %>
-  </div>
-  <div class="field">
-    <%= f.label :mname %><br />
-    <%= f.text_field :mname %>
-  </div>
-  <div class="field">
-    <%= f.label :cat1 %><br />
-    <%= f.text_field :cat1 %>
-  </div>
-  <div class="field">
-    <%= f.label :cat2 %><br />
-    <%= f.text_field :cat2 %>
-  </div>
-  <div class="field">
-    <%= f.label :cat3 %><br />
-    <%= f.text_field :cat3 %>
-  </div>
-  <div class="field">
-    <%= f.label :cat4 %><br />
-    <%= f.text_field :cat4 %>
-  </div>
-  <div class="field">
-    <%= f.label :cat5 %><br />
-    <%= f.text_field :cat5 %>
-  </div>
-  <div class="actions">
-    <%= f.submit %><%= link_to 'Delete', @surg, :remote => true, :method => :delete, :class => 'button' %> 
+		<%= f.text_field :lname, {:class => "px250"} %>
+		<%= f.text_field :fname, {:class => "px250"} %>
+		<%= f.text_field :mname, {:class => "px100"} %>
+		<label class="px200t">&nbsp</label>  
 
+		<label class="pxpxfull">Reserved 1:</label> 
+		<%= f.text_field :cat1, {:class => "pxfull"}%>
+  
+		<label class="pxpxfull">Reserved 2:</label> 
+		<%= f.text_field :cat2, {:class => "pxfull"}%>
+		
+		<label class="pxpxfull">Reserved 3:</label> 
+		<%= f.text_field :cat3, {:class => "pxfull"}%>
+	
+		<label class="pxpxfull">Reserved 4:</label> 
+		<%= f.text_field :cat3, {:class => "pxfull"}%>
 
+		<label class="pxpxfull">Reserved 5:</label> 
+		<%= f.text_field :cat3, {:class => "pxfull"}%>
+
+		<div class="actions">
+			<%= f.submit %><%= link_to 'Delete', @surg, :remote => true, :method => :delete, :class => 'button' %> 
+		</div>  
+	</div>
   </div>
 <% end %>

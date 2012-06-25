@@ -1,0 +1,4 @@
+$('#adminbanner').html("<%= escape_javascript('ADMIN - Locations')%>");
+$('#adminheader').html("<%= escape_javascript(render :partial => 'cases/lochd')%>");
+$('#adminbuttons').html("<%= escape_javascript(render :partial => 'cases/locbuttons')%>");
+$('#adminlist').html("<%= escape_javascript(render :partial => 'cases/loc', :collection => @locs)%>");

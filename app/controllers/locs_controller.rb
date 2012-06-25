@@ -27,7 +27,7 @@ class LocsController < ApplicationController
     @loc = Loc.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.js
       format.xml  { render :xml => @loc }
     end
   end
@@ -35,6 +35,12 @@ class LocsController < ApplicationController
   # GET /locs/1/edit
   def edit
     @loc = Loc.find(params[:id])
+	
+    respond_to do |format|
+      format.js
+      format.xml  { render :xml => @loc }
+    end
+	
   end
 
   # POST /locs
@@ -44,7 +50,7 @@ class LocsController < ApplicationController
 
     respond_to do |format|
       if @loc.save
-        format.html { redirect_to(@loc, :notice => 'Loc was successfully created.') }
+        format.js 
         format.xml  { render :xml => @loc, :status => :created, :location => @loc }
       else
         format.html { render :action => "new" }
@@ -60,7 +66,7 @@ class LocsController < ApplicationController
 
     respond_to do |format|
       if @loc.update_attributes(params[:loc])
-        format.html { redirect_to(@loc, :notice => 'Loc was successfully updated.') }
+        format.js
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -76,7 +82,7 @@ class LocsController < ApplicationController
     @loc.destroy
 
     respond_to do |format|
-      format.html { redirect_to(locs_url) }
+      format.js
       format.xml  { head :ok }
     end
   end
