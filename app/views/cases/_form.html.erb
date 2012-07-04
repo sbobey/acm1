@@ -1,6 +1,24 @@
-
 <head>
 <script type="text/javascript">
+
+function getscan(){
+	alert("GET SCAN");
+	var buffct = WebTWAIN.HowManyImagesInBuffer;
+    alert("Pre Scan PAGES " + buffct);			
+	
+    WebTWAIN.AcquireImage();
+}
+
+function savepages(){
+	alert("Save PAGES");
+	var buffct = WebTWAIN.HowManyImagesInBuffer;
+    alert("CURRENT PAGES " + buffct);			
+	var err = WebTWAIN.SaveAllAsPDF("c:\temp\myfile.pdf");
+	alert(err);	
+    alert(WebTWAIN.errorcode);
+    alert(WebTWAIN.errorstring);
+
+}
 
 $(document).ready(function() {
     $('#addprocgroup input[type=checkbox]').attr("disabled", "disabled");
@@ -31,9 +49,8 @@ function postopblock_reset() {
 </script>
 </head>
 
-
  
-<%= form_for(@case) do |f| %>
+<%= form_for(@case, :remote => true) do |f| %>
   <% if @case.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@case.errors.count, "error") %> prohibited this case from being saved:</h2>
@@ -431,8 +448,12 @@ function postopblock_reset() {
 	<label class="px200t">&nbsp</label>
 	
 	<div class="actions">
-		<%= f.submit %>
+		<%= f.submit %><button onclick="getscan();">Scan Page</button><button onclick="savepages();">Save Pages</button>
+
 	</div>
+	
+
+	
 	
 	<label class="pxfull">&nbsp</label>
 	<label class="pxfull">&nbsp</label>

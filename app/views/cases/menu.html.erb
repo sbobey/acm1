@@ -1,9 +1,96 @@
 
-<div class="case_body">
-	<div class="case_view">
-		<h2>MENU</h2>
-		<h4><a data-remote="true" href="/cases/addcase">Add Case</a></h4>
-		<h4><a data-remote="true" href="/cases/admin">Admin</a></h4>
-	</div>
+<head>
+<script type="text/javascript">
 
-</div>
+	var mykeys = /[A-Za-z\,\.1234567890 ]/g;
+	
+	function callme(field){
+	     
+           var mylname = "";
+           var myfname = "";
+           var myssn = "";
+           var mypatid = "";
+            
+	     
+           mylname  = document.getElementById('gcLname').value;
+           myfname  = document.getElementById('gcFname').value;
+           mycaseid    = document.getElementById('gcCaseid').value;
+           mypatid  = document.getElementById('gcPatid').value;
+           $.ajax({url: '/cases/setview/?lname=' + mylname + '&fname=' + myfname + '&caseid=' + mycaseid + '&patid=' + mypatid , dataType: 'script'});
+	
+	} 
+	
+	function restrictCharacters(myfield, e, restrictionType) {
+	   if (!e){
+	      var e = window.event;
+	   } 
+	   if (e.keyCode){
+	      code = e.keyCode;    // IE   
+	   }else if (e.which){
+	      code = e.which;      // Other browsers
+	   }
+	   var character = String.fromCharCode(code);
+	   
+	
+	   // if they pressed esc... remove focus from field...
+	
+	   if (code==27){ 
+	      this.blur();
+	      return false;   
+	   }
+	   if (code==9){
+	      alert("Got Tab");
+		  if (myfield.id == "gcDob"){
+		      document.getElementById("gcCaseid").focus();
+		  }else{	  
+	          document.getElementById(nextFieldID).focus();
+		  }	  
+	      return false;
+       }		  
+		
+	   // ignore if they are press other keys
+	   // strange because code: 39 is the down key AND ' key...
+	   // and DEL also equals .
+	
+	   if (!e.ctrlKey && code!=9 && code!=36 && code!=46 && code!=37 && code!=38 && (code!=39 || (code==39 && character=="'")) && code!=40) {
+	      if (character.match(restrictionType) || code==8){
+//			 callme();
+	         return true;
+	      }else{
+	         return false;
+	      }
+	   }
+	   return false;
+	}
+	</script>
+
+</head>
+
+
+
+<div class="case_body">
+	<div class="case_search">
+		<div class="menu_top">
+			<ul>
+				<li><a data-remote="true" href="/cases/addcase">Add Case</a></li>
+				<li><a data-remote="true" href="cases/admin">Admin</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+			</ul>
+			<br style="clear:left"/>
+		</div>
+	<%= render :partial => "src_header" %>
+	<%= render :partial => "src_search" %>
+	<div>
+
+	<div id="xyz">
+		<div class="srp_table">
+			<br>
+			<table id="patlist" class="results_table"></table>
+		</div>
+	</div>
+	
+	
+	
+<div>

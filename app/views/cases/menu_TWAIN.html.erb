@@ -1,0 +1,82 @@
+<head>
+<script type="text/javascript">
+
+		function OnPreTransferCallback(){
+			// Add your code here
+		}
+		function OnPostTransferCallback(){
+			// Add your code here
+		}
+		function OnPreAllTransfersCallback(){
+			// Add your code here
+		}
+		function OnPostAllTransfersCallback(){
+			// Add your code here
+		}
+		function OnTransferCancelledCallback(){
+			// Add your code here
+		}
+		function OnTransferErrorCallback(){
+			// Add your code here
+		}
+		function OnMouseClickCallback(sImageIndex){
+			// Add your code here
+		}
+		function OnMouseMoveCallback(sImageIndex){
+			// Add your code here
+		}
+		function OnMouseRightClickCallback(sImageIndex){
+			// Add your code here
+		}
+		function OnMouseDoubleClickCallback(sImageIndex){
+			// Add your code here
+		}
+		function OnTopImageInTheViewChangedCallback(sImageIndex){
+			// Add your code here
+		}
+		function OnImageAreaSelectedCallback(sImageIndex, left, top, right, bottom){
+			// Add your code here
+		}
+		function OnImageAreaDeSelectedCallback(sImageIndex){
+			// Add your code here
+		}
+
+//		window.onload = init;
+
+</script>
+</head>
+
+
+<div class="case_body">
+	<div class="case_view">
+		<h2>MENU</h2>
+		<h4><a data-remote="true" href="/cases/addcase">Add Case</a></h4>
+		<h4><a data-remote="true" href="/cases/admin">Admin</a></h4>
+	</div>
+	
+    <div>	
+	
+		<EMBED
+			TYPE="Application/DynamicWebTwain-Plugin"
+			OnPreTransfer="OnPreTransferCallback"
+			OnPostTransfer="OnPostTransferCallback"
+			OnPreAllTransfers="OnPreAllTransfersCallback"
+			OnPostAllTransfers="OnPostAllTransfersCallback"
+			OnTransferCancelled="OnTransferCancelledCallback"
+			OnTransferError="OnTransferErrorCallback"
+			OnMouseClick="OnMouseClickCallback"
+			OnMouseMove="OnMouseMoveCallback"
+			OnMouseRightClick="OnMouseRightClickCallback"
+			OnMouseDoubleClick="OnMouseDoubleClickCallback"
+			OnTopImageInTheViewChanged="OnTopImageInTheViewChangedCallback"
+			OnImageAreaSelected="OnImageAreaSelectedCallback"
+			OnImageAreaDeSelected="OnImageAreaDeSelectedCallback"
+			
+			WIDTH="0"
+			HEIGHT="0"
+            
+		</EMBED>
+	</div>
+</div>		
+
+

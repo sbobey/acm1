@@ -1,0 +1,83 @@
+
+<tr class="ledger">
+	<td>
+		<table class="primary_result">
+			<tr>
+			
+                <% if result.caseid.nil? %>
+    			    <td class="patient_id">&nbsp;</td>
+                <% else %>
+	    		    <td class="patient_id">
+						<%= link_to result.caseid,{ :controller => 'cases', :action => 'menu', :mysid => result.id }, :remote => true %>
+                    </td>
+                <% end %>
+			
+			
+                <% if result.servdt.nil? %>
+					<td class="dob">&nbsp</td>
+                <% else %>
+                     <% a = "%s" % result.servdt %>
+                     <% adt = a[5,2]+"/"+a[8,2]+"/"+a[0,4] %>
+    		        <td class="dob">
+	 	  	            <%= link_to adt,{ :controller => 'cases', :action => 'menu', :mysid => result.id }, :remote => true %>
+                    </td>
+                <% end %>
+				
+			
+                <% mylen = result.anes_provider %>
+                <% if mylen == 0%>
+    			    <td class="patient_id">&nbsp;</td>
+                <% else %>
+	    		    <td class="patient_id">
+						<%= link_to result.anes_provider,{ :controller => 'cases', :action => 'menu', :mysid => result.id }, :remote => true %>
+                    </td>
+                <% end %>
+			
+			
+                <% mylen = result.patid1 %>
+                <% if mylen == 0%>
+    			    <td class="patient_id">&nbsp;</td>
+                <% else %>
+	    		    <td class="patient_id">
+						<%= link_to result.patid1,{ :controller => 'cases', :action => 'menu', :mysid => result.id }, :remote => true %>
+                    </td>
+                <% end %>
+
+				
+				
+                <% mylen = result.plname.length %>
+                <% if mylen == 0%>
+	    		    <td class="last_name">&nbsp</td>
+                <% else %>
+	    		    <td class="last_name">
+						<%= link_to result.plname,{ :controller => 'cases', :action => 'menu', :mysid => result.id }, :remote => true %>
+                    </td>
+                <% end %>
+
+				
+				
+                <% mylen = result.pfname.length %>
+                <% if mylen == 0%>
+	    		    <td class="first_name">&nbsp</td>
+                <% else %>
+	    		    <td class="first_name">
+						<%= link_to result.pfname,{ :controller => 'cases', :action => 'menu', :mysid => result.id }, :remote => true %>
+                    </td>
+                <% end %>
+
+				
+                <% if result.pdob.nil? %>
+  			        <td class="dob">&nbsp</td>
+                <% else %>
+                    <% a = "%s" % result.pdob %>
+                    <% adob = a[5,2]+"/"+a[8,2]+"/"+a[0,4] %>
+				   	<td class="dob">
+				       <%= link_to adob,{ :controller => 'cases', :action => 'menu', :mysid => result.pat_sid }, :remote => true %>
+                    </td>
+                <% end %>
+      
+			</tr>
+		</table> 
+	
+	</td>
+</tr>

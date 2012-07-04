@@ -1,3 +1,5 @@
+
+
 .case_view {
 	margin: 0 auto;
 	width: 960px;
@@ -54,6 +56,32 @@
 			}
 		}
 	}
+	
+	.menu_top {
+	    width: 100%;
+		background-color: #333;} 
+	
+	.menu_top ul{
+		margin: 0; padding: 0;
+		float: left;}
+ 
+	.menu_top ul li{
+		display: inline;}
+ 
+	.menu_top ul li a{
+		float: left; text-decoration: none;
+		color: white; 
+		padding: 10.5px 11px;
+		background-color: #333; }
+ 
+	.menu_top ul li a:visited{
+		color: white;}
+ 
+	.menu_top ul li a:hover, .menu ul li .current{
+		color: #fff;
+		background-color:#0b75b2;}
+	
+	
 	
 	.table_data {
 		float: left;
@@ -413,6 +441,37 @@
 		line-height: 25px;
 		margin-bottm:5px;
 	}	
-	
-	
 }
+
+.case_search {
+
+	@extend .case_view;
+	width: 100%;
+}
+
+.src_header ul {
+
+	@extend .srp_header;
+
+	width: 100%;
+}
+
+.src_search ul {
+
+	@extend .srp_search;
+
+	width: 100%;
+	
+}	
+.src_search input {
+
+	height: 35px;
+	
+}	
+
+
+
+
+
+
+
