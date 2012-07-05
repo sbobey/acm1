@@ -1,4 +1,21 @@
 class ScansController < ApplicationController
+
+
+  
+  def addscan
+	puts "BEGIN addscan:"
+	mycaseid = params[:id]
+    @scans = Scan.where("caseid = ?",mycaseid).order("caseid ASC")	
+    puts "Size: "
+    puts @scans.size	
+ 
+    respond_to do |format|
+      format.js 
+      format.xml  { render :xml => @scans }
+    end
+  end
+ 
+   
   # GET /scans
   # GET /scans.xml
   def index

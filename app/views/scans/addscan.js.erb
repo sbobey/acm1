@@ -1,0 +1,56 @@
+
+
+function dlogscanclose(){
+   $('#dialogscandiv').dialog('destroy').remove();
+}
+
+function dlogscan(){
+   var $dialogscan = $('<div id=dialogscandiv></div>')
+        .html('\
+        ')
+                .dialog({
+                autoOpen: false,
+                title: '',
+                position: 'center',
+                height: 500,
+                width: 940,
+				modal: false,
+				resizable: false,
+                open: function(event, ui) { jQuery('.ui-dialog-titlebar-close').hide(); 
+                                          },
+                });
+
+   $dialogscan.dialog('open');
+}
+dlogscan();
+
+$('#dialogscandiv').html("<%= escape_javascript(render :partial => 'scans/scanscreen')%>");
+$('#scanheader').html("<%= escape_javascript(render :partial => 'scans/scanhd')%>");
+$('#scanlist').html("<%= escape_javascript(render :partial => 'scans/scan', :collection => @scans)%>");
+
+
+//			alert("Page LOAD");
+//			var WebTWAIN = document.embeds[0];
+//			WebTWAIN.SelectSourceByIndex(0);
+//			WebTWAIN.CloseSource();	 
+//			WebTWAIN.OpenSource();
+//			WebTWAIN.IfShowUI = 0;
+//			WebTWAIN.PixelType = 0;  
+//			WebTWAIN.Resolution = 100;
+//			WebTWAIN.IfFeederEnabled = 0;
+//			WebTWAIN.IfDuplexEnabled = 0 ;
+//			WebTWAIN.IfDisableSourceAfterAcquire = false;
+			
+//			WebTWAIN.Capability = 'CAP_DUPLEX';
+//			alert(WebTWAIN.CapType);
+//            alert(WebTWAIN.CapValue);
+			
+//			if (WebTWAIN.CapValue == 0){
+//				alert('false');
+//			}else{
+//				alert('true');
+//			}	
+			
+//			var buffct = WebTWAIN.HowManyImagesInBuffer;
+//          alert("BUFFCT " + buffct);			
+			

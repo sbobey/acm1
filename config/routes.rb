@@ -1,7 +1,6 @@
 Acm1::Application.routes.draw do
   
 
-  resources :scans
 
   resources :surgs
 
@@ -40,9 +39,11 @@ Acm1::Application.routes.draw do
   match "/cases/viewcase"	  => "cases#viewcase"
   match "/cases/edit"		  => "cases#edit"
   match "/cases/update"		  => "cases#update"
-#  match "/cases"		      => "cases#update"
+  match "/scans/addscan"	  => "scans#addscan"
   
   resources :cases
+  resources :scans
+
  
   root :to => "cases#menu"
 
