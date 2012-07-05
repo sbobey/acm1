@@ -56,10 +56,10 @@
 // need to repurpose for the log in screen
 .logo {
 	background: $white;
-	@include border_radius (#{6 / $em}em #{6 / $em}em 0 0);
+	@include border_radius (#{10 / $em}em #{10 / $em}em #{10 / $em}em #{10 / $em}em);
 	padding: #{8 / $em}em #{30 / $em}em #{8 / $em}em #{15 / $em}em;
 	font-weight: bold;
-	top: #{18 / $em}em;
+	top: #{8 / $em}em;
 	left: #{60 / $em}em;
 	float: left;
 	position: relative;

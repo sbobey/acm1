@@ -1,1 +1,5 @@
 
+$('#dialogmaindiv').dialog('destroy').remove();
+
+$.get("/cases/viewcase", {mysid: <%= @case.id %>} );
+

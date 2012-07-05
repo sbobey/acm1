@@ -232,6 +232,16 @@ class CasesController < ApplicationController
     end
   end
 
+  def viewcase
+    @case = Case.find(params[:mysid])
+    respond_to do |format|
+      format.js 
+      format.xml  { render :xml => @case }
+    end
+  end
+  
+  
+  
   # GET /cases/1
   # GET /cases/1.xml
   def show
@@ -266,7 +276,12 @@ class CasesController < ApplicationController
   # POST /cases
   # POST /cases.xml
   def create
+  
+    mytimestamp =  Time.now.localtime.strftime("%y%m%d-%H%M%S")
+    mytime = "%s" % Time.now.to_i
+
     @case = Case.new(params[:case])
+	@case.caseid = mytimestamp
 
     respond_to do |format|
       if @case.save

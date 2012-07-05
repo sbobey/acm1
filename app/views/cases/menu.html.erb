@@ -68,9 +68,9 @@
 
 
 
-<div class="case_body">
-	<div class="case_search">
-		<div class="menu_top">
+<div class="search_body">
+<div class="search_view">
+	<div class="menu_top">
 			<ul>
 				<li><a data-remote="true" href="/cases/addcase">Add Case</a></li>
 				<li><a data-remote="true" href="cases/admin">Admin</a></li>
@@ -79,18 +79,18 @@
 				<li><a href="#">Link</a></li>
 			</ul>
 			<br style="clear:left"/>
-		</div>
+	</div>		
+
 	<%= render :partial => "src_header" %>
 	<%= render :partial => "src_search" %>
-	<div>
 
+	
 	<div id="xyz">
-		<div class="srp_table">
-			<br>
-			<table id="patlist" class="results_table"></table>
+			<div class="srp_table">
+				<br>
+				<table cellpadding="20" id="patlist" class="results_table" style="table-layout:fixed;" ></table>
+			</div>
 		</div>
-	</div>
-	
-	
+	</div>	
 	
 <div>

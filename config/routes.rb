@@ -35,6 +35,10 @@ Acm1::Application.routes.draw do
   match "/cases/setcrna"	  => "cases#setcrna"
   match "/cases/setloc"		  => "cases#setloc"
   match "/cases/setview"	  => "cases#setview"
+  match "/cases/viewcase"	  => "cases#viewcase"
+  match "/cases/edit"		  => "cases#edit"
+  match "/cases/update"		  => "cases#update"
+#  match "/cases"		      => "cases#update"
   
   resources :cases
  

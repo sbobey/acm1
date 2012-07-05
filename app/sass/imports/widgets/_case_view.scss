@@ -444,32 +444,41 @@
 }
 
 .case_search {
-
 	@extend .case_view;
-	width: 100%;
 }
 
+.src_header {
+
+	@extend default_header_bar;
+
+}
+
+
 .src_header ul {
-
 	@extend .srp_header;
-
-	width: 100%;
+	padding-left: 20px;
+	width: 988px;
+	margin: 0 auto;
 }
 
 .src_search ul {
-
 	@extend .srp_search;
-
-	width: 100%;
-	
+	padding-left: 20px;
+	width: 988px;
+	margin: 0 auto;
 }	
+
 .src_search input {
 
 	height: 35px;
 	
 }	
 
-
+.search_view{
+	@extend .case_view;
+	width: 100%;
+	
+}	
 
 
 

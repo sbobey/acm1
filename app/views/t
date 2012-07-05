@@ -1,0 +1,103 @@
+./axle/text.html.erb:			<p class="small">@extend .small; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor diam, condimentum gravida ultricies non, sollicitudin eget nunc.</p>
+./axle/text.html.erb:			<p class="medium">@extend .medium; (default site style)</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor diam, condimentum gravida ultricies non, sollicitudin eget nunc.</p>
+./axle/text.html.erb:			<p class="large">@extend .large; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor diam, condimentum gravida ultricies non, sollicitudin eget nunc.</p>
+./axle/grids.html.erb:			<p>The grid system is based on the <code>rem</code> unit of measurement. <a href="http://snook.ca/archives/html_and_css/font-size-with-rem" target="_blank">Read more</a></p>
+./axle/grids.html.erb:			<p>When building a SASS mixin, it is preferred to call in the Grid mixin to create widget's width. Call in the Grid mixn using <code>@grid()</code> and pass in the type of grid and number of columns as the 1st and 2nd arguments. See example below:</p>
+./axle/grids.html.erb:			<p>Note: the anticipated <code>@silent</code> feature will suppress OOCSS classes <a href="http://goo.gl/trVgr" target="_blank">read more here</a>.</p>
+./axle/buttons.html.erb:			<p>Axle's buttons are based on the principal that the styles support the markup. The UIs presented here are styled simply for <code>button, a.button</code>.  Follow the code samples below for instructions on using class placed on the parent block element to get special layout and sizing adjustments. </p>
+./axle/_nav.html.erb:	<p><%= link_to_unless_current "SRP Header", :action => "widgets_srpheader" %></p>
+./axle/_nav.html.erb:	<p><a href="/axle/widgets/self_select_panel.php">Widgets</a></p>
+./axle/_nav.html.erb:	<ul class="widget_links">
+./axle/_nav.html.erb:		<li><a href="/axle/widgets/three_col_text_block.php">3 col text block</a></li>
+./axle/_nav.html.erb:		<li><a href="/axle/widgets/daylife_gallery.php">Daylife gallery</a></li>
+./axle/_nav.html.erb:		<li><a href="/axle/widgets/editors_picks.php">Editors picks</a></li>
+./axle/_nav.html.erb:		<li><a href="/axle/widgets/hgroup.php">Hgroup</a></li>
+./axle/_nav.html.erb:		<li><a href="/axle/widgets/image_block_caption.php">Image block w/caption</a></li>
+./axle/_nav.html.erb:		<li><a href="/axle/widgets/info_panel.php">Info panels</a></li>
+./axle/_nav.html.erb:		<li><a href="/axle/widgets/merchandising.php">Merchandising</a></li>
+./axle/_nav.html.erb:		<li><a href="/axle/widgets/narrative_element.php">Narrative element</a></li>
+./axle/_nav.html.erb:		<li><a href="/axle/widgets/self_select_panel.php">Self select panel</a></li>
+./axle/_nav.html.erb:		<li><a href="/axle/widgets/standard_copy_block.php">Standard copy block</a></li>
+./axle/_nav.html.erb:		<li><a href="/axle/widgets/standard_search.php">Standard search</a></li>
+./cases/_form.html.erb:function getscan(){
+./cases/_form.html.erb:		<%= f.submit %><button onclick="getscan();">Scan Page</button><button onclick="savepages();">Save Pages</button>
+./cases/_viewcase.html.erb:			<button onclick="getscan();">Add Scan</button>
+./cases/_src_search.html.erb:<div class="src_search" id="getpat">
+./cases/_editcase.html.erb:			<button onclick="getscan();">Add Scan</button>
+./cases/admin.js.erb:    $.get("/cases/setloc");	
+./cases/admin.js.erb:    $.get("/cases/setcrna");	
+./cases/admin.js.erb:    $.get("/cases/setprov");	
+./cases/admin.js.erb:    $.get("/cases/setsurg");	
+./cases/admin.js.erb:    $.get("/cases/setuser");	
+./cases/_viewform.html.erb:		<button onclick="getscan();">Scan Page</button><button onclick="savepages();">Save Pages</button>
+./cases/update.js.erb:$.get("/cases/viewcase", {mysid: <%= @case.id %>} );
+./cases/menu.html.erb:           mylname  = document.getElementById('gcLname').value;
+./cases/menu.html.erb:           myfname  = document.getElementById('gcFname').value;
+./cases/menu.html.erb:           mycaseid    = document.getElementById('gcCaseid').value;
+./cases/menu.html.erb:           mypatid  = document.getElementById('gcPatid').value;
+./cases/menu.html.erb:		      document.getElementById("gcCaseid").focus();
+./cases/menu.html.erb:	          document.getElementById(nextFieldID).focus();
+./crnas/destroy.js.erb:$.get("/cases/setcrna"); 	
+Binary file ./crnas/.create.js.erb.swp matches
+./crnas/create.js.erb:$.get("/cases/setcrna"); 	
+./crnas/update.js.erb:$.get("/cases/setcrna"); 	
+./layouts/application.html.erb:<body onLoad="document.getElementById('gpLName').focus()">
+./layouts/login.html.erb:<body class="loginbody" onLoad="document.getElementById('email').focus()">
+./locs/destroy.js.erb:$.get("/cases/setloc"); 	
+./locs/create.js.erb:$.get("/cases/setloc"); 	
+./locs/update.js.erb:$.get("/cases/setloc"); 	
+./provs/destroy.js.erb:$.get("/cases/setprov"); 	
+./provs/create.js.erb:$.get("/cases/setprov"); 	
+./provs/update.js.erb:$.get("/cases/setprov"); 	
+./shared/_login_footer.html.erb:<!--	<p><a href="http://www.harmonyhit.com" target="_blank">Harmony Healthcare IT</a><br>(800) 781-1044<br>Get in touch <a href="mailto:info@HarmonyHIT.com">info@HarmonyHIT.com</a></p>-->
+./shared/_site_header.html.erb:    $.get("/users/logout");
+./shared/_site_header.html.erb:			<li role="search_icon" title="Patient Search"><a href="/patients/getpat">M</a></li>
+./shared/_site_footer.html.erb:<!--	<p>&copy; <a href="http://www.harmonyhit.com" target="_blank">Harmony Healthcare IT</a>. All Rights Reserved. Version 6.00.</p>-->
+./surgs/destroy.js.erb:$.get("/cases/setsurg"); 	
+./surgs/create.js.erb:$.get("/cases/setsurg"); 	
+./surgs/update.js.erb:$.get("/cases/setsurg"); 	
+./users/_form.html.erb:   $.get("/users/destroy",{id:<%= @user.id %> });
+./users/_form.html.erb:	$.get("/cases/setuser"); 	
+./users/_form.html.erb:    if ( document.getElementById('addcheck').checked){
+./users/_form.html.erb:       document.getElementById('allow_add').value= '1';
+./users/_form.html.erb:       document.getElementById('allow_add').value= '0';
+./users/_form.html.erb:    if ( document.getElementById('modcheck').checked){
+./users/_form.html.erb:       document.getElementById('allow_mod').value= '1';
+./users/_form.html.erb:       document.getElementById('allow_mod').value= '0';
+./users/_form.html.erb:    if ( document.getElementById('delcheck').checked){
+./users/_form.html.erb:       document.getElementById('allow_del').value= '1';
+./users/_form.html.erb:       document.getElementById('allow_del').value= '0';
+./users/_form.html.erb:    if ( document.getElementById('admincheck').checked){
+./users/_form.html.erb:       document.getElementById('admin_field').value= '1';
+./users/_form.html.erb:       document.getElementById('admin_field').value= '0';
+./users/_form.html.erb:   t = document.getElementById('status_select').value;
+./users/_form.html.erb:   document.getElementById('status_field').value = t;
+./users/_form.html.erb:   t = document.getElementById('usersid').value;
+./users/_form.html.erb:      document.getElementById('addcheck').checked=0;
+./users/_form.html.erb:      document.getElementById('modcheck').checked=0;
+./users/_form.html.erb:      document.getElementById('delcheck').checked=0;
+./users/_form.html.erb:      document.getElementById('allow_add').value=0;
+./users/_form.html.erb:      document.getElementById('allow_mod').value=0;
+./users/_form.html.erb:      document.getElementById('allow_del').value=0;
+./users/_form.html.erb:      document.getElementById('status_select').value=1;
+./users/_form.html.erb:      document.getElementById('status_field').value=1;
+./users/_form.html.erb:      document.getElementById('admincheck').checked=0;
+./users/_form.html.erb:      document.getElementById('admin_field').value=0;
+./users/_form.html.erb:      t = document.getElementById('allow_add').value;
+./users/_form.html.erb:         document.getElementById('addcheck').checked=1;
+./users/_form.html.erb:         document.getElementById('addcheck').checked=0;
+./users/_form.html.erb:      t = document.getElementById('allow_mod').value;
+./users/_form.html.erb:         document.getElementById('modcheck').checked=1;
+./users/_form.html.erb:         document.getElementById('modcheck').checked=0;
+./users/_form.html.erb:      t = document.getElementById('allow_del').value;
+./users/_form.html.erb:         document.getElementById('delcheck').checked=1;
+./users/_form.html.erb:         document.getElementById('delcheck').checked=0;
+./users/_form.html.erb:      t = document.getElementById('status_field').value;
+./users/_form.html.erb:         document.getElementById('status_select').value=1;
+./users/_form.html.erb:         document.getElementById('status_select').value=0;
+./users/_form.html.erb:      t = document.getElementById('admin_field').value;
+./users/_form.html.erb:         document.getElementById('admincheck').checked=1;
+./users/_form.html.erb:         document.getElementById('admincheck').checked=0;
+./users/destroy.js.erb:$.get("/cases/setuser"); 	
+./users/create.js.erb:$.get("/cases/setuser"); 	
+./users/update.js.erb:$.get("/cases/setuser"); 	

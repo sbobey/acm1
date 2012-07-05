@@ -2136,6 +2136,18 @@ body {
   min-height: 208.333em;
   padding-bottom: 5.833em; }
 
+.case_body {
+  width: 100%;
+  background: white;
+  background: -webkit-linear-gradient(top, white 0%, white 93%, #cccccc 100%);
+  background: -moz-linear-gradient(top, white 0%, white 93%, #cccccc 100%);
+  background: -o-linear-gradient(top, white 0%, white 93%, #cccccc 100%);
+  background: -ms-linear-gradient(top, white 0%, white 93%, #cccccc 100%);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='white', endColorstr='white');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='white')";
+  min-height: 75em;
+  padding-bottom: 5.833em; }
+
 .alert_box {
   border: 1px solid rgba(162, 173, 0, 0.5);
   background: rgba(162, 173, 0, 0.1);
@@ -2461,14 +2473,14 @@ body {
 
 .logo, .login_logo {
   background: white;
-  -moz-border-radius: 0.5em 0.5em 0 0;
-  -webkit-border-radius: 0.5em 0.5em 0 0;
-  -o-border-radius: 0.5em 0.5em 0 0;
-  -ms-border-radius: 0.5em 0.5em 0 0;
-  border-radius: 0.5em 0.5em 0 0;
+  -moz-border-radius: 0.833em 0.833em 0.833em 0.833em;
+  -webkit-border-radius: 0.833em 0.833em 0.833em 0.833em;
+  -o-border-radius: 0.833em 0.833em 0.833em 0.833em;
+  -ms-border-radius: 0.833em 0.833em 0.833em 0.833em;
+  border-radius: 0.833em 0.833em 0.833em 0.833em;
   padding: 0.667em 2.5em 0.667em 1.25em;
   font-weight: bold;
-  top: 1.5em;
+  top: 0.667em;
   left: 5em;
   float: left;
   position: relative;
@@ -3537,30 +3549,30 @@ body {
     margin-right: 4px;
     width: 230px; }
 
-.case_view, .case_search {
+.case_view, .case_search, .search_view {
   margin: 0 auto;
   width: 960px; }
-  .case_view .center, .case_search .center {
+  .case_view .center, .case_search .center, .search_view .center {
     text-align: center; }
-  .case_view .ico_prac_access, .case_search .ico_prac_access {
+  .case_view .ico_prac_access, .case_search .ico_prac_access, .search_view .ico_prac_access {
     text-align: center; }
-  .case_view .blank, .case_search .blank {
+  .case_view .blank, .case_search .blank, .search_view .blank {
     width: 25px;
     border: 0; }
-  .case_view .icofont_alpha, .case_search .icofont_alpha, .case_view .alert_box span, .alert_box .case_view span, .case_search .alert_box span, .alert_box .case_search span {
+  .case_view .icofont_alpha, .case_search .icofont_alpha, .search_view .icofont_alpha, .case_view .alert_box span, .alert_box .case_view span, .case_search .alert_box span, .alert_box .case_search span, .search_view .alert_box span, .alert_box .search_view span {
     width: 24px !important;
     text-transform: none;
     line-height: 0.5em; }
-    .case_view .icofont_alpha a, .case_search .icofont_alpha a, .case_view .alert_box span a, .alert_box .case_view span a, .case_search .alert_box span a, .alert_box .case_search span a {
+    .case_view .icofont_alpha a, .case_search .icofont_alpha a, .search_view .icofont_alpha a, .case_view .alert_box span a, .alert_box .case_view span a, .case_search .alert_box span a, .alert_box .case_search span a, .search_view .alert_box span a, .alert_box .search_view span a {
       display: block; }
-      .case_view .icofont_alpha a:active, .case_search .icofont_alpha a:active, .case_view .alert_box span a:active, .alert_box .case_view span a:active, .case_search .alert_box span a:active, .alert_box .case_search span a:active, .case_view .icofont_alpha a:hover, .case_search .icofont_alpha a:hover, .case_view .alert_box span a:hover, .alert_box .case_view span a:hover, .case_search .alert_box span a:hover, .alert_box .case_search span a:hover {
+      .case_view .icofont_alpha a:active, .case_search .icofont_alpha a:active, .search_view .icofont_alpha a:active, .case_view .alert_box span a:active, .alert_box .case_view span a:active, .case_search .alert_box span a:active, .alert_box .case_search span a:active, .search_view .alert_box span a:active, .alert_box .search_view span a:active, .case_view .icofont_alpha a:hover, .case_search .icofont_alpha a:hover, .search_view .icofont_alpha a:hover, .case_view .alert_box span a:hover, .alert_box .case_view span a:hover, .case_search .alert_box span a:hover, .alert_box .case_search span a:hover, .search_view .alert_box span a:hover, .alert_box .search_view span a:hover {
         text-decoration: none; }
-  .case_view .form_block, .case_search .form_block {
+  .case_view .form_block, .case_search .form_block, .search_view .form_block {
     width: 60%; }
-  .case_view .bookmark_nav, .case_search .bookmark_nav {
+  .case_view .bookmark_nav, .case_search .bookmark_nav, .search_view .bookmark_nav {
     width: 100%;
     margin-bottom: 1.667em; }
-  .case_view .left_controls, .case_search .left_controls {
+  .case_view .left_controls, .case_search .left_controls, .search_view .left_controls {
     float: left;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -3569,350 +3581,354 @@ body {
     padding-left: 0%;
     padding-right: 0%;
     width: 14.583%; }
-    .ie7 .case_view .left_controls, .ie7 .case_search .left_controls {
+    .ie7 .case_view .left_controls, .ie7 .case_search .left_controls, .ie7 .search_view .left_controls {
       width: 14.583%; }
-    .case_view .left_controls a, .case_search .left_controls a {
+    .case_view .left_controls a, .case_search .left_controls a, .search_view .left_controls a {
       margin-bottom: 0.833em; }
-      .case_view .left_controls a.button, .case_search .left_controls a.button {
+      .case_view .left_controls a.button, .case_search .left_controls a.button, .search_view .left_controls a.button {
         display: block;
         float: left;
         width: 60%; }
-      .case_view .left_controls a:last-of-type, .case_search .left_controls a:last-of-type {
+      .case_view .left_controls a:last-of-type, .case_search .left_controls a:last-of-type, .search_view .left_controls a:last-of-type {
         margin-bottom: 0; }
-  .case_view .menu_top, .case_search .menu_top {
+  .case_view .menu_top, .case_search .menu_top, .search_view .menu_top {
     width: 100%;
     background-color: #333; }
-  .case_view .menu_top ul, .case_search .menu_top ul {
+  .case_view .menu_top ul, .case_search .menu_top ul, .search_view .menu_top ul {
     margin: 0;
     padding: 0;
     float: left; }
-  .case_view .menu_top ul li, .case_search .menu_top ul li {
+  .case_view .menu_top ul li, .case_search .menu_top ul li, .search_view .menu_top ul li {
     display: inline; }
-  .case_view .menu_top ul li a, .case_search .menu_top ul li a {
+  .case_view .menu_top ul li a, .case_search .menu_top ul li a, .search_view .menu_top ul li a {
     float: left;
     text-decoration: none;
     color: white;
     padding: 10.5px 11px;
     background-color: #333; }
-  .case_view .menu_top ul li a:visited, .case_search .menu_top ul li a:visited {
+  .case_view .menu_top ul li a:visited, .case_search .menu_top ul li a:visited, .search_view .menu_top ul li a:visited {
     color: white; }
-  .case_view .menu_top ul li a:hover, .case_search .menu_top ul li a:hover, .case_view .menu ul li .current, .case_search .menu ul li .current {
+  .case_view .menu_top ul li a:hover, .case_search .menu_top ul li a:hover, .search_view .menu_top ul li a:hover, .case_view .menu ul li .current, .case_search .menu ul li .current, .search_view .menu ul li .current {
     color: #fff;
     background-color: #0b75b2; }
-  .case_view .table_data, .case_search .table_data {
+  .case_view .table_data, .case_search .table_data, .search_view .table_data {
     float: left;
     width: 800px; }
-    .case_view .table_data .default_header tr, .case_search .table_data .default_header tr {
+    .case_view .table_data .default_header tr, .case_search .table_data .default_header tr, .search_view .table_data .default_header tr {
       background: #f3f3f3; }
-      .case_view .table_data .default_header tr th, .case_search .table_data .default_header tr th {
+      .case_view .table_data .default_header tr th, .case_search .table_data .default_header tr th, .search_view .table_data .default_header tr th {
         line-height: 30px; }
-    .case_view .table_data .pracno, .case_search .table_data .pracno {
+    .case_view .table_data .pracno, .case_search .table_data .pracno, .search_view .table_data .pracno {
       width: 60px;
       text-align: center; }
-    .case_view .table_data .name, .case_search .table_data .name {
+    .case_view .table_data .name, .case_search .table_data .name, .search_view .table_data .name {
       width: 120px; }
-    .case_view .table_data .addr, .case_search .table_data .addr {
+    .case_view .table_data .addr, .case_search .table_data .addr, .search_view .table_data .addr {
       width: 220px; }
-      .ie8 .case_view .table_data .addr, .ie8 .case_search .table_data .addr {
+      .ie8 .case_view .table_data .addr, .ie8 .case_search .table_data .addr, .ie8 .search_view .table_data .addr {
         width: 200px; }
-    .case_view .table_data .city, .case_search .table_data .city {
+    .case_view .table_data .city, .case_search .table_data .city, .search_view .table_data .city {
       width: 120px; }
-    .case_view .table_data .state, .case_search .table_data .state {
+    .case_view .table_data .state, .case_search .table_data .state, .search_view .table_data .state {
       width: 50px; }
-    .case_view .table_data .zip, .case_search .table_data .zip {
+    .case_view .table_data .zip, .case_search .table_data .zip, .search_view .table_data .zip {
       width: 50px;
       text-align: center; }
-    .case_view .table_data .source_code, .case_search .table_data .source_code {
+    .case_view .table_data .source_code, .case_search .table_data .source_code, .search_view .table_data .source_code {
       width: 94px; }
-    .case_view .table_data .userid, .case_search .table_data .userid {
+    .case_view .table_data .userid, .case_search .table_data .userid, .search_view .table_data .userid {
       width: 100px; }
-    .case_view .table_data .status, .case_search .table_data .status {
+    .case_view .table_data .status, .case_search .table_data .status, .search_view .table_data .status {
       width: 50px; }
-    .case_view .table_data .email, .case_search .table_data .email {
+    .case_view .table_data .email, .case_search .table_data .email, .search_view .table_data .email {
       width: 290px; }
-      .ie8 .case_view .table_data .email, .ie8 .case_search .table_data .email {
+      .ie8 .case_view .table_data .email, .ie8 .case_search .table_data .email, .ie8 .search_view .table_data .email {
         width: 270px; }
-    .case_view .table_data .admin, .case_search .table_data .admin {
+    .case_view .table_data .admin, .case_search .table_data .admin, .search_view .table_data .admin {
       width: 50px; }
-    .case_view .table_data .access, .case_search .table_data .access {
+    .case_view .table_data .access, .case_search .table_data .access, .search_view .table_data .access {
       width: 115px; }
-    .case_view .table_data .catcode, .case_search .table_data .catcode {
+    .case_view .table_data .catcode, .case_search .table_data .catcode, .search_view .table_data .catcode {
       width: 200px; }
-    .case_view .table_data .catdesc, .case_search .table_data .catdesc {
+    .case_view .table_data .catdesc, .case_search .table_data .catdesc, .search_view .table_data .catdesc {
       width: 200px; }
-  .case_view .pxfull, .case_search .pxfull {
+  .case_view .pxfull, .case_search .pxfull, .search_view .pxfull {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 750px; }
-  .case_view .px725t, .case_search .px725t {
+  .case_view .px725t, .case_search .px725t, .search_view .px725t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 675px; }
-  .case_view .px675t, .case_search .px675t {
+  .case_view .px675t, .case_search .px675t, .search_view .px675t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 625px; }
-  .case_view .px650, .case_search .px650 {
+  .case_view .px650, .case_search .px650, .search_view .px650 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 600px; }
-  .case_view .px650t, .case_search .px650t {
+  .case_view .px650t, .case_search .px650t, .search_view .px650t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 600px; }
-  .case_view .px550, .case_search .px550 {
+  .case_view .px550, .case_search .px550, .search_view .px550 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 500px; }
-  .case_view .px550t, .case_search .px550t {
+  .case_view .px550t, .case_search .px550t, .search_view .px550t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 500px; }
-  .case_view .px500, .case_search .px500 {
+  .case_view .px500, .case_search .px500, .search_view .px500 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 450px; }
-  .case_view .px500t, .case_search .px500t {
+  .case_view .px500t, .case_search .px500t, .search_view .px500t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 450px; }
-  .case_view .px450, .case_search .px450 {
+  .case_view .px450, .case_search .px450, .search_view .px450 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 400px; }
-  .case_view .px450t, .case_search .px450t {
+  .case_view .px450t, .case_search .px450t, .search_view .px450t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 400px; }
-  .case_view .px440, .case_search .px440 {
+  .case_view .px440, .case_search .px440, .search_view .px440 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 390px; }
-  .case_view .px440t, .case_search .px440t {
+  .case_view .px440t, .case_search .px440t, .search_view .px440t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 390px; }
-  .case_view .px400, .case_search .px400 {
+  .case_view .px400, .case_search .px400, .search_view .px400 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 350px; }
-  .case_view .px400t, .case_search .px400t {
+  .case_view .px400t, .case_search .px400t, .search_view .px400t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 350px; }
-  .case_view .px375, .case_search .px375 {
+  .case_view .px375, .case_search .px375, .search_view .px375 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 325px; }
-  .case_view .px375t, .case_search .px375t {
+  .case_view .px375t, .case_search .px375t, .search_view .px375t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 325px; }
-  .case_view .px350, .case_search .px350 {
+  .case_view .px350, .case_search .px350, .search_view .px350 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 300px; }
-  .case_view .px350t, .case_search .px350t {
+  .case_view .px350t, .case_search .px350t, .search_view .px350t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 300px; }
-  .case_view .px340, .case_search .px340 {
+  .case_view .px340, .case_search .px340, .search_view .px340 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 290px; }
-  .case_view .px340t, .case_search .px340t {
+  .case_view .px340t, .case_search .px340t, .search_view .px340t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 290px; }
-  .case_view .px325, .case_search .px325 {
+  .case_view .px325, .case_search .px325, .search_view .px325 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 275px; }
-  .case_view .px325t, .case_search .px325t {
+  .case_view .px325t, .case_search .px325t, .search_view .px325t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 275px; }
-  .case_view .px300, .case_search .px300 {
+  .case_view .px300, .case_search .px300, .search_view .px300 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 250px; }
-  .case_view .px300t, .case_search .px300t {
+  .case_view .px300t, .case_search .px300t, .search_view .px300t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 250px; }
-  .case_view .px250, .case_search .px250 {
+  .case_view .px250, .case_search .px250, .search_view .px250 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 200px; }
-  .case_view .px250t, .case_search .px250t {
+  .case_view .px250t, .case_search .px250t, .search_view .px250t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 200px; }
-  .case_view .px200, .case_search .px200 {
+  .case_view .px200, .case_search .px200, .search_view .px200 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 150px; }
-  .case_view .px200t, .case_search .px200t {
+  .case_view .px200t, .case_search .px200t, .search_view .px200t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 150px; }
-  .case_view .px150, .case_search .px150 {
+  .case_view .px150, .case_search .px150, .search_view .px150 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 100px; }
-  .case_view .px150t, .case_search .px150t {
+  .case_view .px150t, .case_search .px150t, .search_view .px150t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 100px; }
-  .case_view .px100, .case_search .px100 {
+  .case_view .px100, .case_search .px100, .search_view .px100 {
     float: left;
     margin-left: 0;
     margin-right: 50px;
     width: 50px; }
-  .case_view .px100t, .case_search .px100t {
+  .case_view .px100t, .case_search .px100t, .search_view .px100t {
     float: left;
     margin-left: 0;
     margin-right: 34px;
     width: 50px; }
-  .case_view .pxcheck, .case_search .pxcheck {
+  .case_view .pxcheck, .case_search .pxcheck, .search_view .pxcheck {
     float: left;
     margin-left: 0;
     margin-right: 25px;
     width: 25px; }
-  .case_view .px50, .case_search .px50 {
+  .case_view .px50, .case_search .px50, .search_view .px50 {
     float: left;
     margin-left: 0;
     margin-right: 25px;
     width: 25px; }
-  .case_view .px25, .case_search .px25 {
+  .case_view .px25, .case_search .px25, .search_view .px25 {
     float: left;
     margin-left: 0;
     margin-right: 25px;
     width: 25px; }
-  .case_view .indent25, .case_search .indent25 {
+  .case_view .indent25, .case_search .indent25, .search_view .indent25 {
     float: left;
     margin-left: 0;
     margin-right: 0;
     width: 25px; }
-  .case_view .px75n, .case_search .px75n {
+  .case_view .px75n, .case_search .px75n, .search_view .px75n {
     float: left;
     margin-left: 0;
     margin-right: 20px;
     width: 55px; }
-  .case_view .px75nt, .case_search .px75nt {
+  .case_view .px75nt, .case_search .px75nt, .search_view .px75nt {
     float: left;
     margin-left: 0;
     margin-right: 4px;
     width: 55px; }
-  .case_view .px100n, .case_search .px100n {
+  .case_view .px100n, .case_search .px100n, .search_view .px100n {
     float: left;
     margin-left: 0;
     margin-right: 20px;
     width: 80px; }
-  .case_view .px100nt, .case_search .px100nt {
+  .case_view .px100nt, .case_search .px100nt, .search_view .px100nt {
     float: left;
     margin-left: 0;
     margin-right: 4px;
     width: 80px; }
-  .case_view .px125n, .case_search .px125n {
+  .case_view .px125n, .case_search .px125n, .search_view .px125n {
     float: left;
     margin-left: 0;
     margin-right: 20px;
     width: 105px; }
-  .case_view .px125nt, .case_search .px125nt {
+  .case_view .px125nt, .case_search .px125nt, .search_view .px125nt {
     float: left;
     margin-left: 0;
     margin-right: 4px;
     width: 105px; }
-  .case_view .px150n, .case_search .px150n {
+  .case_view .px150n, .case_search .px150n, .search_view .px150n {
     float: left;
     margin-left: 0;
     margin-right: 20px;
     width: 130px; }
-  .case_view .px150nr, .case_search .px150nr {
+  .case_view .px150nr, .case_search .px150nr, .search_view .px150nr {
     float: left;
     margin-left: 0;
     margin-right: 20px;
     text-align: right;
     width: 130px; }
-  .case_view .px150nt, .case_search .px150nt {
+  .case_view .px150nt, .case_search .px150nt, .search_view .px150nt {
     float: left;
     margin-left: 0;
     margin-right: 4px;
     width: 130px; }
-  .case_view .px160n, .case_search .px160n {
+  .case_view .px160n, .case_search .px160n, .search_view .px160n {
     float: left;
     margin-left: 0;
     margin-right: 20px;
     width: 140px; }
-  .case_view .px160nt, .case_search .px160nt {
+  .case_view .px160nt, .case_search .px160nt, .search_view .px160nt {
     float: left;
     margin-left: 0;
     margin-right: 4px;
     width: 140px; }
-  .case_view .px200n, .case_search .px200n {
+  .case_view .px200n, .case_search .px200n, .search_view .px200n {
     float: left;
     margin-left: 0;
     margin-right: 20px;
     width: 180px; }
-  .case_view .px200nt, .case_search .px200nt {
+  .case_view .px200nt, .case_search .px200nt, .search_view .px200nt {
     float: left;
     margin-left: 0;
     margin-right: 4px;
     width: 180px; }
-  .case_view .px250n, .case_search .px250n {
+  .case_view .px250n, .case_search .px250n, .search_view .px250n {
     float: left;
     margin-left: 0;
     margin-right: 20px;
     width: 230px; }
-  .case_view .px250nt, .case_search .px250nt {
+  .case_view .px250nt, .case_search .px250nt, .search_view .px250nt {
     float: left;
     margin-left: 0;
     margin-right: 4px;
     width: 230px; }
-  .case_view label, .case_search label {
+  .case_view label, .case_search label, .search_view label {
     line-height: 25px;
     margin-bottm: 5px; }
 
-.case_search {
-  width: 100%; }
-
 .src_header ul {
-  width: 100%; }
+  padding-left: 20px;
+  width: 988px;
+  margin: 0 auto; }
 
 .src_search ul {
-  width: 100%; }
+  padding-left: 20px;
+  width: 988px;
+  margin: 0 auto; }
 
 .src_search input {
   height: 35px; }
+
+.search_view {
+  width: 100%; }
