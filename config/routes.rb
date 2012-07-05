@@ -1,6 +1,8 @@
 Acm1::Application.routes.draw do
   
 
+  resources :scans
+
   resources :surgs
 
   resources :locs

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 7) do
+ActiveRecord::Schema.define(:version => 8) do
 
   create_table "addps", :force => true do |t|
     t.string   "addcode",    :limit => 50
@@ -162,6 +162,22 @@ ActiveRecord::Schema.define(:version => 7) do
     t.string   "cat3",       :limit => 50
     t.string   "cat4",       :limit => 50
     t.string   "cat5",       :limit => 50
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "scans", :force => true do |t|
+    t.string   "caseid",         :limit => 50
+    t.string   "time_sqequence", :limit => 50
+    t.string   "orig_filename",  :limit => 100
+    t.string   "final_filename", :limit => 100
+    t.string   "patid",          :limit => 50
+    t.string   "plname",         :limit => 50
+    t.string   "pfname",         :limit => 50
+    t.string   "avitar",         :limit => 100
+    t.string   "res1",           :limit => 50
+    t.string   "res2",           :limit => 50
+    t.string   "res3",           :limit => 50
     t.datetime "created_at"
     t.datetime "updated_at"
   end

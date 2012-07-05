@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Caseid:</b>
+  <%= @scan.caseid %>
+</p>
+
+<p>
+  <b>Time sqequence:</b>
+  <%= @scan.time_sqequence %>
+</p>
+
+<p>
+  <b>Orig filename:</b>
+  <%= @scan.orig_filename %>
+</p>
+
+<p>
+  <b>Final filename:</b>
+  <%= @scan.final_filename %>
+</p>
+
+<p>
+  <b>Patid:</b>
+  <%= @scan.patid %>
+</p>
+
+<p>
+  <b>Plname:</b>
+  <%= @scan.plname %>
+</p>
+
+<p>
+  <b>Pfname:</b>
+  <%= @scan.pfname %>
+</p>
+
+<p>
+  <b>Avitar:</b>
+  <%= @scan.avitar %>
+</p>
+
+<p>
+  <b>Res1:</b>
+  <%= @scan.res1 %>
+</p>
+
+<p>
+  <b>Res2:</b>
+  <%= @scan.res2 %>
+</p>
+
+<p>
+  <b>Res3:</b>
+  <%= @scan.res3 %>
+</p>
+
+
+<%= link_to 'Edit', edit_scan_path(@scan) %> |
+<%= link_to 'Back', scans_path %>

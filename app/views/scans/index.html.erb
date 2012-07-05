@@ -1,0 +1,43 @@
+<h1>Listing scans</h1>
+
+<table>
+  <tr>
+    <th>Caseid</th>
+    <th>Time sqequence</th>
+    <th>Orig filename</th>
+    <th>Final filename</th>
+    <th>Patid</th>
+    <th>Plname</th>
+    <th>Pfname</th>
+    <th>Avitar</th>
+    <th>Res1</th>
+    <th>Res2</th>
+    <th>Res3</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @scans.each do |scan| %>
+  <tr>
+    <td><%= scan.caseid %></td>
+    <td><%= scan.time_sqequence %></td>
+    <td><%= scan.orig_filename %></td>
+    <td><%= scan.final_filename %></td>
+    <td><%= scan.patid %></td>
+    <td><%= scan.plname %></td>
+    <td><%= scan.pfname %></td>
+    <td><%= scan.avitar %></td>
+    <td><%= scan.res1 %></td>
+    <td><%= scan.res2 %></td>
+    <td><%= scan.res3 %></td>
+    <td><%= link_to 'Show', scan %></td>
+    <td><%= link_to 'Edit', edit_scan_path(scan) %></td>
+    <td><%= link_to 'Destroy', scan, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Scan', new_scan_path %>

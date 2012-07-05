@@ -1,0 +1,61 @@
+<%= form_for(@scan) do |f| %>
+  <% if @scan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scan.errors.count, "error") %> prohibited this scan from being saved:</h2>
+
+      <ul>
+      <% @scan.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :caseid %><br />
+    <%= f.text_field :caseid %>
+  </div>
+  <div class="field">
+    <%= f.label :time_sqequence %><br />
+    <%= f.text_field :time_sqequence %>
+  </div>
+  <div class="field">
+    <%= f.label :orig_filename %><br />
+    <%= f.text_field :orig_filename %>
+  </div>
+  <div class="field">
+    <%= f.label :final_filename %><br />
+    <%= f.text_field :final_filename %>
+  </div>
+  <div class="field">
+    <%= f.label :patid %><br />
+    <%= f.text_field :patid %>
+  </div>
+  <div class="field">
+    <%= f.label :plname %><br />
+    <%= f.text_field :plname %>
+  </div>
+  <div class="field">
+    <%= f.label :pfname %><br />
+    <%= f.text_field :pfname %>
+  </div>
+  <div class="field">
+    <%= f.label :avitar %><br />
+    <%= f.text_field :avitar %>
+  </div>
+  <div class="field">
+    <%= f.label :res1 %><br />
+    <%= f.text_field :res1 %>
+  </div>
+  <div class="field">
+    <%= f.label :res2 %><br />
+    <%= f.text_field :res2 %>
+  </div>
+  <div class="field">
+    <%= f.label :res3 %><br />
+    <%= f.text_field :res3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

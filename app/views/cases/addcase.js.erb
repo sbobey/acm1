@@ -69,30 +69,30 @@ $('#dialogmaindiv').html("<%= escape_javascript(render :partial => 'cases/addcas
 $('#casescrolldiv').html("<%= escape_javascript(render :partial => 'cases/form')%>");
 
 
-			alert("Page LOAD");
-			var WebTWAIN = document.embeds[0];
-			WebTWAIN.SelectSourceByIndex(0);
-			WebTWAIN.CloseSource();	 
-			WebTWAIN.OpenSource();
-			WebTWAIN.IfShowUI = 0;
-			WebTWAIN.PixelType = 0;  
-			WebTWAIN.Resolution = 100;
-			WebTWAIN.IfFeederEnabled = 0;
-			WebTWAIN.IfDuplexEnabled = 0 ;
-			WebTWAIN.IfDisableSourceAfterAcquire = false;
+//			alert("Page LOAD");
+//			var WebTWAIN = document.embeds[0];
+//			WebTWAIN.SelectSourceByIndex(0);
+//			WebTWAIN.CloseSource();	 
+//			WebTWAIN.OpenSource();
+//			WebTWAIN.IfShowUI = 0;
+//			WebTWAIN.PixelType = 0;  
+//			WebTWAIN.Resolution = 100;
+//			WebTWAIN.IfFeederEnabled = 0;
+//			WebTWAIN.IfDuplexEnabled = 0 ;
+//			WebTWAIN.IfDisableSourceAfterAcquire = false;
 			
-			WebTWAIN.Capability = 'CAP_DUPLEX';
+//			WebTWAIN.Capability = 'CAP_DUPLEX';
 //			alert(WebTWAIN.CapType);
 //            alert(WebTWAIN.CapValue);
 			
-			if (WebTWAIN.CapValue == 0){
+//			if (WebTWAIN.CapValue == 0){
 //				alert('false');
-			}else{
+//			}else{
 //				alert('true');
-			}	
+//			}	
 			
-			var buffct = WebTWAIN.HowManyImagesInBuffer;
-            alert("BUFFCT " + buffct);			
+//			var buffct = WebTWAIN.HowManyImagesInBuffer;
+//          alert("BUFFCT " + buffct);			
 			
 
 

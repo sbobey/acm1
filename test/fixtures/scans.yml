@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  caseid: MyString
+  time_sqequence: MyString
+  orig_filename: MyString
+  final_filename: MyString
+  patid: MyString
+  plname: MyString
+  pfname: MyString
+  avitar: MyString
+  res1: MyString
+  res2: MyString
+  res3: 
+
+two:
+  caseid: MyString
+  time_sqequence: MyString
+  orig_filename: MyString
+  final_filename: MyString
+  patid: MyString
+  plname: MyString
+  pfname: MyString
+  avitar: MyString
+  res1: MyString
+  res2: MyString
+  res3: 
