@@ -3655,17 +3655,17 @@ body {
   .case_view .pxfull, .case_search .pxfull, .search_view .pxfull {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 750px; }
   .case_view .px725t, .case_search .px725t, .search_view .px725t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 675px; }
   .case_view .px675t, .case_search .px675t, .search_view .px675t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 625px; }
   .case_view .px650, .case_search .px650, .search_view .px650 {
     float: left;
@@ -3675,7 +3675,7 @@ body {
   .case_view .px650t, .case_search .px650t, .search_view .px650t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 600px; }
   .case_view .px550, .case_search .px550, .search_view .px550 {
     float: left;
@@ -3685,7 +3685,7 @@ body {
   .case_view .px550t, .case_search .px550t, .search_view .px550t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 500px; }
   .case_view .px500, .case_search .px500, .search_view .px500 {
     float: left;
@@ -3695,7 +3695,7 @@ body {
   .case_view .px500t, .case_search .px500t, .search_view .px500t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 450px; }
   .case_view .px450, .case_search .px450, .search_view .px450 {
     float: left;
@@ -3705,7 +3705,7 @@ body {
   .case_view .px450t, .case_search .px450t, .search_view .px450t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 400px; }
   .case_view .px440, .case_search .px440, .search_view .px440 {
     float: left;
@@ -3715,7 +3715,7 @@ body {
   .case_view .px440t, .case_search .px440t, .search_view .px440t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 390px; }
   .case_view .px400, .case_search .px400, .search_view .px400 {
     float: left;
@@ -3725,7 +3725,7 @@ body {
   .case_view .px400t, .case_search .px400t, .search_view .px400t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 350px; }
   .case_view .px375, .case_search .px375, .search_view .px375 {
     float: left;
@@ -3735,7 +3735,7 @@ body {
   .case_view .px375t, .case_search .px375t, .search_view .px375t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 325px; }
   .case_view .px350, .case_search .px350, .search_view .px350 {
     float: left;
@@ -3745,7 +3745,7 @@ body {
   .case_view .px350t, .case_search .px350t, .search_view .px350t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 300px; }
   .case_view .px340, .case_search .px340, .search_view .px340 {
     float: left;
@@ -3755,7 +3755,7 @@ body {
   .case_view .px340t, .case_search .px340t, .search_view .px340t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 290px; }
   .case_view .px325, .case_search .px325, .search_view .px325 {
     float: left;
@@ -3765,7 +3765,7 @@ body {
   .case_view .px325t, .case_search .px325t, .search_view .px325t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 275px; }
   .case_view .px300, .case_search .px300, .search_view .px300 {
     float: left;
@@ -3775,7 +3775,7 @@ body {
   .case_view .px300t, .case_search .px300t, .search_view .px300t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 250px; }
   .case_view .px250, .case_search .px250, .search_view .px250 {
     float: left;
@@ -3785,7 +3785,7 @@ body {
   .case_view .px250t, .case_search .px250t, .search_view .px250t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 200px; }
   .case_view .px200, .case_search .px200, .search_view .px200 {
     float: left;
@@ -3795,7 +3795,7 @@ body {
   .case_view .px200t, .case_search .px200t, .search_view .px200t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 150px; }
   .case_view .px150, .case_search .px150, .search_view .px150 {
     float: left;
@@ -3805,7 +3805,7 @@ body {
   .case_view .px150t, .case_search .px150t, .search_view .px150t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 100px; }
   .case_view .px100, .case_search .px100, .search_view .px100 {
     float: left;
@@ -3815,7 +3815,7 @@ body {
   .case_view .px100t, .case_search .px100t, .search_view .px100t {
     float: left;
     margin-left: 0;
-    margin-right: 34px;
+    margin-right: 30px;
     width: 50px; }
   .case_view .pxcheck, .case_search .pxcheck, .search_view .pxcheck {
     float: left;
