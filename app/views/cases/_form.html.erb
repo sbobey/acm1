@@ -3,8 +3,12 @@
 
 function getscan(){
 	alert("GET SCAN");
+	
 	var buffct = WebTWAIN.HowManyImagesInBuffer;
-    alert("Pre Scan PAGES " + buffct);			
+    alert("Pre Scan PAGES " + buffct);
+	
+			WebTWAIN.PixelType = 0;  
+			WebTWAIN.Resolution = 100;
 	
     WebTWAIN.AcquireImage();
 }
