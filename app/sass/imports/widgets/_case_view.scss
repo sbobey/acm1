@@ -3,7 +3,7 @@
 .case_view {
 	margin: 0 auto;
 	width: 960px;
-    
+	
 	.center {
 		text-align: center;
 	}
@@ -82,10 +82,10 @@
 		background-color:#0b75b2;}
 	
 	
-	
 	.table_data {
 		float: left;
 		width: 800px;
+		height: 425px;
 		.default_header {
 			tr {
 				background: scale-color($india_grey, $lightness: 51%);
@@ -132,7 +132,13 @@
 		margin-right: 30px;
 		width:675px;
 	}
-	
+	.px700t {
+	    float:left;
+		margin-left: 0;
+		margin-right: 30px;
+		width:650px;
+	}
+		
 	.px675t {
 	    float:left;
 		margin-left: 0;

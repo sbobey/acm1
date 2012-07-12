@@ -2115,7 +2115,7 @@ body {
       padding-left: 100px; }
 
 .scroll_box, .patient_display_data, .admin_view .table_data {
-  height: 420px;
+  height: 425px;
   overflow-y: auto;
   width: 800px;
   float: left; }
@@ -3623,7 +3623,8 @@ body {
     background-color: #0b75b2; }
   .case_view .table_data, .case_search .table_data, .search_view .table_data {
     float: left;
-    width: 800px; }
+    width: 800px;
+    height: 425px; }
     .case_view .table_data .default_header tr, .case_search .table_data .default_header tr, .search_view .table_data .default_header tr {
       background: #f3f3f3; }
       .case_view .table_data .default_header tr th, .case_search .table_data .default_header tr th, .search_view .table_data .default_header tr th {
@@ -3672,6 +3673,11 @@ body {
     margin-left: 0;
     margin-right: 30px;
     width: 675px; }
+  .case_view .px700t, .case_search .px700t, .search_view .px700t {
+    float: left;
+    margin-left: 0;
+    margin-right: 30px;
+    width: 650px; }
   .case_view .px675t, .case_search .px675t, .search_view .px675t {
     float: left;
     margin-left: 0;
