@@ -1,11 +1,56 @@
 class ScansController < ApplicationController
-
-
+ 
+   def saveaspdf
+	 puts "BEGIN saveaspdf:"
+	 mycaseid = params[:caseid]
+     puts "MYCASEIS: "
+     puts mycaseid
+	 mytime = Time.now.to_i
+	 		 
+     scan = Scan.new
+     scan.caseid = mycaseid
+	 scan.time_sqequence = mytime
+     scan.save
+     @myscan = Scan.where("caseid = ? and time_sqequence = ?", mycaseid ,mytime).first	 
+	 puts "MYSCAN SIZE: "
+     puts @myscan.caseid	
+	 puts @myscan.time_sqequence
+	 tmp = @myscan.id
+	 @myid = tmp.to_s.rjust(8, '0')
+	 @remotename = @myid[0,2] + "/" + @myid[2,2] + "/" + @myid[4,2] + "/" + @myid[6,2]
+     @localname = @myid + "-" + mycaseid + ".pdf"
+     puts "FILE NAMES: "
+     puts @remotename
+     puts @localname
+     @myscan.orig_filename = @localname 
+     @myscan.final_filename = @remotename   	 
+	 @myscan.update_attributes(@myscan)
+	 
+     puts "MYID: "
+     puts @myid	 
+     respond_to do |format|
+        format.js  
+	 end
+  end 
+ 
+  
+  def savescan  # not used - reference only
+	puts "BEGIN savescan:"
+    uploaded_io = params[:RemoteFile]
+	File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'w') do |file|
+		file.write(uploaded_io.read)
+	end
+    respond_to do |format|
+      format.html  { render :nothing => true }
+	end
+  end
+ 
+  
   
   def addscan
 	puts "BEGIN addscan:"
-	mycaseid = params[:id]
-    @scans = Scan.where("caseid = ?",mycaseid).order("caseid ASC")	
+	@mycaseid = params[:id]
+    @scans = Scan.where("caseid = ?",@mycaseid).order("caseid ASC")	
     puts "Size: "
     puts @scans.size	
  

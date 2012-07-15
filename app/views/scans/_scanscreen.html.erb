@@ -2,35 +2,31 @@
 <head>
 <script type="text/javascript">
 
+
+var WebTWAIN = document.embeds[0];
+WebTWAIN.SelectSourceByIndex(0);
+WebTWAIN.CloseSource();
+WebTWAIN.OpenSource();
+WebTWAIN.IfShowUI = 0;
+WebTWAIN.PixelType = 0;  
+WebTWAIN.Resolution = 100;
+WebTWAIN.IfFeederEnabled = 0;
+WebTWAIN.IfDuplexEnabled = 0 ;
+
+
+
 function getscan(){
-
-	alert("Press Enter to Load Scanner: ");
-	var WebTWAIN = document.embeds[0];
-	WebTWAIN.SelectSourceByIndex(0);
-	WebTWAIN.CloseSource();	 
-	WebTWAIN.OpenSource();
-			
-	WebTWAIN.IfShowUI = 0;
-	WebTWAIN.PixelType = 0;  
-	WebTWAIN.Resolution = 100;
-	WebTWAIN.IfFeederEnabled = 0;
-	WebTWAIN.IfDuplexEnabled = 0 ;
-	WebTWAIN.IfDisableSourceAfterAcquire = true;
-	var buffct = WebTWAIN.HowManyImagesInBuffer;
-
-	var buffct = WebTWAIN.HowManyImagesInBuffer;
-    alert("Pre Scan PAGES " + buffct);	
 	
+	var buffct = WebTWAIN.HowManyImagesInBuffer;
     WebTWAIN.AcquireImage();
 }
 
-function savepages(){
-	alert("Save PAGES");
-	var WebTWAIN = document.embeds[0];
-	var buffct = WebTWAIN.HowManyImagesInBuffer;
-    alert("CURRENT PAGES " + buffct);			
-	var err = WebTWAIN.SaveAllAsPDF("/temp3/test.pdf");
-    alert(WebTWAIN.errorstring);
+
+
+function saveaspdf(){
+
+ $.ajax({url: '/scans/saveaspdf/?caseid=' + <%=@mycaseid%> ,dataType: 'script'});
+ 
 }
 
 
@@ -39,10 +35,13 @@ function savepages(){
 
 
 
-
-
-
 <div class="admin_view" id="adminview">
+
+		<EMBED
+			TYPE="Application/DynamicWebTwain-Plugin"
+			WIDTH="0"
+			HEIGHT="0"
+		</EMBED>
 
   		<div class="modal_header">
 			<div id="scanbanner" class="detail_header">ADMIN</div>
@@ -54,8 +53,8 @@ function savepages(){
         <div class="left_controls">
             <nav class="bookmark_nav">
                 <ul>
-                    <li><a id="scanpage" onclick="getscan();" data-remote="true" href="#">Scan Page</a><span></span></li>
-                    <li><a id="scansave" onclick="savepages();" data-remote="true" href="#">Scan Save</a><span></span></li>
+                    <li><a id="scanpage" onclick="getscan();" data-remote="true" >Scan Page</a><span></span></li>
+                    <li><a id="scansave" onclick="saveaspdf();" data-remote="true" >Scan Save</a><span></span></li>
                 </ul>
             </nav>
 			

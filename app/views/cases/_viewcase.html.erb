@@ -28,7 +28,7 @@
 			<br>
 			<br>
 			<br>
-			<%= button_to 'Add Scan', { :controller => 'scans', :action => 'addscan', :id => @case.id }, :remote => true %>		
+			<%= button_to 'Add Scan', { :controller => 'scans', :action => 'addscan', :id => @case.id, :caseid => @case.caseid }, :remote => true %>		
 			<br>
 			<br>
 			<!--<button onclick="getscan();">Add Scan</button>-->
