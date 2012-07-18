@@ -2,22 +2,27 @@
 <head>
 <script type="text/javascript">
 
-
 var WebTWAIN = document.embeds[0];
-WebTWAIN.SelectSourceByIndex(0);
-WebTWAIN.CloseSource();
-WebTWAIN.OpenSource();
-WebTWAIN.IfShowUI = 0;
-WebTWAIN.PixelType = 0;  
-WebTWAIN.Resolution = 100;
-WebTWAIN.IfFeederEnabled = 0;
-WebTWAIN.IfDuplexEnabled = 0 ;
-
-
 
 function getscan(){
+
+	WebTWAIN.SelectSourceByIndex(0);
+	WebTWAIN.CloseSource();
+	WebTWAIN.OpenSource();
+	WebTWAIN.IfShowUI = 0;
+	WebTWAIN.PixelType = 0;  
+	WebTWAIN.Resolution = 100;
+	WebTWAIN.IfFeederEnabled = 0;
+	WebTWAIN.IfDuplexEnabled = 0 ;
+
+//	var buffct = WebTWAIN.HowManyImagesInBuffer;
+//	var mystat = WebTWAIN.DataSourceStatus;
+//	var mysource = WebTWAIN.CurrentSourceName;
 	
-	var buffct = WebTWAIN.HowManyImagesInBuffer;
+//	alert("Current Buffer: " + buffct);
+//	alert("Current Status: " + mystat);
+//	alert("Current Source: " + mysource);
+
     WebTWAIN.AcquireImage();
 }
 
@@ -25,7 +30,8 @@ function getscan(){
 
 function saveaspdf(){
 
- $.ajax({url: '/scans/saveaspdf/?caseid=' + <%=@mycaseid%> ,dataType: 'script'});
+
+ $.ajax({url: '/scans/saveaspdf/?caseid=' + '<%=@mycaseid%>' ,dataType: 'script'});
  
 }
 
@@ -53,8 +59,8 @@ function saveaspdf(){
         <div class="left_controls">
             <nav class="bookmark_nav">
                 <ul>
-                    <li><a id="scanpage" onclick="getscan();" data-remote="true" >Scan Page</a><span></span></li>
-                    <li><a id="scansave" onclick="saveaspdf();" data-remote="true" >Scan Save</a><span></span></li>
+                    <li><a id="scanpage" onclick="getscan();" data-remote="false" >Scan Page</a><span></span></li>
+                    <li><a id="scansave" onclick="saveaspdf();" data-remote="false" >Scan Save</a><span></span></li>
                 </ul>
             </nav>
 			
