@@ -6,7 +6,8 @@
 					<td class="px100n"> <%= scan.plname          %> </td>
 					<td class="px100n"> <%= scan.pfname          %> </td>
 					<td class="px250n"> <%= scan.res1           %> </td>
-					<td class="px200n"> <%= scan.final_filename %> </td>
+					<td class="px200n"> <%= link_to scan.final_filename, { :controller => 'scans', :action => 'viewscan', :myfile => scan.final_filename }, :target => '_blank' %> </td> 	
+
 
 				</tr>
 

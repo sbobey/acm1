@@ -41,6 +41,8 @@ Acm1::Application.routes.draw do
   match "/cases/update"		  => "cases#update"
   match "/scans/addscan"	  => "scans#addscan"
   match "/scans/saveaspdf"	  => "scans#saveaspdf"
+  match "/scans/setscan"	  => "scans#setscan"
+  match "/scans/viewscan"	  => "scans#viewscan"
   
   resources :cases
   resources :scans

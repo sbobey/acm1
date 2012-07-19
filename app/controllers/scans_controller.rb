@@ -3,6 +3,7 @@ class ScansController < ApplicationController
    def saveaspdf
 	 puts "BEGIN saveaspdf:"
 	 mycaseid = params[:caseid]
+	 @mycaseid = mycaseid
      puts "MYCASEIS: "
      puts mycaseid
 	 mytime = Time.now.to_i
@@ -33,6 +34,38 @@ class ScansController < ApplicationController
 	 end
   end 
  
+  def viewscan
+ 	 @fname = params[:myfile]
+	 @fname = "/data/acmscans/" + @fname
+	 puts "FILENAME: "
+	 puts @fname
+	 puts "EXISTS ?"
+	 puts FileTest.exists?(@fname)
+	 
+	 if FileTest.exists?(@fname)
+       send_file(@fname, :type => 'application/pdf', :disposition => 'inline')
+     else
+	   pdf = Prawn::Document.new
+       pdf.text "File Could Not Be Found: " + @fname
+	   pdf.text " "
+	   pdf.text @fname 
+	   pdf.render_file @fname
+       send_file(@fname, :type => 'application/pdf', :disposition => 'inline')
+	 end 
+  end
+
+  def setscan
+	puts "BEGIN setscan:"
+	@mycaseid = params[:caseid]
+    @scans = Scan.where("caseid = ?",@mycaseid).order("caseid ASC")	
+    puts "Size: "
+    puts @scans.size	
+ 
+    respond_to do |format|
+      format.js 
+      format.xml  { render :xml => @scans }
+    end
+  end
   
   
   def addscan

@@ -1,6 +1,29 @@
 
 <head>
+
+<EMBED
+	TYPE="Application/DynamicWebTwain-Plugin"
+	WIDTH="0"
+	HEIGHT="0"
+</EMBED>
+
 <script type="text/javascript">
+
+	
+	var WebTWAIN = document.embeds[0];
+	WebTWAIN.OpenSourceManager();
+	WebTWAIN.SelectSource();
+	WebTWAIN.CloseSource();
+	WebTWAIN.OpenSource();
+//	WebTWAIN.SelectSourceByIndex(0);
+//	WebTWAIN.CloseSource();
+//	WebTWAIN.OpenSource();
+	WebTWAIN.IfShowUI = 0;
+	WebTWAIN.PixelType = 0;  
+	WebTWAIN.Resolution = 100;
+	WebTWAIN.IfFeederEnabled = 0;
+	WebTWAIN.IfDuplexEnabled = 0 ;
+
 
 	var mykeys = /[A-Za-z\,\.1234567890 ]/g;
 	
@@ -67,9 +90,7 @@
 </head>
 
 
-
 <div class="search_body">
-
 
 <div class="search_view">
 	<div class="menu_top">

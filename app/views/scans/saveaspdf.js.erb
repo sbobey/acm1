@@ -2,13 +2,24 @@
 
 
 	var name = '<%=@localname%>';
-	name = 'c:\\acmscans\\' + name
+	name = 'c:\\acmscans\\' + name;
 
 
 	var buffct = WebTWAIN.HowManyImagesInBuffer;
+	alert("BEFORE DUMP ALL BUFFER CT: " + buffct);
 
-    err = WebTWAIN.SaveAllAsPDF(name)
+    WebTWAIN.SaveAllAsPDF(name);
 
-	dlogscanclose();
+	WebTWAIN.RemoveAllImages();
+			
+	buffct2 = WebTWAIN.HowManyImagesInBuffer;
+	
+	alert("AFTER DUMP ALL BUFFER CT: " + buffct2);
+	
+
+//	dlogscanclose();
+
+ $.ajax({url: '/scans/setscan/?caseid=' + '<%=@mycaseid%>' ,dataType: 'script'});
+
 
 
