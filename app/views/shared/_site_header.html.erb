@@ -13,20 +13,20 @@ function goadmin(){
 <head/>
 
 <header class="site_header">
-	<div class="logo"><span class="health">Anestheisa</span><span class="data">Case</span><br><span class="archiver">Manager</span></div>
-	<div class="utility_nav">
+	<div class="logo"><span class="health">Anestheisa</span><span class="data"> Case</span><br><span class="archiver">Manager</span></div>
+   <div class="utility_nav">
 		<ol>
 			<li role="username"><%= session[:myname] %></li>
-			<li role="reports_icon" title="Reports"><a href="#">1</a></li>
+		<!--<li role="reports_icon" title="Reports"><a href="#">1</a></li>-->
 			<!--li role="print_icon" title="Reports"><a href="#">p</a></li-->
 			<!-- li role="fax" title="fax results"><a href="#">3</a></li>
 			<li role="email" title="email results"><a href="#">r</a></li -->
-            <% if "%s" % session[:isadmin] == "1" %>
+            <!--<% if "%s" % session[:isadmin] == "1" %>
 				<li role="admin_icon" title="Application Admin"><a href="/pracs">C</a></li>
 			<% else %>
 				<li role="admin_icon" onclick="goadmin()" title="Application Admin"><a href="#">C</a></li>
-			<% end %>
-			<li role="search_icon" title="Patient Search"><a href="/patients/getpat">M</a></li>
+			<% end %>-->
+			<!--<li role="search_icon" title="Patient Search"><a href="/patients/getpat">M</a></li>-->
 			<li><button onclick="signout()" >sign out</button></li>
 		</ol>
 	</div>

@@ -40,10 +40,21 @@ $juliet_grey: scale-color($alpha_grey, $lightness: 100%);
 /////// OOCSS generic color blocks ////////
 // ----------------------------------------------
 $alpha_primary: #ec0036;    // red
+
 $bravo_primary: #59705d;    // green
+$bravo_primary: #597583;    // green
+
+
 $charlie_primary: #a2ad00;    // yellow
+$charlie_primary: #597583;    // yellow
+
 $delta_primary: #256ab1;    // blue
+//$delta_primary: #256ab1;    // blue
+
 $echo_primary: #fc6432;     // accent
+//$echo_primary: #fc6432;     // accent
+
+
 
 $alpha_color: $alpha_primary;
 $alpha_color_bravo: scale-color($alpha_color, $lightness: 10%);

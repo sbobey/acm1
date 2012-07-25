@@ -95,24 +95,24 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='white')"; }
 
 .echo_color_gradient {
-  background: #67816b;
-  background: -webkit-linear-gradient(top, #75927a 0%, #59705d 100%);
-  background: -moz-linear-gradient(top, #75927a 0%, #59705d 100%);
-  background: -o-linear-gradient(top, #75927a 0%, #59705d 100%);
-  background: -ms-linear-gradient(top, #75927a 0%, #59705d 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #75927a), color-stop(100%, #59705d));
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#75927a', endColorstr='#59705d');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#75927a', endColorstr='#59705d')"; }
+  background: #658494;
+  background: -webkit-linear-gradient(top, #7592a1 0%, #597583 100%);
+  background: -moz-linear-gradient(top, #7592a1 0%, #597583 100%);
+  background: -o-linear-gradient(top, #7592a1 0%, #597583 100%);
+  background: -ms-linear-gradient(top, #7592a1 0%, #597583 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7592a1), color-stop(100%, #597583));
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#7592a1', endColorstr='#597583');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#7592a1', endColorstr='#597583')"; }
 
 .fox_color_gradient {
-  background: #59705d;
-  background: -webkit-linear-gradient(top, #59705d 0%, #75927a 100%);
-  background: -moz-linear-gradient(top, #59705d 0%, #75927a 100%);
-  background: -o-linear-gradient(top, #59705d 0%, #75927a 100%);
-  background: -ms-linear-gradient(top, #59705d 0%, #75927a 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #59705d), color-stop(100%, #75927a));
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#59705d', endColorstr='#75927a');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#59705d', endColorstr='#75927a')"; }
+  background: #597583;
+  background: -webkit-linear-gradient(top, #597583 0%, #7592a1 100%);
+  background: -moz-linear-gradient(top, #597583 0%, #7592a1 100%);
+  background: -o-linear-gradient(top, #597583 0%, #7592a1 100%);
+  background: -ms-linear-gradient(top, #597583 0%, #7592a1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #597583), color-stop(100%, #7592a1));
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#597583', endColorstr='#7592a1');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#597583', endColorstr='#7592a1')"; }
 
 /* Greyscale color objects */
 /* ----------------------- */
@@ -182,64 +182,64 @@
   background-color: #ffe4ea; }
 
 .bravo_color {
-  background-color: #59705d; }
+  background-color: #597583; }
 
 .bravo_color_bravo {
-  background-color: #67816b; }
+  background-color: #658494; }
 
 .bravo_color_charlie {
-  background-color: #75927a; }
+  background-color: #7592a1; }
 
 .bravo_color_delta {
-  background-color: #869f8b; }
+  background-color: #86a0ad; }
 
 .bravo_color_echo {
-  background-color: #98ad9b; }
+  background-color: #97aeb9; }
 
 .bravo_color_fox {
-  background-color: #a9bbac; }
+  background-color: #a9bbc4; }
 
 .bravo_color_golf {
-  background-color: #bac8bd; }
+  background-color: #bac9d0; }
 
 .bravo_color_hotel {
-  background-color: #cbd6cd; }
+  background-color: #cbd6dc; }
 
 .bravo_color_india {
-  background-color: #dde4de; }
+  background-color: #dce4e8; }
 
 .bravo_color_juliet {
-  background-color: #eef1ee; }
+  background-color: #eef1f3; }
 
 .charlie_color {
-  background-color: #a2ad00; }
+  background-color: #597583; }
 
 .charlie_color_bravo {
-  background-color: #c2cf00; }
+  background-color: #658494; }
 
 .charlie_color_charlie {
-  background-color: #e1f000; }
+  background-color: #7592a1; }
 
 .charlie_color_delta {
-  background-color: #f0ff13; }
+  background-color: #86a0ad; }
 
 .charlie_color_echo {
-  background-color: #f2ff35; }
+  background-color: #97aeb9; }
 
 .charlie_color_fox {
-  background-color: #f4ff57; }
+  background-color: #a9bbc4; }
 
 .charlie_color_golf {
-  background-color: #f6ff78; }
+  background-color: #bac9d0; }
 
 .charlie_color_hotel {
-  background-color: #f9ff9a; }
+  background-color: #cbd6dc; }
 
 .charlie_color_india {
-  background-color: #fbffbc; }
+  background-color: #dce4e8; }
 
 .charlie_color_juliet {
-  background-color: #fdffdd; }
+  background-color: #eef1f3; }
 
 .delta_color {
   background-color: #256ab1; }
@@ -597,7 +597,7 @@
 /* big pull buttons with play icon option */
 /* -------------------------------------- */
 .big_pill_buttons button, .big_pill_buttons .button {
-  border: 0.083em solid #59705d;
+  border: 0.083em solid #597583;
   font-size: 1.833em;
   line-height: 1.5em;
   padding: 0.333em 0.833em;
@@ -690,7 +690,7 @@
   font-family: Arial, sans-serif; }
 
 .l_big_pill_buttons button, .l_big_pill_buttons .button {
-  border: 0.083em solid #59705d;
+  border: 0.083em solid #597583;
   font-size: 1.167em;
   line-height: 1.5em;
   padding: 0.333em 0.833em;
@@ -783,7 +783,7 @@
   font-family: Arial, sans-serif; }
 
 .xl_big_pill_buttons button, .xl_big_pill_buttons .button {
-  border: 0.083em solid #59705d;
+  border: 0.083em solid #597583;
   font-size: 1.333em;
   line-height: 1.5em;
   padding: 0.333em 0.833em;
@@ -876,7 +876,7 @@
   font-family: Arial, sans-serif; }
 
 .xxl_big_pill_buttons button, .xxl_big_pill_buttons .button {
-  border: 0.083em solid #59705d;
+  border: 0.083em solid #597583;
   font-size: 1.5em;
   line-height: 1.5em;
   padding: 0.333em 0.833em;
@@ -969,7 +969,7 @@
   font-family: Arial, sans-serif; }
 
 .xxxl_big_pill_buttons button, .xxxl_big_pill_buttons .button {
-  border: 0.083em solid #59705d;
+  border: 0.083em solid #597583;
   font-size: 1.667em;
   line-height: 1.5em;
   padding: 0.333em 0.833em;
@@ -1062,7 +1062,7 @@
   font-family: Arial, sans-serif; }
 
 .xxxxl_big_pill_buttons button, .xxxxl_big_pill_buttons .button {
-  border: 0.083em solid #59705d;
+  border: 0.083em solid #597583;
   font-size: 1.833em;
   line-height: 1.5em;
   padding: 0.333em 0.833em;
@@ -1155,7 +1155,7 @@
   font-family: Arial, sans-serif; }
 
 .big_pill_play_icons button, .big_pill_play_icons .button {
-  border: 0.083em solid #59705d;
+  border: 0.083em solid #597583;
   font-size: 1.833em;
   line-height: 1.5em;
   background: #fc7347;
@@ -1864,7 +1864,7 @@ body {
   .styleguide .primary_text {
     background-color: #333333; }
   .styleguide .href_color {
-    background-color: #a2ad00; }
+    background-color: #597583; }
   .styleguide .instructional_text {
     background-color: #4d4d4d; }
   .styleguide .error_text {
@@ -1896,11 +1896,11 @@ body {
   .styleguide .input_disabled_text {
     background-color: #b3b3b3; }
   .styleguide .ins_color {
-    background-color: #a2ad00; }
+    background-color: #597583; }
   .styleguide .mark_color {
-    background-color: #a2ad00; }
+    background-color: #597583; }
   .styleguide .selection_color {
-    background-color: #f2ff35; }
+    background-color: #97aeb9; }
   .styleguide .selection_text_color {
     background-color: #333333; }
   .styleguide .grid_960, .styleguide .grid_768, .styleguide .grid_320, .styleguide .grid_760 {

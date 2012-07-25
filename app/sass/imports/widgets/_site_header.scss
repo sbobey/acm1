@@ -1,9 +1,11 @@
 .site_header {
-	background: url(#{$imgDir}hda_header_bkg_swril.png) no-repeat 50% 33%, $bravo_grey;
+#	background: url(#{$imgDir}hda_header_bkg_swril.png) no-repeat 50% 33%, $bravo_grey;
 	.ie8 & {
-		background: url(#{$imgDir}hda_header_bkg_swril.png) no-repeat 50% 33%;
+#		background: url(#{$imgDir}hda_header_bkg_swril.png) no-repeat 50% 33%;
 	}
 	border-bottom: 3px solid $charlie_color;
+	margin-bottom: -19px;
+	
 	@extend .clearfix;
 	@include selector(height, 70);
 }
@@ -77,12 +79,14 @@
 	}
 	.data {
 		color: $charlie_color;
+		color: $bravo_color;
 		
 	}
 	.archiver {
 		font-family: $webfont_bravo;
 		color: $delta_color;
 		letter-spacing: -1px;
+		color: $bravo_color;
 	}
 }
 // refactor this into a reusable object
