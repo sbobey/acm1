@@ -2532,7 +2532,7 @@ body {
 
 .srp_table {
   width: 100%;
-  background: url(/images/no_search_badge.png) 50% 50% no-repeat white;
+  background: white !important;
   min-height: 41.667em; }
 
 .no_badge {

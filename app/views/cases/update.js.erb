@@ -1,5 +1,8 @@
 
-$('#dialogmaindiv').dialog('destroy').remove();
+//$('#dialogmaindiv').dialog('destroy').remove();
+//$.get("/cases/viewcase", {mysid: <%= @case.id %>} );
 
-$.get("/cases/viewcase", {mysid: <%= @case.id %>} );
+// above lines to refresh view --------------------------------------------
 
+$('#dialogmaindiv').html("<%= escape_javascript(render :partial => 'cases/viewcase')%>");
+$('#casescrolldiv').html("<%= escape_javascript(render :partial => 'cases/viewform')%>");

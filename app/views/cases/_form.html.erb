@@ -45,17 +45,17 @@ function postopblock_reset() {
     </div>
   <% end %>
 
-    <%= f.label :'PatientID:', {:class => "px250"} %>
-    <%= f.label :'CaseID:', {:class => "px250"} %>
+	<label class="px250">Patient MR#</label>
+ 	<label class="px250">Case ID</label>
     <br></br>
 
 	<%= f.text_field :patid1, {:class => "px250"} %>
     <%= f.text_field :caseid, {:class => "px250", :disabled => "true"} %>
     <br></br>
-
-    <%= f.label :'LastName:' , {:class => "px250"} %>
-    <%= f.label :'FirstName:' , {:class => "px250"} %>
-    <%= f.label :'Middle:' , {:class => "px100"} %>
+	
+	<label class="px250">LastName</label>
+ 	<label class="px250">FirstName</label>
+ 	<label class="px100">Middle</label>
     <br></br>
 	
     <%= f.text_field :plname, {:class => "px250"} %>
@@ -65,9 +65,9 @@ function postopblock_reset() {
 
     <%= f.hidden_field :psortname %>
 	
-    <%= f.label :'DOB:', {:class => "px150"} %>
-	<%= f.label :'Sex:', {:class => "px150"} %>
-    <%= f.label :'Ins category', {:class => "px200"} %>
+	<label class="px150">DOB</label>
+ 	<label class="px150">Gender</label>
+ 	<label class="px200">Ins Category</label>
     <br></br>
 
 	
@@ -83,22 +83,24 @@ function postopblock_reset() {
     <br></br>
     <br></br>
 <!----------------------------------------------------------------------------->	
+
+ 	<label class="px250">Anesthesiologist</label>
+ 	<label class="px250">CRNA</label>
+    <br></br>
 	
-    <%= f.label :servdt, {:class => "px150"}  %>
-    <%= f.label :surgeon, {:class => "px250"} %>
+    <%= f.text_field :anes_provider, {:class => "px250"} %>
+    <%= f.text_field :crna_provider, {:class => "px250"} %>
+    <br></br>
+
+	
+	<label class="px150">DOS</label>
+ 	<label class="px250">Surgeon</label>
     <br></br>
 	
 	<%= f.text_field :servdt, {:class => "px150"}  %>
     <%= f.text_field :surg_provider, {:class => "px250"} %>
     <br></br>
 	
-    <%= f.label :anes_provider, {:class => "px250"} %>
-    <%= f.label :crna_provider, {:class => "px250"} %>	
-    <br></br>
-	
-    <%= f.text_field :anes_provider, {:class => "px250"} %>
-    <%= f.text_field :crna_provider, {:class => "px250"} %>
-    <br></br>
 
 	<%= f.label :procedure, {:class => "pxfull"} %>
     <%= f.text_field :procedure, {:class => "pxfull"}  %>
@@ -108,7 +110,7 @@ function postopblock_reset() {
     <%= f.text_field :diagnosis, {:class => "pxfull"}  %>
     <br></br>
 
-    <%= f.label :loc, {:class => "px250"}  %>
+    <%= f.label :location, {:class => "px250"}  %>
     <%= f.label :start_time, {:class => "px200"} %>
     <%= f.label :end_time, {:class => "px200"} %>
     <br></br>
@@ -117,10 +119,10 @@ function postopblock_reset() {
     <%= f.text_field :start_time, {:class => "px200"} %>
     <%= f.text_field :end_time, {:class => "px200"} %>
     <br></br>
-
-    <%= f.label :'anes mode', {:class => "px250"}  %>
-	<%= f.label :'position', {:class => "px200"}  %>
-	<label class="px200">Physical state</label>
+ 	
+	<label class="px250">Anes Mode</label>
+	<%= f.label :'Position', {:class => "px200"}  %>
+	<label class="px200">ASA</label>
     <br></br>
 		
     <%= f.text_field :surg_anes_mode , {:class => "px250"}%>
@@ -131,7 +133,7 @@ function postopblock_reset() {
     <br></br>
 	
 <!------------------------------------------------------------------------------->
-	<%= f.label :'postop block indicated:', {:class => "px200n"} %>
+	<%= f.label :'Regional indicated:', {:class => "px200n"} %>
     <%= f.check_box :postop_block_req, {:onclick => "postopblock_reset();", :class => "check50px", :id => "post_op_block_check"} %>
 	<%= f.label :'Requested by:', {:class => "px150n"}  %>
     <%= f.text_field :postop_block_req, {:class => "px250n"}  %>
@@ -142,7 +144,7 @@ function postopblock_reset() {
  	<div id="postopblockgroup">
 		<%= f.label :'Interscalene:', {:class => "px100n"}  %>
 		<%= f.check_box :interscalene, {:class => "check50px"}  %>
-		<%= f.label :'Interscalene w/cat:', {:class => "px160n"}  %>
+		<%= f.label :'Interscalen w/cath:', {:class => "px160n"}  %>
 		<%= f.check_box :interscalene_cat, {:class => "check50px"}  %>
 		<br></br>
 
@@ -160,7 +162,7 @@ function postopblock_reset() {
 
 		<%= f.label :'Supraclav:', {:class => "px100n"}  %>
 		<%= f.check_box :supraclav, {:class => "check50px"}  %>
-		<%= f.label :'Supraclav w/cat:', {:class => "px160n"}  %>
+		<%= f.label :'Supraclav w/cath:', {:class => "px160n"}  %>
 		<%= f.check_box :supraclav_cat, {:class => "check50px"}  %>
 		<br></br>
 		
@@ -177,7 +179,7 @@ function postopblock_reset() {
 	
 		<%= f.label :'Infraclav:', {:class => "px100n"}  %>
 		<%= f.check_box :infraclav, {:class => "check50px"}  %>
-		<%= f.label :'Infraclav w/cat:', {:class => "px160n"}  %>
+		<%= f.label :'Infraclav w/cath:', {:class => "px160n"}  %>
 		<%= f.check_box :infraclav_cat, {:class => "check50px"}  %>
 		<br></br>
 	
@@ -199,7 +201,7 @@ function postopblock_reset() {
 		
 		<%= f.label :'Femoral:', {:class => "px100n"}  %>
 		<%= f.check_box :femoral, {:class => "check50px"}  %>
-		<%= f.label :'Femoral w/cat:', {:class => "px160n"}  %>
+		<%= f.label :'Femoral w/cath:', {:class => "px160n"}  %>
 		<%= f.check_box :femoral_cat, {:class => "check50px"}  %>
 		<br></br>
 	
@@ -216,7 +218,7 @@ function postopblock_reset() {
 
 		<%= f.label :'Sciatic:', {:class => "px100n"}  %>
 		<%= f.check_box :sciatic, {:class => "check50px"}  %>
-		<%= f.label :'Sciatic w/cat:', {:class => "px160n"}  %>
+		<%= f.label :'Sciatic w/cath:', {:class => "px160n"}  %>
 		<%= f.check_box :sciatic_cat, {:class => "check50px"}  %>
 		<br></br>
 	

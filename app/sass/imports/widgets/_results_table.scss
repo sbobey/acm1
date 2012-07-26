@@ -1,7 +1,8 @@
 .srp_table {
 	width: 100%;
 	//background: $white;
-	background: url(#{$imgDir}no_search_badge.png) 50% 50% no-repeat $white;
+	//background: url(#{$imgDir}no_search_badge.png) 50% 50% no-repeat $white;
+	background: $white !important;
 	min-height: #{500 / $em}em;
 	//background: $white;
 }
