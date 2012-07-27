@@ -41,7 +41,6 @@ module Acm1
 
 	config.active_record.timestamped_migrations = false	
 	
-	config.force_ssl = true
 	
   end
 end
