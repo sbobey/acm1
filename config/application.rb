@@ -40,7 +40,6 @@ module Acm1
     config.filter_parameters += [:password]
 
 	config.active_record.timestamped_migrations = false	
-	config.middleware.insert_before ActionDispatch::Static, "Rack::SSL"
 
 	
   end
