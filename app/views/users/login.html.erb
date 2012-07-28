@@ -1,0 +1,127 @@
+<head>
+<script type="text/javascript">
+
+// $(document).ready(function() {
+//     var $mydialog = $('#notes_list').dialog({ 
+//          autoOpen: false,
+//          width: 900,
+//          height: 500,
+//          title: ''
+//     });
+//     $('#notes_list_opener').click(function(){ // default open - remove click
+//         $mydialog.dialog('open');
+//     });
+//     
+//     var $mydialog_2 = $('#add_edit_notes').dialog({ 
+//          autoOpen: false,
+//          width: 900,
+//          height: 500,
+//          title: ''
+//     });
+//     $('#add_edit_notes_opener').click(function(){ // default open - remove click
+//         $mydialog_2.dialog('open');
+//     });
+//     
+//     var $mydialog_3 = $('#note_data').dialog({ 
+//          autoOpen: false,
+//          width: 900,
+//          height: 500,
+//          title: ''
+//     });
+//     $('#note_data_opener').click(function(){ // default open - remove click
+//         $mydialog_3.dialog('open');
+//     });
+//     
+//     var $mydialog_4 = $('#patient_data').dialog({ 
+//          autoOpen: false,
+//          width: 940,
+//          height: 600,
+//          title: ''
+//     });
+//     $('#patient_data_opener').click(function(){ // default open - remove click
+//         $mydialog_4.dialog('open');
+//     });
+// });
+
+//      $(document).ready(function() {
+//          var $dialog = $('<div></div>')
+//          .html('This dialog will show every time!')
+//          .dialog({
+//	        autoOpen: false,
+//	        title: 'Basic Dialog'
+//          });
+//          $('#opener').click(function(){ // default open - remove click
+//             $dialog.dialog('open');
+//          });
+//      );
+
+
+
+
+function passwdhelp(){
+   alert("Contact your administrator for assistance");
+}
+
+
+function checkclear(what){
+  if(! what._haschanged ){
+     what.value='';
+  }
+  what._haschanged=true;
+}
+
+function checkSubmit(e){
+   if (!e){
+      var e = window.event;
+   } 
+   if (e.keyCode){
+      code = e.keyCode;    // IE   
+   }else if (e.which){
+      code = e.which;      // Other browsers
+   }
+   if ( code == 13 ){
+	  validate();
+   }
+}
+
+function validate(){
+     myemail  = document.getElementById('email').value;
+     mypassword = document.getElementById('password').value;
+     $.ajax({url: '/users/auth/?login=' + myemail + '&password=' + mypassword ,dataType: 'script'});
+     document.getElementById('email').value="";
+     document.getElementById('password').value="";
+}
+
+</script>
+<head/>
+
+<div class="login_body">
+	<div class="login_form" onkeypress="checkSubmit(event);">
+		<input type="text" id="email" placeholder="Username" />
+		<input type="password" id="password" placeholder="Password" />
+		</br>
+		</br>
+		<button id=login onclick="validate();">Login</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#" onclick="passwdhelp()">Forgot password?</a>
+		</br>
+		</br>
+		<p id="feedback" style="color:red"></p>
+	</div>
+		
+</div>
+
+
+<!--
+<a id="notes_list_opener" href="#" >shared/_notes_list.html.erb</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a id="add_edit_notes_opener" href="#" >shared/_add_edit_note.html.erb</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a id="note_data_opener" href="#" >shared/_note_data.html.erb</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a id="patient_data_opener" href="#" >shared/_patient_data.html.erb</a>
+-->
+
+<%#= render :partial => 'shared/test_icon_fonts' %>
+<%#= render :partial => 'patients/notes_list' %>
+<%#= render :partial => 'patients/add_edit_note' %>
+<%#= render :partial => 'patients/note_data' %>
+<%#= render :partial => 'patients/patient_data' %>
+
+
+

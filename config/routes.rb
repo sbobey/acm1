@@ -12,7 +12,7 @@ Acm1::Application.routes.draw do
 
   resources :crnas
 
-  resources :users
+
 
   get "/axle" => "axle#grids"
   get "/axle/text" => "axle#text"
@@ -24,7 +24,7 @@ Acm1::Application.routes.draw do
   get "/axle/widgets/srp_header" => "axle#widgets_srpheader"
  
   match "/users/login"        => "users#login"
-  match "/users/auth/"        => "users#auth"
+  match "/users/auth"         => "users#auth"
   match "/users/logout"		  => "users#logout"
   match "/users/destroy"	  => "users#destroy"
   match "/cases/menu"		  => "cases#menu"
@@ -46,9 +46,9 @@ Acm1::Application.routes.draw do
   
   resources :cases
   resources :scans
-
+  resources :users
  
-  root :to => "cases#menu"
+  root :to => "users#login"
 
 
 

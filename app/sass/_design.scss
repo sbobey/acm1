@@ -64,9 +64,10 @@ body {
 	border: 0;
 	padding: 0;
 	.sub_footer {
-		background: url(#{$imgDir}sub_footer.gif);
+//		background: url(#{$imgDir}sub_footer.gif);
+        background-color: ($charlie_primary);
 		width: 100%;
-		height: #{80 / $em}em;
+		height: #{150 / $em}em;
 		.ie8 & {
 			margin-top: -20px;
 		}

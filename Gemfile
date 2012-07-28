@@ -6,7 +6,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
 
-gem 'rack-ssl', :require => 'rack/ssl'
+# gem 'rack-ssl', :require => 'rack/ssl'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

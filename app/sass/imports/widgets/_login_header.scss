@@ -1,6 +1,7 @@
 .login_header {
 	@extend .site_header;
-	background: url(#{$imgDir}loginscreenswl.png) no-repeat 50% 0 $bravo_grey;
+//	background: url(#{$imgDir}loginscreenswl.png) no-repeat 50% 0 $bravo_grey;
+    background-color: ($charlie_primary);
 	border-bottom-width: 5px;
 	@include selector(height, 190);
 }
