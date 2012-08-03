@@ -88,7 +88,9 @@ function postopblock_reset() {
  	<label class="px250">CRNA</label>
     <br></br>
 	
-    <%= f.text_field :anes_provider, {:class => "px250"} %>
+	<%= f.collection_select(:anes_sid, Prov.all, :id, :lname, options ={:prompt => "Select .. "}, {:class => "px250", :selected => @case.anes_sid }) %>
+	
+    <!--<%= f.text_field :anes_provider, {:class => "px250"} %>-->
     <%= f.text_field :crna_provider, {:class => "px250"} %>
     <br></br>
 

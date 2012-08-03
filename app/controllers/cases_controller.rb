@@ -282,7 +282,7 @@ class CasesController < ApplicationController
 
     @case = Case.new(params[:case])
 	@case.caseid = mytimestamp
-
+	
     respond_to do |format|
       if @case.save
         format.js  
@@ -298,9 +298,11 @@ class CasesController < ApplicationController
   # PUT /cases/1.xml
   def update
     @case = Case.find(params[:id])
-
+      
+	
     respond_to do |format|
       if @case.update_attributes(params[:case])
+	  
         format.js 
         format.xml  { head :ok }
       else

@@ -122,6 +122,9 @@ ActiveRecord::Schema.define(:version => 8) do
     t.string   "surg_provider",      :limit => 50
     t.string   "anes_provider",      :limit => 50
     t.string   "crna_provider",      :limit => 50
+    t.string   "surg_sid",           :limit => 50
+    t.string   "anes_sid",           :limit => 50
+    t.string   "crna_sid",           :limit => 50
     t.datetime "created_at"
     t.datetime "updated_at"
   end
