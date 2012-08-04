@@ -7,6 +7,13 @@
 
 //});
 
+//$(function() {
+ 
+//   $("form").bind("keypress", function(e) {
+//		alert("kljfsldkfjsldkf");
+//        if (e.which == 13) return false;
+//   });
+//});
 
 
 //function checkEnter(myfield,e){

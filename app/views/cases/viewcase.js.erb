@@ -1,43 +1,57 @@
 
-function load_pat_section(){
+function load_pat_section(arg){
  	$('#casescrolldiv').scrollTop(0);
-//	$('#case_patid1').focus();
+	if (arg == 1){
+		$('#case_patid1').focus();
+	}	
 	var myvar = document.activeElement;
 }
 
-function load_surg_section(){
+function load_surg_section(arg){
 	$('#casescrolldiv').scrollTop(470);
-//	$('#case_servdt').focus();
+	if (arg == 1){
+		$('#case_anes_sid').focus();
+	}	
 	var myvar = document.activeElement;
 }
 
-function load_block_section(){
+function load_block_section(arg){
 	$('#casescrolldiv').scrollTop(895);
-//	$('#post_op_block_check').focus();
+	if (arg == 1){
+		$('#post_op_block_check').focus();
+	}	
 	var myvar = document.activeElement;
 }
 
-function load_block_section2(){
+function load_block_section2(arg){
 	$('#casescrolldiv').scrollTop(1310);
-//	$('#case_femoral').focus();
+	if (arg == 1){
+		$('#case_femoral').focus();
+	}	
 	var myvar = document.activeElement;
 }
 
-function load_proc_section(){
+function load_proc_section(arg){
 	$('#casescrolldiv').scrollTop(1790);
-//	$('#require_addp_check').focus();
+	if (arg == 1){
+		$('#require_addp_check').focus();
+	}	
 	var myvar = document.activeElement;
 }
 
-function load_proc_section2(){
+function load_proc_section2(arg){
 	$('#casescrolldiv').scrollTop(2225);
-//	$('#case_addproc13').focus();
+	if (arg == 1){
+		$('#case_addproc13').focus();
+	}	
 	var myvar = document.activeElement;
 }
 
-function load_code_section(){
+function load_code_section(arg){
 	$('#casescrolldiv').scrollTop(2765);
-//	$('#case_cpt_surg').focus();
+	if (arg == 1){
+		$('#case_cpt_surg').focus();
+	}	
 	var myvar = document.activeElement;
 }
 

@@ -73,7 +73,7 @@ function postopblock_reset() {
 	
     <%= f.text_field :pdob, {:class => "px150"} %>
     <%= f.text_field :psex, {:class => "px150"} %>
-	<%= f.text_field :ins_cat, {:class => "px200"} %>
+	<%= f.text_field :ins_cat, {:class => "px200", :onkeydown => "return checkTab(this,event);"} %>
     <br></br>
     <br></br>
     <br></br>
@@ -129,7 +129,7 @@ function postopblock_reset() {
 		
     <%= f.text_field :surg_anes_mode , {:class => "px250"}%>
     <%= f.text_field :position , {:class => "px250"}%>
-    <%= f.text_field :physical_state, {:class => "px200"}%>
+    <%= f.text_field :physical_state, {:class => "px200", :onkeydown => "return checkTab(this,event);"}%>
     <br></br>
     <br></br>
     <br></br>
@@ -138,7 +138,7 @@ function postopblock_reset() {
 	<%= f.label :'Regional indicated:', {:class => "px200n"} %>
     <%= f.check_box :postop_block_req, {:onclick => "postopblock_reset();", :class => "check50px", :id => "post_op_block_check"} %>
 	<%= f.label :'Requested by:', {:class => "px150n"}  %>
-    <%= f.text_field :postop_block_req, {:class => "px250n"}  %>
+    <%= f.text_field :postop_block_req, {:class => "px250n", :onkeydown => "return checkTab(this,event);"}  %>
 	<br></br>
 	<br>
   
@@ -328,7 +328,7 @@ function postopblock_reset() {
 		<label class="indent25">&nbsp</label>
 		<%= f.check_box :addproc14, {:class => "check50px"} %>
 		<label class="px200">DAILY MGMT EPID.</label>
-		<%= f.text_field :addproc14_days, {:class => "px100n"} %>
+		<%= f.text_field :addproc14_days, {:class => "px100n", :onkeydown => "return checkTab(this,event);"} %>
 		<label class="px50">Days:</label>
 		<br></br>
 	
@@ -356,7 +356,7 @@ function postopblock_reset() {
 		<label class="indent25">&nbsp</label>
 		<%= f.check_box :otherproc2, {:class => "check50px"}  %>
 		<label class="px75n">Other2:</label>
-		<%= f.text_field :otherproc2_desc, {:class => "px650t"} %>
+		<%= f.text_field :otherproc2_desc, {:class => "px650t", :onkeydown => "return checkTab(this,event);"} %>
 		<br></br>
 		<br></br>
 		
@@ -442,7 +442,7 @@ function postopblock_reset() {
 	
 	<label class="px300">&nbsp</label>
 	<label class="px150n">Surgical Amt:</label>
-    <%= f.text_field :surgical_amount, {:class => "px150n"} %>
+    <%= f.text_field :surgical_amount, {:class => "px150n", :onkeydown => "return checkTab(this,event);"} %>
     <br></br>
 	
 	<div class="actions">

@@ -1,14 +1,63 @@
+function checkEnter(myfield,e){
+    if (!e){
+      var e = window.event;
+    } 
+    if (e.keyCode){
+      code = e.keyCode;    // IE   
+    }else if (e.which){
+	  code = e.which;      // Other browsers
+	}
+	if (code == 13){
+	    return false;
+	}	
+}	
+
+function checkTab(myfield,e){
+    if (!e){
+      var e = window.event;
+    } 
+    if (e.keyCode){
+      code = e.keyCode;    // IE   
+    }else if (e.which){
+	  code = e.which;      // Other browsers
+	}
+	myid = myfield.id
+	if (code == 9){
+	    if (myid == "case_ins_cat"){
+			$('#case_patid1').focus();
+			return false;
+		}else if (myid == "case_physical_state"){
+			$('#case_anes_sid').focus();
+			return false;
+		}else if (myid == 'case_otherproc2_desc'){
+			$('#casescrolldiv').scrollTop(1790);
+			$('#require_addp_check').focus();
+			return false;
+		}else if (myid == 'case_surgical_amount'){
+			$('#case_cpt_surg').focus();
+			return false;
+		}else if (myid == 'case_postop_block_req'){
+			$('#casescrolldiv').scrollTop(1310);
+			return false;
+		}else if (myid == 'case_addproc14_days'){
+			$('#casescrolldiv').scrollTop(2225);
+		}
+		return true;
+	}
+}	
+
 
 
 function load_pat_section(){
  	$('#casescrolldiv').scrollTop(0);
 	$('#case_patid1').focus();
 	var myvar = document.activeElement;
+	alert(myvar.id);
 }
 
 function load_surg_section(){
 	$('#casescrolldiv').scrollTop(470);
-	$('#case_servdt').focus();
+	$('#case_anes_sid').focus();
 	var myvar = document.activeElement;
 }
 
@@ -32,7 +81,7 @@ function load_proc_section(){
 
 function load_proc_section2(){
 	$('#casescrolldiv').scrollTop(2225);
-	$('#case_addproc13').focus();
+	$('#case_addproc12').focus();
 	var myvar = document.activeElement;
 }
 
