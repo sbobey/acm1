@@ -70,9 +70,9 @@ function postopblock_reset() {
  	<label class="px200">Ins Category</label>
     <br></br>
 
-	
-    <%= f.text_field :pdob, {:class => "px150"} %>
-    <%= f.text_field :psex, {:class => "px150"} %>
+    <%= f.text_field :pdob, {:class => "px150", :placeholder => "yyyymmdd"} %>
+  	<%= f.select :psex, options_for_select(@dim_sx), options ={:prompt => "Select .. "}, {:class => "px150"} %>
+	<!--<%= f.text_field :psex, {:class => "px150"} %>-->
 	<%= f.text_field :ins_cat, {:class => "px200", :onkeydown => "return checkTab(this,event);"} %>
     <br></br>
     <br></br>
@@ -99,7 +99,7 @@ function postopblock_reset() {
  	<label class="px250">Surgeon</label>
     <br></br>
 	
-	<%= f.text_field :servdt, {:class => "px150"}  %>
+	<%= f.text_field :servdt, {:class => "px150", :placeholder => "yyyymmdd"}  %>
 	<%= f.collection_select(:surg_sid, Surg.all, :id, :lname, options ={:prompt => "Select .. "}, {:class => "px250", :selected => @case.anes_sid }) %>
     <!--<%= f.text_field :surg_provider, {:class => "px250"} %>-->
     <br></br>

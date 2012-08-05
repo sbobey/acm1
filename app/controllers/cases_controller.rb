@@ -220,7 +220,12 @@ class CasesController < ApplicationController
 		@dim_pc[ct] = row[1]
 		ct = ct + 1
 	end	
-	
+	@dim_sx = Array.new
+	ct = 0
+	CSV.foreach("public/sx.csv", :col_sep => '|') do |row|
+		@dim_sx[ct] = row[1]
+		ct = ct + 1
+	end		
 	
  	respond_to do |format|
       format.js 
@@ -295,6 +300,12 @@ class CasesController < ApplicationController
 	ct = 0
 	CSV.foreach("public/pc.csv", :col_sep => '|') do |row|
 		@dim_pc[ct] = row[1]
+		ct = ct + 1
+	end	
+	@dim_sx = Array.new
+	ct = 0
+	CSV.foreach("public/sx.csv", :col_sep => '|') do |row|
+		@dim_sx[ct] = row[1]
 		ct = ct + 1
 	end	
 	
