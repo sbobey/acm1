@@ -210,13 +210,13 @@ class CasesController < ApplicationController
 	
 	@dim_dx = Array.new
 	ct = 0
-	CSV.foreach("/home/steve/acm1/public/dx.csv", :col_sep => '|') do |row|
+	CSV.foreach("public/dx.csv", :col_sep => '|') do |row|
 		@dim_dx[ct] = row[1]
 		ct = ct + 1
 	end	
 	@dim_pc = Array.new
 	ct = 0
-	CSV.foreach("/home/steve/acm1/public/pc.csv", :col_sep => '|') do |row|
+	CSV.foreach("public/pc.csv", :col_sep => '|') do |row|
 		@dim_pc[ct] = row[1]
 		ct = ct + 1
 	end	
