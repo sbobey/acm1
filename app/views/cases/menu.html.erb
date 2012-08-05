@@ -39,7 +39,8 @@
            myfname  = document.getElementById('gcFname').value;
            mycaseid    = document.getElementById('gcCaseid').value;
            mypatid  = document.getElementById('gcPatid').value;
-           $.ajax({url: '/cases/setview/?lname=' + mylname + '&fname=' + myfname + '&caseid=' + mycaseid + '&patid=' + mypatid , dataType: 'script'});
+		   myprovid = document.getElementById('gcProv').value
+           $.ajax({url: '/cases/setview/?lname=' + mylname + '&fname=' + myfname + '&caseid=' + mycaseid + '&patid=' + mypatid + '&provid=' + myprovid, dataType: 'script'});
 	
 	} 
 	
@@ -94,10 +95,9 @@
 	<div class="menu_top">
 			<ul>
 				<li><a data-remote="true" href="/cases/addcase">Add Case</a></li>
+				<li><a href="#">Reports</a></li>
 				<li><a data-remote="true" href="/cases/admin">Admin</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
+			
 			</ul>
 			<br style="clear:left"/>
 	</div>		

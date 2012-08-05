@@ -10,6 +10,7 @@ class CasesController < ApplicationController
     myfname = params[:fname]
     mycaseid = params[:caseid]
     mypatid = params[:patid]
+    myprovid = params[:provid]
 	
 	
     puts "VARS: "
@@ -17,6 +18,7 @@ class CasesController < ApplicationController
     puts myfname
     puts mycaseid
     puts mypatid
+    puts myprovid
     puts "VARS: "
 
     puts "SIZE: "
@@ -24,6 +26,7 @@ class CasesController < ApplicationController
     puts myfname.size
     puts mycaseid.size
     puts mypatid.size
+    puts myprovid.size
     puts "SIZE: "
    
     str = ""
@@ -49,14 +52,14 @@ class CasesController < ApplicationController
        puts  "%%%%%%%%%%%%%%%%"
     end
 
-    puts myfname.size
-    if myfname.size != 0
+    puts myprovid.size
+    if myprovid.size != 0
        if bindct == 1 
-          str = str + " AND pfname LIKE ?"
-          bind2 = myfname
+          str = str + " AND anes_provider LIKE ?"
+          bind2 = myprovid
        else 
-          str = "pfname LIKE ?"
-          bind1 = myfname
+          str = "anes_provider LIKE ?"
+          bind1 = myprovid
        end
        bindct = bindct + 1
        puts "--> " + str
