@@ -1,3 +1,5 @@
+require 'csv'
+
 class CasesController < ApplicationController
 
   def setview
@@ -205,6 +207,21 @@ class CasesController < ApplicationController
  
   def addcase
     @case = Case.new
+	
+	@dim_dx = Array.new
+	ct = 0
+	CSV.foreach("/home/steve/acm1/public/dx.csv", :col_sep => '|') do |row|
+		@dim_dx[ct] = row[1]
+		ct = ct + 1
+	end	
+	@dim_pc = Array.new
+	ct = 0
+	CSV.foreach("/home/steve/acm1/public/pc.csv", :col_sep => '|') do |row|
+		@dim_pc[ct] = row[1]
+		ct = ct + 1
+	end	
+	
+	
  	respond_to do |format|
       format.js 
       format.xml  { render :xml => @cases }
@@ -267,6 +284,22 @@ class CasesController < ApplicationController
   # GET /cases/1/edit
   def edit
     @case = Case.find(params[:id])
+	
+	@dim_dx = Array.new
+	ct = 0
+	CSV.foreach("/home/steve/acm1/public/dx.csv", :col_sep => '|') do |row|
+		@dim_dx[ct] = row[1]
+		ct = ct + 1
+	end	
+	@dim_pc = Array.new
+	ct = 0
+	CSV.foreach("/home/steve/acm1/public/pc.csv", :col_sep => '|') do |row|
+		@dim_pc[ct] = row[1]
+		ct = ct + 1
+	end	
+	
+	
+	
     respond_to do |format|
       format.js 
       format.xml  { render :xml => @case }
