@@ -89,8 +89,9 @@ function postopblock_reset() {
     <br></br>
 	
 	<%= f.collection_select(:anes_sid, Prov.all, :id, :lname, options ={:prompt => "Select .. "}, {:class => "px250", :selected => @case.anes_sid }) %>
+	<%= f.collection_select(:crna_sid, Crna.all, :id, :lname, options ={:prompt => "Select .. "}, {:class => "px250", :selected => @case.crna_sid }) %>
     <!--<%= f.text_field :anes_provider, {:class => "px250"} %>-->
-    <%= f.text_field :crna_provider, {:class => "px250"} %>
+    <!--<%= f.text_field :crna_provider, {:class => "px250"} %>-->
     <br></br>
 
 	
@@ -118,7 +119,8 @@ function postopblock_reset() {
     <%= f.label :end_time, {:class => "px200"} %>
     <br></br>
 		
-    <%= f.text_field :loc, {:class => "px250"}  %>
+	<%= f.collection_select(:loc, Loc.all, :name, :name, options ={:prompt => "Select .. "}, {:class => "px250", :selected => @case.loc }) %>
+    <!--<%= f.text_field :loc, {:class => "px250"}  %>-->
     <%= f.text_field :start_time, {:class => "px200"} %>
     <%= f.text_field :end_time, {:class => "px200"} %>
     <br></br>
