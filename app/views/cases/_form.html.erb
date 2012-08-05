@@ -2,6 +2,7 @@
 <script type="text/javascript">
 
 
+
 $(document).ready(function() {
     $('#addprocgroup input[type=checkbox]').attr("disabled", "disabled");
   	$('#postopblockgroup input[type=checkbox]').attr("disabled", "disabled");
@@ -28,11 +29,28 @@ function postopblock_reset() {
 	}
 }
 
+function check_pc(){
+	var pcchoice = document.getElementById('case_procedure').value
+	if (pcchoice == "Other"){
+		document.getElementById('case_other_pc').disabled = false;
+		$('#case_other_pc').focus();
+	}	
+}
+	
+function check_dx(){
+	var dxchoice = document.getElementById('case_diagnosis').value
+	if (dxchoice == "Other"){
+		document.getElementById('case_other_dx').disabled = false;
+		$('#case_other_dx').focus();
+	}	
+}	
+
+
 </script>
 </head>
 
  
-<%= form_for(@case, :remote => true) do |f| %>
+<%= form_for(@case, {:name => "1234"}, :html => {:name => 'form_case'}, :remote => true) do |f| %>
   <% if @case.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@case.errors.count, "error") %> prohibited this case from being saved:</h2>
@@ -71,7 +89,7 @@ function postopblock_reset() {
     <br></br>
 
     <%= f.text_field :pdob, {:class => "px150", :placeholder => "yyyymmdd"} %>
-  	<%= f.select :psex, options_for_select(@dim_sx), options ={:prompt => "Select .. "}, {:class => "px150"} %>
+  	<%= f.select :psex, @dim_sx, options ={:prompt => "Select .. "}, {:class => "px150"} %>
 	<!--<%= f.text_field :psex, {:class => "px150"} %>-->
 	<%= f.text_field :ins_cat, {:class => "px200", :onkeydown => "return checkTab(this,event);"} %>
     <br></br>
@@ -104,14 +122,16 @@ function postopblock_reset() {
     <!--<%= f.text_field :surg_provider, {:class => "px250"} %>-->
     <br></br>
 	
-	<%= f.label :procedure, {:class => "pxfull"} %>
- 	<%= f.select :procedure, options_for_select(@dim_pc), options ={:prompt => "Select .. "}, {:class => "pxfull"} %>
-   <!--<%= f.text_field :procedure, {:class => "pxfull"}  %>-->
+	<%= f.label :procedure, {:class => "px100"} %>
+ 	<%= f.select :procedure, @dim_pc, options ={:prompt => "Select .. "}, {:onchange => "check_pc();", :class => "px700t", :selected => @case.procedure} %>
+   	<label class="px100">&nbsp</label>
+	<%= f.text_field :other_pc, {:disabled => 1, :class => "px700t", :placeholder => "Other Procedure .."}  %>
     <br></br>
 
-    <%= f.label :diagnosis, {:class => "pxfull"}  %>
-	<%= f.select :diagnosis, options_for_select(@dim_dx), options ={:prompt => "Select .. "}, {:class => "pxfull"} %>
-    <!--<%= f.text_field :diagnosis, {:class => "pxfull"}  %>-->
+    <%= f.label :diagnosis, {:class => "px100"}  %>
+	<%= f.select :diagnosis, @dim_dx, options ={:prompt => "Select .. "}, {:onchange => "check_dx();", :class => "px700t", :selected => @case.diagnosis} %>
+   	<label class="px100">&nbsp</label>
+    <%= f.text_field :other_dx, {:disabled => 1, :class => "px700t", :placeholder => "Other Disgnosis .."}  %>
     <br></br>
 
     <%= f.label :location, {:class => "px250"}  %>
