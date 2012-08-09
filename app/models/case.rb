@@ -1,5 +1,5 @@
 class Case < ActiveRecord::Base
-
+	validates_presence_of :plname  
 	def before_save()
 	    puts "ENTER CASE BEFORE SAVE: "
 		puts "! ! ! ! ! ! !"

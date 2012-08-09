@@ -50,7 +50,7 @@ function check_dx(){
 </head>
 
  
-<%= form_for(@case, {:name => "1234"}, :html => {:name => 'form_case'}, :remote => true) do |f| %>
+<%= form_for(@case, :remote => true) do |f| %>
   <% if @case.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@case.errors.count, "error") %> prohibited this case from being saved:</h2>
@@ -71,7 +71,7 @@ function check_dx(){
     <%= f.text_field :caseid, {:class => "px250", :disabled => "true"} %>
     <br></br>
 	
-	<label class="px250">LastName</label>
+	<label class="px250">LastName<%= mark_required(@case, :plname) %></label> 
  	<label class="px250">FirstName</label>
  	<label class="px100">Middle</label>
     <br></br>

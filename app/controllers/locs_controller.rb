@@ -43,6 +43,9 @@ class LocsController < ApplicationController
 	
   end
 
+ 
+  
+  
   # POST /locs
   # POST /locs.xml
   def create
@@ -53,7 +56,10 @@ class LocsController < ApplicationController
         format.js 
         format.xml  { render :xml => @loc, :status => :created, :location => @loc }
       else
-        format.html { render :action => "new" }
+	    puts "ERRORS ! ! ! ! ! ! : "
+	    puts @loc.errors.count
+		puts @loc.errors.full_messages
+        format.js { render :controller => "application", :action => "errdisplay" }
         format.xml  { render :xml => @loc.errors, :status => :unprocessable_entity }
       end
     end
@@ -69,7 +75,7 @@ class LocsController < ApplicationController
         format.js
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.js { render :controller => "application", :action => "errdisplay" }
         format.xml  { render :xml => @loc.errors, :status => :unprocessable_entity }
       end
     end

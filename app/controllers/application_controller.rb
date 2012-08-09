@@ -22,4 +22,11 @@ class ApplicationController < ActionController::Base
 	end		
   end	
  
+   def errdisplay
+    respond_to do |format|
+      format.js
+      format.xml  { render :xml => @loc }
+    end
+  end
+  
 end

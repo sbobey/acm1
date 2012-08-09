@@ -1,16 +1,19 @@
-<%= form_for(@loc, :remote => true) do |f| %>
-  <% if @loc.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@loc.errors.count, "error") %> prohibited this loc from being saved:</h2>
 
-      <ul>
-      <% @loc.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<head>
+<script type="text/javascript">
+
+function closemain(){
+	$('#dialogmaindiv').dialog('destroy').remove();
+
+	$.get("/cases/setloc"); 	
   
+}   
+
+</script>
+</head>
+
+<%= form_for(@loc, :remote => true) do |f| %>
+   
    <div class="modal_header">
 	<div class="detail_header">
 		<ul>
@@ -18,7 +21,7 @@
 		</ul>
 	</div>
 	<div class="action_buttons">
-	    <!--<button onclick=""><span class="icofont_alpha">p</span>PRINT</button>--><button onclick="dlogmainclose();" class="close">X</button>
+	    <!--<button onclick=""><span class="icofont_alpha">p</span>PRINT</button>--><button onclick="closemain();" class="close">X</button>
 	</div>
   </div>
  
