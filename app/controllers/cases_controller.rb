@@ -335,8 +335,11 @@ class CasesController < ApplicationController
         format.js  
         format.xml  { render :xml => @case, :status => :created, :location => @case }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @case.errors, :status => :unprocessable_entity }
+	    puts "ERRORS ! ! ! ! ! ! : "
+	    puts @case.errors.count
+		puts @case.errors.full_messages
+        format.js { render :controller => "application", :action => "errdisplay" }
+        format.xml  { render :xml => @loc.errors, :status => :unprocessable_entity }
       end
     end
   end

@@ -1,6 +1,13 @@
 <head>
 <script type="text/javascript">
 
+	$(function() {
+		$( "#case_pdob" ).datepicker();
+	});
+	$(function() {
+		$( "#case_servdt" ).datepicker();
+	});
+	
 
 
 $(document).ready(function() {
@@ -63,7 +70,7 @@ function check_dx(){
     </div>
   <% end %>
 
-	<label class="px250">Patient MR#</label>
+	<label class="px250">Patient MR# <%= mark_required(@case, :patid1) %></label>
  	<label class="px250">Case ID</label>
     <br></br>
 
@@ -71,8 +78,8 @@ function check_dx(){
     <%= f.text_field :caseid, {:class => "px250", :disabled => "true"} %>
     <br></br>
 	
-	<label class="px250">LastName<%= mark_required(@case, :plname) %></label> 
- 	<label class="px250">FirstName</label>
+	<label class="px250">LastName <%= mark_required(@case, :plname) %></label> 
+ 	<label class="px250">FirstName <%= mark_required(@case, :pfname) %></label>
  	<label class="px100">Middle</label>
     <br></br>
 	
@@ -83,14 +90,13 @@ function check_dx(){
 
     <%= f.hidden_field :psortname %>
 	
-	<label class="px150">DOB</label>
- 	<label class="px150">Gender</label>
- 	<label class="px200">Ins Category</label>
+	<label class="px150">DOB <%= mark_required(@case, :pdob) %></label>
+ 	<label class="px150">Gender <%= mark_required(@case, :psex) %></label>
+ 	<label class="px200">Ins Category <%= mark_required(@case, :ins_cat) %></label>
     <br></br>
 
-    <%= f.text_field :pdob, {:class => "px150", :placeholder => "yyyymmdd"} %>
+    <%= f.text_field :pdob, {:class => "px150"} %>
   	<%= f.select :psex, @dim_sx, options ={:prompt => "Select .. "}, {:class => "px150"} %>
-	<!--<%= f.text_field :psex, {:class => "px150"} %>-->
 	<%= f.text_field :ins_cat, {:class => "px200", :onkeydown => "return checkTab(this,event);"} %>
     <br></br>
     <br></br>
@@ -102,8 +108,8 @@ function check_dx(){
     <br></br>
 <!----------------------------------------------------------------------------->	
 
- 	<label class="px250">Anesthesiologist</label>
- 	<label class="px250">CRNA</label>
+ 	<label class="px250">Anesthesiologist <%= mark_required(@case, :anes_sid) %></label>
+ 	<label class="px250">CRNA <%= mark_required(@case, :crna_sid) %></label>
     <br></br>
 	
 	<%= f.collection_select(:anes_sid, Prov.all, :id, :lname, options ={:prompt => "Select .. "}, {:class => "px250", :selected => @case.anes_sid }) %>
@@ -113,41 +119,39 @@ function check_dx(){
     <br></br>
 
 	
-	<label class="px150">DOS</label>
- 	<label class="px250">Surgeon</label>
+	<label class="px150">DOS <%= mark_required(@case, :servdt) %></label>
+ 	<label class="px250">Surgeon <%= mark_required(@case, :surg_sid) %></label>
     <br></br>
 	
-	<%= f.text_field :servdt, {:class => "px150", :placeholder => "yyyymmdd"}  %>
+	<%= f.text_field :servdt, {:class => "px150"}  %>
 	<%= f.collection_select(:surg_sid, Surg.all, :id, :lname, options ={:prompt => "Select .. "}, {:class => "px250", :selected => @case.anes_sid }) %>
-    <!--<%= f.text_field :surg_provider, {:class => "px250"} %>-->
     <br></br>
-	
-	<%= f.label :procedure, {:class => "px100"} %>
+
+ 	<label class="px100">Procedure<%= mark_required(@case, :procedure) %></label>
  	<%= f.select :procedure, @dim_pc, options ={:prompt => "Select .. "}, {:onchange => "check_pc();", :class => "px700t", :selected => @case.procedure} %>
    	<label class="px100">&nbsp</label>
 	<%= f.text_field :other_pc, {:disabled => 1, :class => "px700t", :placeholder => "Other Procedure .."}  %>
     <br></br>
 
-    <%= f.label :diagnosis, {:class => "px100"}  %>
+ 	<label class="px100">Diagnosis<%= mark_required(@case, :diagnosis) %></label>
 	<%= f.select :diagnosis, @dim_dx, options ={:prompt => "Select .. "}, {:onchange => "check_dx();", :class => "px700t", :selected => @case.diagnosis} %>
    	<label class="px100">&nbsp</label>
     <%= f.text_field :other_dx, {:disabled => 1, :class => "px700t", :placeholder => "Other Disgnosis .."}  %>
     <br></br>
 
-    <%= f.label :location, {:class => "px250"}  %>
-    <%= f.label :start_time, {:class => "px200"} %>
-    <%= f.label :end_time, {:class => "px200"} %>
+  	<label class="px250">Location <%= mark_required(@case, :loc) %></label>
+  	<label class="px200">Start Time <%= mark_required(@case, :start_time) %></label>
+ 	<label class="px200">End Time <%= mark_required(@case, :end_time) %></label>
     <br></br>
 		
 	<%= f.collection_select(:loc, Loc.all, :name, :name, options ={:prompt => "Select .. "}, {:class => "px250", :selected => @case.loc }) %>
-    <!--<%= f.text_field :loc, {:class => "px250"}  %>-->
     <%= f.text_field :start_time, {:class => "px200"} %>
     <%= f.text_field :end_time, {:class => "px200"} %>
     <br></br>
  	
-	<label class="px250">Anes Mode</label>
-	<%= f.label :'Position', {:class => "px200"}  %>
-	<label class="px200">ASA</label>
+	<label class="px250">Anes Mode <%= mark_required(@case, :surg_anes_mode) %></label>
+	<label class="px200">Position <%= mark_required(@case, :position) %></label>
+	<label class="px200">ASA <%= mark_required(@case, :physical_state) %></label>
     <br></br>
 		
     <%= f.text_field :surg_anes_mode , {:class => "px250"}%>

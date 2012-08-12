@@ -1,4 +1,19 @@
 
+function checkEnter(myfield,e){
+    if (!e){
+      var e = window.event;
+    } 
+    if (e.keyCode){
+      code = e.keyCode;    // IE   
+    }else if (e.which){
+	  code = e.which;      // Other browsers
+	}
+	if (code == 13){
+	    return false;
+	}	
+}	
+
+
 function setlocnav(){
     $.get("/cases/setloc");	
 }
@@ -33,8 +48,8 @@ function dlogmain2(){
                 position: 'center',
                 height: 500,
                 width: 940,
-				modal: false,
-				resizable: false,
+				modal: true,
+				resizable: true,
                 open: function(event, ui) { jQuery('.ui-dialog-titlebar-close').hide(); 
                                           },
                 });

@@ -3,3 +3,24 @@
 
 en:
   hello: "Hello world"
+
+  activerecord:
+    attributes:
+      case:
+        patid1: "MedRec Number:"
+        pfname: "First Name:"
+        plname: "Last Name:"
+        pdob: "DOB:"
+        psex: "Gender:"
+        procedure: "Procedure:"
+        diagnosis: "Diagnosis:"
+        position: "Position:"
+        physical_state: "ASA:"
+        start_time: "Start Time:"
+        end_time: "End Time:"
+        surg_anes_mode: "First Name:"
+        loc: "Location:"
+        servdt: "DOS:"
+        surg_sid: "Surgeon:"
+        anes_sid: "Anesth MD:"
+        crna_sid: "CRNA:"

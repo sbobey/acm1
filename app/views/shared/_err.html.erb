@@ -1,0 +1,23 @@
+
+
+   <div class="modal_header">
+	<div class="detail_header">
+		<ul>
+			<li>Error</li>
+		</ul>
+	</div>
+	<div class="action_buttons">
+	    <!--<button onclick=""><span class="icofont_alpha">p</span>PRINT</button>--><button onclick="dlogerr1close();" class="close">X</button>
+	</div>
+  </div>
+<% if target.errors.any? %>
+    <div id="error_explanation" class= "error_modal">
+      <h4><%= pluralize(target.errors.count, "error") %> prohibited this loc from being saved:</h4>
+      <ul>
+      <% target.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+ <% end %>
+ 

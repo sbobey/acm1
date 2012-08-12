@@ -3147,6 +3147,11 @@ body {
     font-family: HeydingsCommonIconsRegular;
     font-size: 1.3em; }
 
+.error_modal ul {
+  list-style: circle; }
+.error_modal li {
+  float: none; }
+
 .bookmark_nav {
   float: left;
   -moz-box-sizing: border-box;

@@ -2,17 +2,16 @@
 <head>
 <script type="text/javascript">
 
-function closemain(){
-	$('#dialogmaindiv').dialog('destroy').remove();
+function closeme(){
 
-	$.get("/cases/setloc"); 	
-  
+$('#dialogmaindiv2').html("<%= escape_javascript(render :partial => 'cases/adminscreen')%>");
+setlocnav();
+
 }   
 
 </script>
 </head>
 
-<%= form_for(@loc, :remote => true) do |f| %>
    
    <div class="modal_header">
 	<div class="detail_header">
@@ -21,18 +20,17 @@ function closemain(){
 		</ul>
 	</div>
 	<div class="action_buttons">
-	    <!--<button onclick=""><span class="icofont_alpha">p</span>PRINT</button>--><button onclick="closemain();" class="close">X</button>
+	    <!--<button onclick=""><span class="icofont_alpha">p</span>PRINT</button>--><button onclick="closeme();" class="close">X</button>
 	</div>
   </div>
- 
+
+<%= form_for(@loc, :remote => true) do |f| %>
+  
   <div class="case_view" style="width:940px"> 
 	<div style="width:800px;">
 	
-	    <label class="px50">Code:</label>
-		<%= f.text_field :code, {:class => "px100n"} %>
-		<label class="px650t">&nbsp</label>  
-  
-		<label class="pxfull">Location Name:</label> 
+	
+		<label class="pxfull">Location Name: <%= mark_required(@loc, :name) %></label> 
 
 		<%= f.text_field :name, {:class => "px250"} %>
 		<label class="px550t">&nbsp</label>  

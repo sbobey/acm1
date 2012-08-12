@@ -13,7 +13,7 @@ function dlogerr1(){
                 position: 'center',
                 height: 200,
                 width: 500,
-				modal: false,
+				modal: true,
 				resizable: false,
                 open: function(event, ui) { jQuery('.ui-dialog-titlebar-close').hide(); 
                                           },
@@ -22,5 +22,5 @@ function dlogerr1(){
    $dialogerr1.dialog('open');
 }
 dlogerr1();
-$('#dialogerrdiv1').html("<%= escape_javascript(render 'shared/err', :target => @loc )%>");
+$('#dialogerrdiv1').html("<%= escape_javascript( render "shared/err", :target => @case )%>");
 

@@ -1,5 +1,21 @@
 class Case < ActiveRecord::Base
+	validates_presence_of :patid1
 	validates_presence_of :plname  
+	validates_presence_of :pfname  
+	validates_presence_of :pdob  
+	validates_presence_of :psex  
+	validates_presence_of :procedure  
+	validates_presence_of :diagnosis  
+	validates_presence_of :position  
+	validates_presence_of :physical_state  
+	validates_presence_of :start_time  
+	validates_presence_of :end_time  
+	validates_presence_of :surg_anes_mode  
+	validates_presence_of :loc  
+	validates_presence_of :servdt  
+	validates_presence_of :surg_sid  
+	validates_presence_of :crna_sid  
+	validates_presence_of :anes_sid 
 	def before_save()
 	    puts "ENTER CASE BEFORE SAVE: "
 		puts "! ! ! ! ! ! !"

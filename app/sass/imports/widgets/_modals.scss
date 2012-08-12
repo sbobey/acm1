@@ -436,6 +436,16 @@ $modal_background_color: $white;
 	}
 }
 
+.error_modal {
+
+	ul {
+		list-style: circle;
+	}	
+	li {
+		float: none
+	}
+}
+
 .bookmark_nav {
 	@include grid(12,2,percent);
 	@include alpha;
