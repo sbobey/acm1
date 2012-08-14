@@ -22,6 +22,7 @@ function checkTab(myfield,e){
 	  code = e.which;      // Other browsers
 	}
 	myid = myfield.id
+	alert(myid);
 
 	if (code == 9){
 	    if (myid == "case_ins_cat"){
@@ -42,6 +43,8 @@ function checkTab(myfield,e){
 			return false;
 		}else if (myid == 'case_addproc14_days'){
 			$('#casescrolldiv').scrollTop(2225);
+		}else if (myid == 'case_end_time'){
+            alert("You just left end time");
 		}
 		return true;
 	}

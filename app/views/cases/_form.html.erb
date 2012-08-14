@@ -1,4 +1,6 @@
 <head>
+
+
 <script type="text/javascript">
 
 	$(function() {
@@ -8,7 +10,15 @@
 		$( "#case_servdt" ).datepicker();
 	});
 	
+	$(function() {
+		$( "#case_start_time" ).timepicker({ampm: true});
+	});
+	
+	$(function() {
+		$( "#case_end_time" ).timepicker({ampm: true});
+	});
 
+	
 
 $(document).ready(function() {
     $('#addprocgroup input[type=checkbox]').attr("disabled", "disabled");
@@ -146,7 +156,7 @@ function check_dx(){
 		
 	<%= f.collection_select(:loc, Loc.all, :name, :name, options ={:prompt => "Select .. "}, {:class => "px250", :selected => @case.loc }) %>
     <%= f.text_field :start_time, {:class => "px200"} %>
-    <%= f.text_field :end_time, {:class => "px200"} %>
+    <%= f.text_field :end_time, {:class => "px200", :onkeydown => "return checkTab(this,event);"} %>
     <br></br>
  	
 	<label class="px250">Anes Mode <%= mark_required(@case, :surg_anes_mode) %></label>

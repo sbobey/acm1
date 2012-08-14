@@ -101,6 +101,15 @@ class CreateCases < ActiveRecord::Migration
       t.string :surg_provider, :limit => 50
       t.string :anes_provider, :limit => 50
       t.string :crna_provider, :limit => 50
+      t.string :surg_sid, :limit => 50
+      t.string :anes_sid, :limit => 50
+      t.string :crna_sid, :limit => 50
+      t.string :other_pc, :limit => 255
+      t.string :other_dx, :limit => 255
+      t.string :total_time, :limit => 50
+      t.string :inpatient, :limit => 10
+      t.string :emergency, :limit => 10
+      t.string :rounds, :limit => 10
       t.timestamps
     end
   end

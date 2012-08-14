@@ -1,1 +1,1 @@
-rails generate scaffold Scan caseid:string time_sqequence:string orig_filename:string final_filename:string patid:string plname:string pfname:string avitar:string res1:string res2:string res3:string
+rails generate scaffold Round caseid:string datetime:string user:string res2:string res3:string
