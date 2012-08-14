@@ -16,6 +16,8 @@ class Case < ActiveRecord::Base
 	validates_presence_of :surg_sid  
 	validates_presence_of :crna_sid  
 	validates_presence_of :anes_sid 
+	validates_presence_of :emergency 
+	validates_presence_of :inpatient 
 	def before_save()
 	    puts "ENTER CASE BEFORE SAVE: "
 		puts "! ! ! ! ! ! !"

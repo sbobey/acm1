@@ -2,6 +2,8 @@ Acm1::Application.routes.draw do
   
 
 
+  resources :rounds
+
   resources :surgs
 
   resources :locs

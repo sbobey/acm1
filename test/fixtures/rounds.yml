@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  caseid: MyString
+  datetime: MyString
+  user: MyString
+  res2: MyString
+  res3: 
+
+two:
+  caseid: MyString
+  datetime: MyString
+  user: MyString
+  res2: MyString
+  res3: 

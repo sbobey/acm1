@@ -3,19 +3,41 @@
 
 <script type="text/javascript">
 
+
 	$(function() {
-		$( "#case_pdob" ).datepicker();
-	});
-	$(function() {
-		$( "#case_servdt" ).datepicker();
+		$( "#case_pdob" ).datepicker({
+			dateFormat: 'yy-mm-dd',
+			onClose: function (){
+				$('#case_pdob').focus();
+			}			
+		});
 	});
 	
 	$(function() {
-		$( "#case_start_time" ).timepicker({ampm: true});
+		$( "#case_servdt" ).datepicker({
+			dateFormat: 'yy-mm-dd',
+			onClose: function (){
+				$('#case_servdt').focus();
+			}			
+		});
 	});
 	
 	$(function() {
-		$( "#case_end_time" ).timepicker({ampm: true});
+		$( "#case_start_time" ).timepicker({
+		    ampm: true, timeFormat: 'hh:mm TT',
+			onClose: function (){
+				$('#case_start_time').focus();
+			}			
+		});
+	});
+	
+	$(function() {
+		$( "#case_end_time" ).timepicker({
+			ampm: true, timeFormat: 'hh:mm TT',
+			onClose: function (){
+				$('#case_end_time').focus();
+			}
+		});
 	});
 
 	
@@ -25,6 +47,59 @@ $(document).ready(function() {
   	$('#postopblockgroup input[type=checkbox]').attr("disabled", "disabled");
   	$('#postopblockgroup input[type=radio]').attr("disabled", "disabled");
 })
+
+function setlapsed(){
+ 			a = document.getElementById('case_start_time').value;
+			temp = a.split(' ');
+			flag = temp[1];
+			rest = temp[0];
+			temp2 = rest.split(':');
+			hh = parseFloat(temp2[0]);
+			mm = parseFloat(temp2[1]);
+			if (flag[0] == "P"){
+			    if (hh < 12){
+				    hh = hh + 12;
+				}
+            }	
+			if (flag[0] == "A"){
+			    if (hh == 12){
+				    hh = 0;
+				}
+            }				
+			hh_start = hh;
+            minutes1 = hh * 60;
+			minutes1 = minutes1 + mm;
+			
+			b = document.getElementById('case_end_time').value;
+			temp = b.split(' ');
+			flag = temp[1];
+			rest = temp[0];
+			temp2 = rest.split(':');
+			hh = parseFloat(temp2[0]);
+			mm = parseFloat(temp2[1]);
+			if (flag[0] == "P"){
+			    if (hh < 12){
+				    hh = hh + 12;
+				}
+            }		
+ 			if (flag[0] == "A"){
+			    if (hh == 12){
+				    hh = 0;
+				}
+            }	
+            if (hh < hh_start){
+               hh = hh + 24;
+            }			   
+            minutes2 = hh * 60;
+			minutes2 = minutes2 + mm;
+			
+			
+            total_min = minutes2 - minutes1;
+
+			document.getElementById('case_total_time').value = total_min;
+ 			$('#case_surg_anes_mode').focus();
+
+}
 
 function addproc_reset() {
     var myattr = $('#require_addp_check').attr("checked");
@@ -66,6 +141,9 @@ function check_dx(){
 </script>
 </head>
 
+<% @dim_yn = ['Yes', 'No'] %>
+<% @dim_asa = ['I', 'II', 'III', 'IV', 'V'] %>
+
  
 <%= form_for(@case, :remote => true) do |f| %>
   <% if @case.errors.any? %>
@@ -103,12 +181,14 @@ function check_dx(){
 	<label class="px150">DOB <%= mark_required(@case, :pdob) %></label>
  	<label class="px150">Gender <%= mark_required(@case, :psex) %></label>
  	<label class="px200">Ins Category <%= mark_required(@case, :ins_cat) %></label>
+ 	<label class="px200">In-Patient <%= mark_required(@case, :inpatient) %></label>
     <br></br>
 
     <%= f.text_field :pdob, {:class => "px150"} %>
   	<%= f.select :psex, @dim_sx, options ={:prompt => "Select .. "}, {:class => "px150"} %>
-	<%= f.text_field :ins_cat, {:class => "px200", :onkeydown => "return checkTab(this,event);"} %>
-    <br></br>
+	<%= f.text_field :ins_cat, {:class => "px200"} %>
+   	<%= f.select :inpatient, @dim_yn, options ={:prompt => "Select .. "}, {:class => "px150", :onkeydown => "return checkTab(this,event);"} %>
+   <br></br>
     <br></br>
     <br></br>
     <br></br>
@@ -150,23 +230,28 @@ function check_dx(){
     <br></br>
 
   	<label class="px250">Location <%= mark_required(@case, :loc) %></label>
-  	<label class="px200">Start Time <%= mark_required(@case, :start_time) %></label>
- 	<label class="px200">End Time <%= mark_required(@case, :end_time) %></label>
+  	<label class="px150">Start Time <%= mark_required(@case, :start_time) %></label>
+ 	<label class="px150">End Time <%= mark_required(@case, :end_time) %></label>
+ 	<label class="px150">Total Time <%= mark_required(@case, :total_time) %></label>
     <br></br>
 		
 	<%= f.collection_select(:loc, Loc.all, :name, :name, options ={:prompt => "Select .. "}, {:class => "px250", :selected => @case.loc }) %>
-    <%= f.text_field :start_time, {:class => "px200"} %>
-    <%= f.text_field :end_time, {:class => "px200", :onkeydown => "return checkTab(this,event);"} %>
+    <%= f.text_field :start_time, {:class => "px150"} %>
+    <%= f.text_field :end_time, {:class => "px150", :onkeydown => "return checkTab(this,event);"} %>
+    <%= f.text_field :total_time, {:class => "px150", :onfocus => "setlapsed();"} %>
     <br></br>
  	
 	<label class="px250">Anes Mode <%= mark_required(@case, :surg_anes_mode) %></label>
-	<label class="px200">Position <%= mark_required(@case, :position) %></label>
-	<label class="px200">ASA <%= mark_required(@case, :physical_state) %></label>
+	<label class="px150">Position <%= mark_required(@case, :position) %></label>
+	<label class="px150">ASA <%= mark_required(@case, :physical_state) %></label>
+	<label class="px150">Emergency <%= mark_required(@case, :emergency) %></label>
     <br></br>
 		
     <%= f.text_field :surg_anes_mode , {:class => "px250"}%>
-    <%= f.text_field :position , {:class => "px250"}%>
-    <%= f.text_field :physical_state, {:class => "px200", :onkeydown => "return checkTab(this,event);"}%>
+    <%= f.text_field :position , {:class => "px150"}%>
+  	<%= f.select :physical_state, @dim_asa, options ={:prompt => "Select .. "}, {:class => "px150"} %>
+  	<%= f.select :emergency, @dim_yn, options ={:prompt => "Select .. "}, {:class => "px150", :onkeydown => "return checkTab(this,event);"} %>
+	
     <br></br>
     <br></br>
     <br></br>

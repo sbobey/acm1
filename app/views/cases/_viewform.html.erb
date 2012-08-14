@@ -77,13 +77,15 @@
     <br></br>
 
     <%= f.label :location, {:class => "px250"}  %>
-    <%= f.label :start_time, {:class => "px200"} %>
-    <%= f.label :end_time, {:class => "px200"} %>
+    <%= f.label :start_time, {:class => "px150"} %>
+    <%= f.label :end_time, {:class => "px150"} %>
+    <%= f.label :total_time, {:class => "px150"} %>
     <br></br>
 		
     <%= f.text_field :loc, {:class => "px250", :readonly => 1}  %>
-    <%= f.text_field :start_time, {:class => "px200", :readonly => 1} %>
-    <%= f.text_field :end_time, {:class => "px200", :readonly => 1} %>
+    <%= f.text_field :start_time, {:class => "px150", :readonly => 1} %>
+    <%= f.text_field :end_time, {:class => "px150", :readonly => 1} %>
+    <%= f.text_field :total_time, {:class => "px150", :disabled => "true"} %>
     <br></br>
  	
 	<label class="px250">Anes Mode</label>

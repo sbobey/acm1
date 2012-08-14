@@ -12,6 +12,12 @@ function checkEnter(myfield,e){
 	}	
 }	
 
+
+
+	
+	 
+
+
 function checkTab(myfield,e){
     if (!e){
       var e = window.event;
@@ -22,13 +28,12 @@ function checkTab(myfield,e){
 	  code = e.which;      // Other browsers
 	}
 	myid = myfield.id
-	alert(myid);
-
+	
 	if (code == 9){
-	    if (myid == "case_ins_cat"){
+	    if (myid == "case_inpatient"){
 			$('#case_patid1').focus();
 			return false;
-		}else if (myid == "case_physical_state"){
+		}else if (myid == "case_emergency"){
 			$('#case_anes_sid').focus();
 			return false;
 		}else if (myid == 'case_otherproc2_desc'){
@@ -43,8 +48,61 @@ function checkTab(myfield,e){
 			return false;
 		}else if (myid == 'case_addproc14_days'){
 			$('#casescrolldiv').scrollTop(2225);
-		}else if (myid == 'case_end_time'){
-            alert("You just left end time");
+		}else if (myid == 'case_end_time_hold'){
+         
+			a = document.getElementById('case_start_time').value;
+			temp = a.split(' ');
+			flag = temp[1];
+			rest = temp[0];
+			temp2 = rest.split(':');
+			hh = parseFloat(temp2[0]);
+			mm = parseFloat(temp2[1]);
+			alert(hh);
+			if (flag[0] == "P"){
+			    if (hh < 12){
+				    hh = hh + 12;
+				}
+            }	
+			alert(hh);	
+			if (flag[0] == "A"){
+				alert("GOT AM");
+			    if (hh == 12){
+				    hh = 0;
+				}
+            }				
+			hh_start = hh;
+            minutes1 = hh * 60;
+			minutes1 = minutes1 + mm;
+			alert(minutes1);
+			
+			b = document.getElementById('case_end_time').value;
+			temp = b.split(' ');
+			flag = temp[1];
+			rest = temp[0];
+			temp2 = rest.split(':');
+			hh = parseFloat(temp2[0]);
+			mm = parseFloat(temp2[1]);
+			if (flag[0] == "P"){
+			    if (hh < 12){
+				    hh = hh + 12;
+				}
+            }		
+ 			if (flag[0] == "A"){
+			    if (hh == 12){
+				    hh = 0;
+				}
+            }	
+            if (hh < hh_start){
+               hh = hh + 24;
+            }			   
+            minutes2 = hh * 60;
+			minutes2 = minutes2 + mm;
+			
+			alert(minutes2 + " - " + minutes1);
+			
+            total_min = minutes2 - minutes1;
+
+			document.getElementById('case_total_time').value = total_min;
 		}
 		return true;
 	}

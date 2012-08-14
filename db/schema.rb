@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 8) do
+ActiveRecord::Schema.define(:version => 9) do
 
   create_table "addps", :force => true do |t|
     t.string   "addcode",    :limit => 50
@@ -127,6 +127,9 @@ ActiveRecord::Schema.define(:version => 8) do
     t.string   "crna_sid",           :limit => 50
     t.string   "other_pc"
     t.string   "other_dx"
+    t.string   "inpatient",          :limit => 10
+    t.string   "emergency",          :limit => 10
+    t.string   "rounds",             :limit => 10
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -167,6 +170,16 @@ ActiveRecord::Schema.define(:version => 8) do
     t.string   "cat3",       :limit => 50
     t.string   "cat4",       :limit => 50
     t.string   "cat5",       :limit => 50
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rounds", :force => true do |t|
+    t.string   "caseid",     :limit => 50
+    t.string   "datetime",   :limit => 50
+    t.string   "user",       :limit => 50
+    t.string   "res2",       :limit => 50
+    t.string   "res3",       :limit => 50
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,37 @@
+<%= form_for(@round) do |f| %>
+  <% if @round.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@round.errors.count, "error") %> prohibited this round from being saved:</h2>
+
+      <ul>
+      <% @round.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :caseid %><br />
+    <%= f.text_field :caseid %>
+  </div>
+  <div class="field">
+    <%= f.label :datetime %><br />
+    <%= f.text_field :datetime %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :res2 %><br />
+    <%= f.text_field :res2 %>
+  </div>
+  <div class="field">
+    <%= f.label :res3 %><br />
+    <%= f.text_field :res3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

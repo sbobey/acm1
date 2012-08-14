@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Caseid:</b>
+  <%= @round.caseid %>
+</p>
+
+<p>
+  <b>Datetime:</b>
+  <%= @round.datetime %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @round.user %>
+</p>
+
+<p>
+  <b>Res2:</b>
+  <%= @round.res2 %>
+</p>
+
+<p>
+  <b>Res3:</b>
+  <%= @round.res3 %>
+</p>
+
+
+<%= link_to 'Edit', edit_round_path(@round) %> |
+<%= link_to 'Back', rounds_path %>
