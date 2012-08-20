@@ -1,46 +1,36 @@
 <%= form_for(@case, :remote => true) do |f| %>
-  <% if @case.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@case.errors.count, "error") %> prohibited this case from being saved:</h2>
 
-      <ul>
-      <% @case.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-	<label class="px250">Patient MR#</label>
+	<label class="px250">Patient MR# <%= mark_required(@case, :patid1) %></label>
  	<label class="px250">Case ID</label>
     <br></br>
 
-	<%= f.text_field :patid1, {:class => "px250", :readonly => 1} %>
+	<%= f.text_field :patid1, {:class => "px250"} %>
     <%= f.text_field :caseid, {:class => "px250", :disabled => "true"} %>
     <br></br>
 	
-	<label class="px250">LastName</label>
- 	<label class="px250">FirstName</label>
+	<label class="px250">LastName <%= mark_required(@case, :plname) %></label> 
+ 	<label class="px250">FirstName <%= mark_required(@case, :pfname) %></label>
  	<label class="px100">Middle</label>
     <br></br>
 	
-    <%= f.text_field :plname, {:class => "px250", :readonly => 1} %>
-    <%= f.text_field :pfname, {:class => "px250", :readonly => 1} %>
-    <%= f.text_field :pmname, {:class => "px100", :readonly => 1} %>
+    <%= f.text_field :plname, {:class => "px250"} %>
+    <%= f.text_field :pfname, {:class => "px250"} %>
+    <%= f.text_field :pmname, {:class => "px100"} %>
     <br></br>
 
     <%= f.hidden_field :psortname %>
 	
-	<label class="px150">DOB</label>
- 	<label class="px150">Gender</label>
- 	<label class="px200">Ins Category</label>
+	<label class="px150">DOB <%= mark_required(@case, :pdob) %></label>
+ 	<label class="px150">Gender <%= mark_required(@case, :psex) %></label>
+ 	<label class="px200">Ins Category <%= mark_required(@case, :ins_cat) %></label>
+ 	<label class="px200">In-Patient <%= mark_required(@case, :inpatient) %></label>
     <br></br>
 
-	
-    <%= f.text_field :pdob, {:class => "px150", :readonly => 1} %>
-    <%= f.text_field :psex, {:class => "px150", :readonly => 1} %>
-	<%= f.text_field :ins_cat, {:class => "px200", :readonly => 1} %>
-    <br></br>
+    <%= f.text_field :pdob, {:class => "px150"} %>
+    <%= f.text_field :psex, {:class => "px150"} %>
+	<%= f.text_field :ins_cat, {:class => "px200"} %>
+	<%= f.text_field :inpatient, {:class => "px150"} %>
+   <br></br>
     <br></br>
     <br></br>
     <br></br>
@@ -50,168 +40,166 @@
     <br></br>
 <!----------------------------------------------------------------------------->	
 
- 	<label class="px250">Anesthesiologist</label>
- 	<label class="px250">CRNA</label>
+ 	<label class="px250">Anesthesiologist <%= mark_required(@case, :anes_sid) %></label>
+ 	<label class="px250">CRNA <%= mark_required(@case, :crna_sid) %></label>
     <br></br>
 	
-    <%= f.text_field :anes_provider, {:class => "px250", :readonly => 1} %>
-    <%= f.text_field :crna_provider, {:class => "px250", :readonly => 1} %>
-    <br></br>
-
-	
-	<label class="px150">DOS</label>
- 	<label class="px250">Surgeon</label>
+    <%= f.text_field :anes_provider, {:class => "px250"} %>
+    <%= f.text_field :crna_provider, {:class => "px250"} %>
     <br></br>
 	
-	<%= f.text_field :servdt, {:class => "px150", :readonly => 1}  %>
-    <%= f.text_field :surg_provider, {:class => "px250", :readonly => 1} %>
+	<label class="px150">DOS <%= mark_required(@case, :servdt) %></label>
+ 	<label class="px250">Surgeon <%= mark_required(@case, :surg_sid) %></label>
     <br></br>
 	
-
-	<%= f.label :procedure, {:class => "pxfull"} %>
-    <%= f.text_field :procedure, {:class => "pxfull", :readonly => 1}  %>
+	<%= f.text_field :servdt, {:class => "px150"}  %>
+	<%= f.text_field :surg_sid, {:class => "px150"}  %>
     <br></br>
 
-    <%= f.label :diagnosis, {:class => "pxfull"}  %>
-    <%= f.text_field :diagnosis, {:class => "pxfull", :readonly => 1}  %>
+ 	<label class="px100">Procedure<%= mark_required(@case, :procedure) %></label>
+ 	<%= f.text_field :procedure, {:class => "px700t"}  %>
+   	<label class="px100">&nbsp</label>
+	<%= f.text_field :other_pc, {:class => "px700t"}  %>
     <br></br>
 
-    <%= f.label :location, {:class => "px250"}  %>
-    <%= f.label :start_time, {:class => "px150"} %>
-    <%= f.label :end_time, {:class => "px150"} %>
-    <%= f.label :total_time, {:class => "px150"} %>
+ 	<label class="px100">Diagnosis<%= mark_required(@case, :diagnosis) %></label>
+ 	<%= f.text_field :diagnosis, {:class => "px700t"}  %>
+   	<label class="px100">&nbsp</label>
+  	<%= f.text_field :other_dx, {:class => "px700t"}  %>
+   <br></br>
+
+  	<label class="px250">Location <%= mark_required(@case, :loc) %></label>
+  	<label class="px150">Start Time <%= mark_required(@case, :start_time) %></label>
+ 	<label class="px150">End Time <%= mark_required(@case, :end_time) %></label>
+ 	<label class="px150">Total Time <%= mark_required(@case, :total_time) %></label>
     <br></br>
 		
-    <%= f.text_field :loc, {:class => "px250", :readonly => 1}  %>
-    <%= f.text_field :start_time, {:class => "px150", :readonly => 1} %>
-    <%= f.text_field :end_time, {:class => "px150", :readonly => 1} %>
-    <%= f.text_field :total_time, {:class => "px150", :disabled => "true"} %>
+ 	<%= f.text_field :loc, {:class => "px250"}  %>
+    <%= f.text_field :start_time, {:class => "px150"} %>
+    <%= f.text_field :end_time, {:class => "px150"} %>
+    <%= f.text_field :total_time, {:class => "px150"} %>
     <br></br>
  	
-	<label class="px250">Anes Mode</label>
-	<%= f.label :'Position', {:class => "px200"}  %>
-	<label class="px200">ASA</label>
+	<label class="px250">Anes Mode <%= mark_required(@case, :surg_anes_mode) %></label>
+	<label class="px150">Position <%= mark_required(@case, :position) %></label>
+	<label class="px150">ASA <%= mark_required(@case, :physical_state) %></label>
+	<label class="px150">Emergency <%= mark_required(@case, :emergency) %></label>
     <br></br>
 		
-    <%= f.text_field :surg_anes_mode , {:class => "px250", :readonly => 1}%>
-    <%= f.text_field :position , {:class => "px250", :readonly => 1}%>
-    <%= f.text_field :physical_state, {:class => "px200", :readonly => 1}%>
+    <%= f.text_field :surg_anes_mode , {:class => "px250"}%>
+    <%= f.text_field :position , {:class => "px150"}%>
+    <%= f.text_field :physical_state , {:class => "px150"}%>
+    <%= f.text_field :emergency , {:class => "px150"}%>
+	
     <br></br>
     <br></br>
     <br></br>
 	
 <!------------------------------------------------------------------------------->
 	<%= f.label :'Regional indicated:', {:class => "px200n"} %>
-    <%= f.check_box :postop_block_req, {:onclick => "postopblock_reset();", :class => "check50px", :id => "post_op_block_check", :disabled => 1} %>
+    <%= f.check_box :postop_block_req, {:onclick => "postopblock_reset();", :class => "check50px", :id => "post_op_block_check"} %>
 	<%= f.label :'Requested by:', {:class => "px150n"}  %>
-    <%= f.text_field :postop_block_req, {:class => "px250n", :readonly => 1}  %>
+    <%= f.text_field :postop_block_req, {:class => "px250n", :onkeydown => "return checkTab(this,event);"}  %>
 	<br></br>
 	<br>
   
 
  	<div id="postopblockgroup">
+		<label class="indent25">&nbsp</label>
 		<%= f.label :'Interscalene:', {:class => "px100n"}  %>
-		<%= f.check_box :interscalene, {:class => "check50px", :disabled => 1}  %>
-		<%= f.label :'Interscalen w/cath:', {:class => "px160n"}  %>
-		<%= f.check_box :interscalene_cat, {:class => "check50px", :disabled => 1}  %>
-		<br></br>
-
-	
-		<label class="indent25">&nbsp</label>
+		<%= f.check_box :interscalene, {:class => "check50px"}  %>
+		<label class="px75n">w/cath:</label>
+		<%= f.check_box :interscalene_cat, {:class => "check50px"}  %>
+		<label class="px50">&nbsp</label>
 		<%= f.label :Left, {:class => "px50"}  %>
-		<%= f.radio_button :interscalene_sense, "1", {:class => "check50px", :disabled => 1}   %>
-		<br></br>
-	
-		<label class="indent25">&nbsp</label>
+		<%= f.radio_button :interscalene_sense, "1", {:class => "check50px"}   %>
 		<%= f.label :Right, {:class => "px50"}  %>
-		<%= f.radio_button :interscalene_sense, "2", {:class => "check50px", :disabled => 1}   %>
-		<br></br>
-	
-
+		<%= f.radio_button :interscalene_sense, "2", {:class => "check50px"}   %>
+		<%= f.label :Both, {:class => "px50"}  %>
+		<%= f.radio_button :interscalene_sense, "3", {:class => "check50px"}   %>
+	    <br></br>
+		<label class="indent25">&nbsp</label>
 		<%= f.label :'Supraclav:', {:class => "px100n"}  %>
-		<%= f.check_box :supraclav, {:class => "check50px", :disabled => 1}  %>
-		<%= f.label :'Supraclav w/cath:', {:class => "px160n"}  %>
-		<%= f.check_box :supraclav_cat, {:class => "check50px", :disabled => 1}  %>
-		<br></br>
-		
-		<label class="indent25">&nbsp</label>
+		<%= f.check_box :supraclav, {:class => "check50px"}  %>
+		<label class="px75n">w/cath:</label>
+		<%= f.check_box :supraclav_cat, {:class => "check50px"}  %>
+		<label class="px50">&nbsp</label>
 		<%= f.label :Left, {:class => "px50"}  %>
-		<%= f.radio_button :supraclav_sense, "1", {:class => "check50px", :disabled => 1}   %>
-		<br></br>
-
-		<label class="indent25">&nbsp</label>
+		<%= f.radio_button :supraclav_sense, "1", {:class => "check50px"}   %>
 		<%= f.label :Right, {:class => "px50"}  %>
-		<%= f.radio_button :supraclav_sense, "2", {:class => "check50px", :disabled => 1}   %>
-		<br></br>
-
-	
+		<%= f.radio_button :supraclav_sense, "2", {:class => "check50px"}   %>
+		<%= f.label :Both, {:class => "px50"}  %>
+		<%= f.radio_button :supraclav_sense, "3", {:class => "check50px"}   %>
+	    <br></br>
+		<label class="indent25">&nbsp</label>
 		<%= f.label :'Infraclav:', {:class => "px100n"}  %>
-		<%= f.check_box :infraclav, {:class => "check50px", :disabled => 1}  %>
-		<%= f.label :'Infraclav w/cath:', {:class => "px160n"}  %>
-		<%= f.check_box :infraclav_cat, {:class => "check50px", :disabled => 1}  %>
-		<br></br>
-	
-		<label class="indent25">&nbsp</label>
+		<%= f.check_box :infraclav, {:class => "check50px"}  %>
+		<label class="px75n">w/cath:</label>
+		<%= f.check_box :infraclav_cat, {:class => "check50px"}  %>
+		<label class="px50">&nbsp</label>
 		<%= f.label :Left, {:class => "px50"}  %>
-		<%= f.radio_button :infraclav_sense, "1", {:class => "check50px", :disabled => 1}   %>
-		<br></br>
-
-		<label class="indent25">&nbsp</label>
+		<%= f.radio_button :infraclav_sense, "1", {:class => "check50px"}   %>
 		<%= f.label :Right, {:class => "px50"}  %>
-		<%= f.radio_button :infraclav_sense, "2", {:class => "check50px", :disabled => 1}   %>
-		<br></br>
-		<br></br>
-
-		
-		<%= f.label :'Regional Block (Page 2):', {:class => "px300n"}  %>
-		<br>
-				
-		
-		<%= f.label :'Femoral:', {:class => "px100n"}  %>
-		<%= f.check_box :femoral, {:class => "check50px", :disabled => 1}  %>
-		<%= f.label :'Femoral w/cath:', {:class => "px160n"}  %>
-		<%= f.check_box :femoral_cat, {:class => "check50px", :disabled => 1}  %>
-		<br></br>
-	
+		<%= f.radio_button :infraclav_sense, "2", {:class => "check50px"}   %>
+		<%= f.label :Both, {:class => "px50"}  %>
+		<%= f.radio_button :infraclav_sense, "3", {:class => "check50px"}   %>
+	    <br></br>
 		<label class="indent25">&nbsp</label>
-		<%= f.label :Left, {:class => "px50"}  %>
-		<%= f.radio_button :femoral_sense, "1", {:class => "check50px", :disabled => 1}   %>
-		<br></br>
-
-		<label class="indent25">&nbsp</label>
-		<%= f.label :Right, {:class => "px50"}  %>
-		<%= f.radio_button :femoral_sense, "2", {:class => "check50px", :disabled => 1}   %>
-		<br></br>
-	
-
-		<%= f.label :'Sciatic:', {:class => "px100n"}  %>
-		<%= f.check_box :sciatic, {:class => "check50px", :disabled => 1}  %>
-		<%= f.label :'Sciatic w/cath:', {:class => "px160n"}  %>
-		<%= f.check_box :sciatic_cat, {:class => "check50px", :disabled => 1}  %>
-		<br></br>
-	
-		<label class="indent25">&nbsp</label>
-		<%= f.label :Left, {:class => "px50"}  %>
-		<%= f.radio_button :sciatic_sense, "1", {:class => "check50px", :disabled => 1}   %>
-		<br></br>
-
-		<label class="indent25">&nbsp</label>
-		<%= f.label :Right, {:class => "px50"}  %>
-		<%= f.radio_button :sciatic_sense, "2", {:class => "check50px", :disabled => 1}   %>
-		<br></br>
-
 		<%= f.label :'Axillary:', {:class => "px100n"}  %>
-		<%= f.check_box :axillary, {:class => "check50px", :disabled => 1}  %>
-		<br></br>
-	
-		<label class="indent25">&nbsp</label>
+		<%= f.check_box :axillary, {:class => "check50px"}  %>
+		<label class="px75n">w/cath:</label>
+		<%= f.check_box :axillary_cat, {:class => "check50px"}  %>
+		<label class="px50">&nbsp</label>
 		<%= f.label :Left, {:class => "px50"}  %>
-		<%= f.radio_button :axillary_sense, "1", {:class => "check50px", :disabled => 1}   %>
-		<br></br>
-
-		<label class="indent25">&nbsp</label>
+		<%= f.radio_button :axillary_sense, "1", {:class => "check50px"}   %>
 		<%= f.label :Right, {:class => "px50"}  %>
-		<%= f.radio_button :axillary_sense, "2", {:class => "check50px", :disabled => 1}   %>
+		<%= f.radio_button :axillary_sense, "2", {:class => "check50px"}   %>
+		<%= f.label :Both, {:class => "px50"}  %>
+		<%= f.radio_button :axillary_sense, "3", {:class => "check50px"}   %>
+	    <br></br>
+		<label class="indent25">&nbsp</label>
+		<%= f.label :'Tap:', {:class => "px100n"}  %>
+		<%= f.check_box :tap, {:class => "check50px"}  %>
+		<label class="px75n">w/cath:</label>
+		<%= f.check_box :tap_cat, {:class => "check50px"}  %>
+		<label class="px50">&nbsp</label>
+		<%= f.label :Left, {:class => "px50"}  %>
+		<%= f.radio_button :tap_sense, "1", {:class => "check50px"}   %>
+		<%= f.label :Right, {:class => "px50"}  %>
+		<%= f.radio_button :tap_sense, "2", {:class => "check50px"}   %>
+		<%= f.label :Both, {:class => "px50"}  %>
+		<%= f.radio_button :tap_sense, "3", {:class => "check50px"}   %>
+	    <br></br>
+		<label class="indent25">&nbsp</label>
+		<%= f.label :'Femoral:', {:class => "px100n"}  %>
+		<%= f.check_box :femoral, {:class => "check50px"}  %>
+		<label class="px75n">w/cath:</label>
+		<%= f.check_box :femoral_cat, {:class => "check50px"}  %>
+		<label class="px50">&nbsp</label>
+		<%= f.label :Left, {:class => "px50"}  %>
+		<%= f.radio_button :femoral_sense, "1", {:class => "check50px"}   %>
+		<%= f.label :Right, {:class => "px50"}  %>
+		<%= f.radio_button :femoral_sense, "2", {:class => "check50px"}   %>
+		<%= f.label :Both, {:class => "px50"}  %>
+		<%= f.radio_button :femoral_sense, "3", {:class => "check50px"}   %>
+	    <br></br>
+		<label class="indent25">&nbsp</label>
+		<%= f.label :'Sciatic:', {:class => "px100n"}  %>
+		<%= f.check_box :sciatic, {:class => "check50px"}  %>
+		<label class="px75n">w/cath:</label>
+		<%= f.check_box :sciatic_cat, {:class => "check50px"}  %>
+		<label class="px50">&nbsp</label>
+		<%= f.label :Left, {:class => "px50"}  %>
+		<%= f.radio_button :sciatic_sense, "1", {:class => "check50px"}   %>
+		<%= f.label :Right, {:class => "px50"}  %>
+		<%= f.radio_button :sciatic_sense, "2", {:class => "check50px"}   %>
+		<%= f.label :Both, {:class => "px50"}  %>
+		<%= f.radio_button :sciatic_sense, "3", {:class => "check50px"}   %>
+	    <br></br>
+	
+		
+
+
 		<br></br>
 		<br></br>
 		<br></br>
@@ -220,109 +208,114 @@
 	
     </div>
 	
-	<input onclick="addproc_reset();"type="checkbox" class="check50px" id="require_addp_check" disabled="disabled">
+	
+<!----------------------------------------------------------------------------------->	
+	<input onclick="addproc_reset();"type="checkbox" class="check50px" id="require_addp_check">
 	<label class="px250">Additional Procedures:</label>
 	<br></br>
-	<label class="indent25">&nbsp</label>
 
-		
+
 	<div id="addprocgroup">
-		<%= f.check_box :addproc1, {:class => "check50px", :disabled => 1} %>
-		<label class="px700t">ANES. FOR PT. EXTREME AGE UNDER 1 OVER 70 (99100)</label>
-		<br></br>
-		
-		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc2, {:class => "check50px", :disabled => 1} %>
-		<label class="px700t">ANES. COMPLICATED BY EMERGENCY CONDITIONS (99140)</label>
-		<br></br>
 	
 		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc3, {:class => "check50px", :disabled => 1} %>
+		<%= f.check_box :addproc3, {:class => "check50px"} %>
 		<label class="px700t">INTUBATION, EMERGENCY (31500)</label>
 		<br></br>
 	
 		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc4, {:class => "check50px", :disabled => 1} %>
+		<%= f.check_box :addproc4, {:class => "check50px"} %>
 		<label class="px700t">CVP LINE AGE 8 YEARS OR OLDER (36556-59)</label>
 		<br></br>
 	
 		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc5, {:class => "check50px", :disabled => 1} %>
+		<%= f.check_box :addproc5, {:class => "check50px"} %>
 		<label class="px700t">ARTERIAL CATHETERIZATION OR CANNULATION (36620)</label>
 		<br></br>
 	
 		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc6, {:class => "check50px", :disabled => 1} %>
+		<%= f.check_box :addproc6, {:class => "check50px"} %>
 		<label class="px700t">INSERTION & PLACEMENT OF SWAN-GANZ (93503)</label>
 		<br></br>
 	
 		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc7, {:class => "check50px", :disabled => 1} %>
+		<%= f.check_box :addproc7, {:class => "check50px"} %>
 		<label class="px700t">CPR/FULL CODE (92950)</label>
 		<br></br>
-	
+		
 		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc8, {:class => "check50px", :disabled => 1} %>
+		<%= f.check_box :addproc8, {:class => "check50px"} %>
 		<label class="px700t">VENTILATION ASSIST FIRST DAY (94002-59)</label>
 		<br></br>
 	
 		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc9, {:class => "check50px", :disabled => 1} %>
+		<%= f.check_box :addproc9, {:class => "check50px"} %>
 		<label class="px700t">VENTILATION ASSIST SUBSEQUENT DAYS (94003)</label>
 		<br></br>
 	
 		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc10, {:class => "check50px", :disabled => 1} %>
-		<label class="px700t">CONSULT-INITIAL - INPATIENT (99293)</label>
-		<br></br>
-	
-		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc11, {:class => "check50px", :disabled => 1} %>
-		<label class="px700t">INITIAL HOSPITAL CARE - IN PATIENT (MEDICARE)(99222)</label>
-		<br></br>
-	
-		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc12, {:class => "check50px", :disabled => 1} %>
-		<label class="px700t">CONSULT-FOLLOWUP-IN PATIENT (99253)</label>
-		<br></br>
-	
-		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc13, {:class => "check50px", :disabled => 1} %>
+		<%= f.check_box :addproc13, {:class => "check50px"} %>
 		<label class="px700t">LARYNGOSCOPY, FLEXIBLE FIBEROPTIC (31575-59)</label>
 		<br></br>
 	
 		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc14, {:class => "check50px", :disabled => 1} %>
-		<label class="px200">DAILY MGMT EPID.</label>
-		<%= f.text_field :addproc14_days, {:class => "px100n", :readonly => 1} %>
-		<label class="px50">Days:</label>
-		<br></br>
-	
-		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc15, {:class => "check50px", :disabled => 1} %>
+		<%= f.check_box :addproc15, {:class => "check50px"} %>
 		<label class="px700t">ULTRASOUND GUIDANCE FOR VASCULAR ACCESS (76937-26)</label>
 		<br></br>
 		
 		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc16, {:class => "check50px", :disabled => 1} %>
+		<%= f.check_box :addproc16, {:class => "check50px"} %>
 		<label class="px700t">ULTRASOUND GUIDANCE REAL TIME (76942-26)</label>
 		<br></br>
 	
 		<label class="indent25">&nbsp</label>
-		<%= f.check_box :addproc17, {:class => "check50px", :disabled => 1} %>
+		<%= f.check_box :addproc17, {:class => "check50px"} %>
 		<label class="px700t">TEE PLACEMENT OF PROBE ONLY (93313)</label>
+		<br></br>
+		
+<!------------------------------------------------------------------------------------>		
+    	<label class="indent25">&nbsp</label>
+	
+		<%= f.check_box :addproc1, {:class => "check50px"} %>
+		<label class="px700t">ANES. FOR PT. EXTREME AGE UNDER 1 OVER 70 (99100)</label>
+		<br></br>
+		
+		<label class="indent25">&nbsp</label>
+		<%= f.check_box :addproc2, {:class => "check50px"} %>
+		<label class="px700t">ANES. COMPLICATED BY EMERGENCY CONDITIONS (99140)</label>
 		<br></br>
 	
 		<label class="indent25">&nbsp</label>
-		<%= f.check_box :otherproc, {:class => "check50px", :disabled => 1}  %>
+		<%= f.check_box :addproc10, {:class => "check50px"} %>
+		<label class="px700t">CONSULT-INITIAL - INPATIENT (99293)</label>
+		<br></br>
+	
+		<label class="indent25">&nbsp</label>
+		<%= f.check_box :addproc11, {:class => "check50px"} %>
+		<label class="px700t">INITIAL HOSPITAL CARE - IN PATIENT (MEDICARE)(99222)</label>
+		<br></br>
+	
+		<label class="indent25">&nbsp</label>
+		<%= f.check_box :addproc12, {:class => "check50px"} %>
+		<label class="px700t">CONSULT-FOLLOWUP-IN PATIENT (99253)</label>
+		<br></br>
+	
+		<label class="indent25">&nbsp</label>
+		<%= f.check_box :addproc14, {:class => "check50px"} %>
+		<label class="px200">DAILY MGMT EPID.</label>
+		<%= f.text_field :addproc14_days, {:class => "px100n", :onkeydown => "return checkTab(this,event);"} %>
+		<label class="px50">Days:</label>
+		<br></br>
+	
+		<label class="indent25">&nbsp</label>
+		<%= f.check_box :otherproc, {:class => "check50px"}  %>
 		<label class="px75n">Other1:</label>
-		<%= f.text_field :otherproc_desc, {:class => "px650t", :readonly => 1} %>
+		<%= f.text_field :otherproc_desc, {:class => "px650t"} %>
 		<br></br>
 
 		<label class="indent25">&nbsp</label>
-		<%= f.check_box :otherproc2, {:class => "check50px", :disabled => 1}  %>
+		<%= f.check_box :otherproc2, {:class => "check50px"}  %>
 		<label class="px75n">Other2:</label>
-		<%= f.text_field :otherproc2_desc, {:class => "px650t", :readonly => 1} %>
+		<%= f.text_field :otherproc2_desc, {:class => "px650t", :onkeydown => "return checkTab(this,event);"} %>
 		<br></br>
 		<br></br>
 		
@@ -358,59 +351,62 @@
 		<br></br>
 		
     <label class="px100">CPT/Surg:</label>
-	<%= f.text_field :cpt_surg, {:class => "px200", :readonly => 1} %>
+	<%= f.text_field :cpt_surg, {:class => "px200"} %>
     <label class="px100">CPT/Anes:</label>
-	<%= f.text_field :cpt_anes, {:class => "px200", :readonly => 1} %>
+	<%= f.text_field :cpt_anes, {:class => "px200"} %>
 	<br></br>
 
     <%= f.label :'Dx1:', {:class => "px150"} %>
     <%= f.label :'Dx2:', {:class => "px150"} %>
     <%= f.label :'Dx3:', {:class => "px150"} %>
     <%= f.label :'Dx4:', {:class => "px350t"} %>
-	<%= f.text_field :diag1, {:class => "px150", :readonly => 1} %>
-    <%= f.text_field :diag2, {:class => "px150", :readonly => 1} %>
-	<%= f.text_field :diag3, {:class => "px150", :readonly => 1} %>
-    <%= f.text_field :diag4, {:class => "px150", :readonly => 1} %>
+	<%= f.text_field :diag1, {:class => "px150"} %>
+    <%= f.text_field :diag2, {:class => "px150"} %>
+	<%= f.text_field :diag3, {:class => "px150"} %>
+    <%= f.text_field :diag4, {:class => "px150"} %>
 	<br></br>
 	<br></br>
 	
     <label class="px150n">Basic Units:</label>
-    <%= f.text_field :baseic_units, {:class => "px150", :readonly => 1} %>
+    <%= f.text_field :baseic_units, {:class => "px150"} %>
 	<br></br>
 	
     <label class="px150n">Time Units:</label>
-    <%= f.text_field :time_units, {:class => "px150", :readonly => 1} %>
+    <%= f.text_field :time_units, {:class => "px150"} %>
 	<br></br>
 	
     <label class="px150n">Mod Units:</label>
-    <%= f.text_field :mod_units, {:class => "px150", :readonly => 1} %>
+    <%= f.text_field :mod_units, {:class => "px150"} %>
 	<br></br>
 	
     <label class="px150n">Line Units:</label>
-    <%= f.text_field :line_units, {:class => "px150", :readonly => 1} %>
+    <%= f.text_field :line_units, {:class => "px150"} %>
     <label class="px150n">Total Units:</label>
-    <%= f.text_field :total_units, {:class => "px150", :readonly => 1} %>
+    <%= f.text_field :total_units, {:class => "px150"} %>
 	<br></br>
 	<br>
 
     <label class="px150n">Other1 CPT:</label>
-    <%= f.text_field :otherproc_cpt, {:class => "px150n", :readonly => 1} %>
+    <%= f.text_field :otherproc_cpt, {:class => "px150n"} %>
     <label class="px150n">Other1 Amt:</label>
-    <%= f.text_field :otherproc_amount, {:class => "px150n", :readonly => 1} %>
+    <%= f.text_field :otherproc_amount, {:class => "px150n"} %>
 	<br></br>
 
     <label class="px150n">Other2 CPT:</label>
-    <%= f.text_field :otherproc2_cpt, {:class => "px150n", :readonly => 1} %>
+    <%= f.text_field :otherproc2_cpt, {:class => "px150n"} %>
 	<label class="px150n">Other2 Amt:</label>
-    <%= f.text_field :otherproc2_amount, {:class => "px150n", :readonly => 1} %>
+    <%= f.text_field :otherproc2_amount, {:class => "px150n"} %>
 	<br></br>
 	
 	
 	<label class="px300">&nbsp</label>
 	<label class="px150n">Surgical Amt:</label>
-    <%= f.text_field :surgical_amount, {:class => "px150n", :readonly => 1} %>
+    <%= f.text_field :surgical_amount, {:class => "px150n", :onkeydown => "return checkTab(this,event);"} %>
     <br></br>
 	
+	<!--<div class="actions">
+			<%= f.submit %>
+	</div>-->
 	
 	<br></br>
 	<br></br>
@@ -420,5 +416,12 @@
 	<br></br>
 	<br></br>
 	<br></br>
+
+
+
+
+
+
+
  
 <% end %>  

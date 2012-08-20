@@ -77,16 +77,8 @@ function load_block_section(arg){
 	var myvar = document.activeElement;
 }
 
-function load_block_section2(arg){
-	$('#casescrolldiv').scrollTop(1310);
-	if (arg == 1){
-		$('#case_femoral').focus();
-	}	
-	var myvar = document.activeElement;
-}
-
 function load_proc_section(arg){
-	$('#casescrolldiv').scrollTop(1790);
+	$('#casescrolldiv').scrollTop(1350);
 	if (arg == 1){
 		$('#require_addp_check').focus();
 	}	
@@ -94,7 +86,7 @@ function load_proc_section(arg){
 }
 
 function load_proc_section2(arg){
-	$('#casescrolldiv').scrollTop(2225);
+	$('#casescrolldiv').scrollTop(1780);
 	if (arg == 1){
 		$('#case_addproc13').focus();
 	}	
@@ -102,13 +94,17 @@ function load_proc_section2(arg){
 }
 
 function load_code_section(arg){
-	$('#casescrolldiv').scrollTop(2765);
+	$('#casescrolldiv').scrollTop(2320);
 	if (arg == 1){
 		$('#case_cpt_surg').focus();
 	}	
 	var myvar = document.activeElement;
 }
 
+function dlogmainback(){
+   $('#dialogmaindiv').html("<%= escape_javascript(render :partial => 'cases/viewcase')%>");
+   $('#casescrolldiv').html("<%= escape_javascript(render :partial => 'cases/viewform')%>");
+}
 function dlogmainclose(){
    $('#dialogmaindiv').dialog('destroy').remove();
 }

@@ -146,18 +146,7 @@ function check_dx(){
 
  
 <%= form_for(@case, :remote => true) do |f| %>
-  <% if @case.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@case.errors.count, "error") %> prohibited this case from being saved:</h2>
-
-      <ul>
-      <% @case.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+ 
 	<label class="px250">Patient MR# <%= mark_required(@case, :patid1) %></label>
  	<label class="px250">Case ID</label>
     <br></br>
@@ -266,108 +255,101 @@ function check_dx(){
   
 
  	<div id="postopblockgroup">
+		<label class="indent25">&nbsp</label>
 		<%= f.label :'Interscalene:', {:class => "px100n"}  %>
 		<%= f.check_box :interscalene, {:class => "check50px"}  %>
-		<%= f.label :'Interscalen w/cath:', {:class => "px160n"}  %>
+		<label class="px75n">w/cath:</label>
 		<%= f.check_box :interscalene_cat, {:class => "check50px"}  %>
-		<br></br>
-
-	
-		<label class="indent25">&nbsp</label>
+		<label class="px50">&nbsp</label>
 		<%= f.label :Left, {:class => "px50"}  %>
 		<%= f.radio_button :interscalene_sense, "1", {:class => "check50px"}   %>
-		<br></br>
-	
-		<label class="indent25">&nbsp</label>
 		<%= f.label :Right, {:class => "px50"}  %>
 		<%= f.radio_button :interscalene_sense, "2", {:class => "check50px"}   %>
-		<br></br>
-	
-
+		<%= f.label :Both, {:class => "px50"}  %>
+		<%= f.radio_button :interscalene_sense, "3", {:class => "check50px"}   %>
+	    <br></br>
+		<label class="indent25">&nbsp</label>
 		<%= f.label :'Supraclav:', {:class => "px100n"}  %>
 		<%= f.check_box :supraclav, {:class => "check50px"}  %>
-		<%= f.label :'Supraclav w/cath:', {:class => "px160n"}  %>
+		<label class="px75n">w/cath:</label>
 		<%= f.check_box :supraclav_cat, {:class => "check50px"}  %>
-		<br></br>
-		
-		<label class="indent25">&nbsp</label>
+		<label class="px50">&nbsp</label>
 		<%= f.label :Left, {:class => "px50"}  %>
 		<%= f.radio_button :supraclav_sense, "1", {:class => "check50px"}   %>
-		<br></br>
-
-		<label class="indent25">&nbsp</label>
 		<%= f.label :Right, {:class => "px50"}  %>
 		<%= f.radio_button :supraclav_sense, "2", {:class => "check50px"}   %>
-		<br></br>
-
-	
+		<%= f.label :Both, {:class => "px50"}  %>
+		<%= f.radio_button :supraclav_sense, "3", {:class => "check50px"}   %>
+	    <br></br>
+		<label class="indent25">&nbsp</label>
 		<%= f.label :'Infraclav:', {:class => "px100n"}  %>
 		<%= f.check_box :infraclav, {:class => "check50px"}  %>
-		<%= f.label :'Infraclav w/cath:', {:class => "px160n"}  %>
+		<label class="px75n">w/cath:</label>
 		<%= f.check_box :infraclav_cat, {:class => "check50px"}  %>
-		<br></br>
-	
-		<label class="indent25">&nbsp</label>
+		<label class="px50">&nbsp</label>
 		<%= f.label :Left, {:class => "px50"}  %>
 		<%= f.radio_button :infraclav_sense, "1", {:class => "check50px"}   %>
-		<br></br>
-
-		<label class="indent25">&nbsp</label>
 		<%= f.label :Right, {:class => "px50"}  %>
 		<%= f.radio_button :infraclav_sense, "2", {:class => "check50px"}   %>
-		<br></br>
-		<br></br>
-
-		
-		<%= f.label :'Regional Block (Page 2):', {:class => "px300n"}  %>
-		<br>
-				
-		
-		<%= f.label :'Femoral:', {:class => "px100n"}  %>
-		<%= f.check_box :femoral, {:class => "check50px"}  %>
-		<%= f.label :'Femoral w/cath:', {:class => "px160n"}  %>
-		<%= f.check_box :femoral_cat, {:class => "check50px"}  %>
-		<br></br>
-	
+		<%= f.label :Both, {:class => "px50"}  %>
+		<%= f.radio_button :infraclav_sense, "3", {:class => "check50px"}   %>
+	    <br></br>
 		<label class="indent25">&nbsp</label>
-		<%= f.label :Left, {:class => "px50"}  %>
-		<%= f.radio_button :femoral_sense, "1", {:class => "check50px"}   %>
-		<br></br>
-
-		<label class="indent25">&nbsp</label>
-		<%= f.label :Right, {:class => "px50"}  %>
-		<%= f.radio_button :femoral_sense, "2", {:class => "check50px"}   %>
-		<br></br>
-	
-
-		<%= f.label :'Sciatic:', {:class => "px100n"}  %>
-		<%= f.check_box :sciatic, {:class => "check50px"}  %>
-		<%= f.label :'Sciatic w/cath:', {:class => "px160n"}  %>
-		<%= f.check_box :sciatic_cat, {:class => "check50px"}  %>
-		<br></br>
-	
-		<label class="indent25">&nbsp</label>
-		<%= f.label :Left, {:class => "px50"}  %>
-		<%= f.radio_button :sciatic_sense, "1", {:class => "check50px"}   %>
-		<br></br>
-
-		<label class="indent25">&nbsp</label>
-		<%= f.label :Right, {:class => "px50"}  %>
-		<%= f.radio_button :sciatic_sense, "2", {:class => "check50px"}   %>
-		<br></br>
-
 		<%= f.label :'Axillary:', {:class => "px100n"}  %>
 		<%= f.check_box :axillary, {:class => "check50px"}  %>
-		<br></br>
-	
-		<label class="indent25">&nbsp</label>
+		<label class="px75n">w/cath:</label>
+		<%= f.check_box :axillary_cat, {:class => "check50px"}  %>
+		<label class="px50">&nbsp</label>
 		<%= f.label :Left, {:class => "px50"}  %>
 		<%= f.radio_button :axillary_sense, "1", {:class => "check50px"}   %>
-		<br></br>
-
-		<label class="indent25">&nbsp</label>
 		<%= f.label :Right, {:class => "px50"}  %>
 		<%= f.radio_button :axillary_sense, "2", {:class => "check50px"}   %>
+		<%= f.label :Both, {:class => "px50"}  %>
+		<%= f.radio_button :axillary_sense, "3", {:class => "check50px"}   %>
+	    <br></br>
+		<label class="indent25">&nbsp</label>
+		<%= f.label :'Tap:', {:class => "px100n"}  %>
+		<%= f.check_box :tap, {:class => "check50px"}  %>
+		<label class="px75n">w/cath:</label>
+		<%= f.check_box :tap_cat, {:class => "check50px"}  %>
+		<label class="px50">&nbsp</label>
+		<%= f.label :Left, {:class => "px50"}  %>
+		<%= f.radio_button :tap_sense, "1", {:class => "check50px"}   %>
+		<%= f.label :Right, {:class => "px50"}  %>
+		<%= f.radio_button :tap_sense, "2", {:class => "check50px"}   %>
+		<%= f.label :Both, {:class => "px50"}  %>
+		<%= f.radio_button :tap_sense, "3", {:class => "check50px"}   %>
+	    <br></br>
+		<label class="indent25">&nbsp</label>
+		<%= f.label :'Femoral:', {:class => "px100n"}  %>
+		<%= f.check_box :femoral, {:class => "check50px"}  %>
+		<label class="px75n">w/cath:</label>
+		<%= f.check_box :femoral_cat, {:class => "check50px"}  %>
+		<label class="px50">&nbsp</label>
+		<%= f.label :Left, {:class => "px50"}  %>
+		<%= f.radio_button :femoral_sense, "1", {:class => "check50px"}   %>
+		<%= f.label :Right, {:class => "px50"}  %>
+		<%= f.radio_button :femoral_sense, "2", {:class => "check50px"}   %>
+		<%= f.label :Both, {:class => "px50"}  %>
+		<%= f.radio_button :femoral_sense, "3", {:class => "check50px"}   %>
+	    <br></br>
+		<label class="indent25">&nbsp</label>
+		<%= f.label :'Sciatic:', {:class => "px100n"}  %>
+		<%= f.check_box :sciatic, {:class => "check50px"}  %>
+		<label class="px75n">w/cath:</label>
+		<%= f.check_box :sciatic_cat, {:class => "check50px"}  %>
+		<label class="px50">&nbsp</label>
+		<%= f.label :Left, {:class => "px50"}  %>
+		<%= f.radio_button :sciatic_sense, "1", {:class => "check50px"}   %>
+		<%= f.label :Right, {:class => "px50"}  %>
+		<%= f.radio_button :sciatic_sense, "2", {:class => "check50px"}   %>
+		<%= f.label :Both, {:class => "px50"}  %>
+		<%= f.radio_button :sciatic_sense, "3", {:class => "check50px"}   %>
+	    <br></br>
+	
+		
+
+
 		<br></br>
 		<br></br>
 		<br></br>
@@ -376,11 +358,13 @@ function check_dx(){
 	
     </div>
 	
+	
+<!----------------------------------------------------------------------------------->	
 	<input onclick="addproc_reset();"type="checkbox" class="check50px" id="require_addp_check">
 	<label class="px250">Additional Procedures:</label>
 	<br></br>
 
-<!----------------------------------------------------------------------------------->
+
 	<div id="addprocgroup">
 	
 		<label class="indent25">&nbsp</label>

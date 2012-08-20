@@ -130,6 +130,10 @@ ActiveRecord::Schema.define(:version => 9) do
     t.string   "inpatient",          :limit => 10
     t.string   "emergency",          :limit => 10
     t.string   "rounds",             :limit => 10
+    t.string   "axillary_cat",       :limit => 10
+    t.string   "tap",                :limit => 10
+    t.string   "tap_cat",            :limit => 10
+    t.string   "tap_sense",          :limit => 10
     t.datetime "created_at"
     t.datetime "updated_at"
   end
