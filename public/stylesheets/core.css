@@ -3510,6 +3510,16 @@ body {
     margin-left: 0;
     margin-right: 4px;
     width: 105px; }
+  .admin_view .px130n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 110px; }
+  .admin_view .px130nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 110px; }
   .admin_view .px150n {
     float: left;
     margin-left: 0;
@@ -3556,6 +3566,16 @@ body {
     margin-left: 0;
     margin-right: 4px;
     width: 230px; }
+  .admin_view .px300n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 280px; }
+  .admin_view .px300nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 280px; }
   .admin_view .px400n {
     float: left;
     margin-left: 0;
@@ -3893,6 +3913,16 @@ body {
     margin-left: 0;
     margin-right: 4px;
     width: 105px; }
+  .case_view .px130n, .case_search .px130n, .search_view .px130n {
+    float: left;
+    margin-left: 0;
+    margin-right: 20px;
+    width: 110px; }
+  .case_view .px130nt, .case_search .px130nt, .search_view .px130nt {
+    float: left;
+    margin-left: 0;
+    margin-right: 4px;
+    width: 110px; }
   .case_view .px150n, .case_search .px150n, .search_view .px150n {
     float: left;
     margin-left: 0;

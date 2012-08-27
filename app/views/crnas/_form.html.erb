@@ -1,62 +1,74 @@
-<%= form_for(@crna, :remote => true) do |f| %>
-  <% if @crna.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@crna.errors.count, "error") %> prohibited this crna from being saved:</h2>
+<head>
+<script type="text/javascript">
 
-      <ul>
-      <% @crna.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
+function edit_back_button(){
+	dlogmain2close();
+	dlogmain2();
+	$('#dialogmaindiv2').html("<%= escape_javascript(render :partial => 'cases/adminscreen')%>");
+	$.get("/cases/setcrna"); 	
+}
+
+</script>
+</head>
+
+
+
    <div class="modal_header">
 	<div class="detail_header">
 		<ul>
-			<li>EDIT - Crna</li>
+			<li>ADMIN - CRNA</li>
 		</ul>
 	</div>
 	<div class="action_buttons">
-	    <!--<button onclick=""><span class="icofont_alpha">p</span>PRINT</button>--><button onclick="dlogmainclose();" class="close">X</button>
+	    <!--<button onclick=""><span class="icofont_alpha">p</span>PRINT</button>--><button onclick="edit_back_button();" class="close">X</button>
 	</div>
   </div>
+
+<%= form_for(@crna, :remote => true) do |f| %>
+  
  
   <div class="case_view" style="width:940px"> 
 	<div style="width:800px;">
  
-        <label class="px50">Code:</label>
-		<%= f.text_field :code, {:class => "px100n"} %>
-		<label class="px650t">&nbsp</label>  
-
-		<label class="px250">Last Name:</label> 
-		<label class="px250">First Name:</label>
-		<label class="px100">Middle:</label> 
-		<label class="px200t">&nbsp</label> 
-
-		<%= f.text_field :lname, {:class => "px250"} %>
-		<%= f.text_field :fname, {:class => "px250"} %>
-		<%= f.text_field :mname, {:class => "px100"} %>
-		<label class="px200t">&nbsp</label>  
-
-		<label class="pxpxfull">Reserved 1:</label> 
-		<%= f.text_field :cat1, {:class => "pxfull"}%>
-  
-		<label class="pxpxfull">Reserved 2:</label> 
-		<%= f.text_field :cat2, {:class => "pxfull"}%>
+		<%= f.hidden_field :code, {:class => "px100n"} %>
+		<br>
+		<br>  
+		<br>
 		
-		<label class="pxpxfull">Reserved 3:</label> 
-		<%= f.text_field :cat3, {:class => "pxfull"}%>
-	
-		<label class="pxpxfull">Reserved 4:</label> 
-		<%= f.text_field :cat4, {:class => "pxfull"}%>
+		<label class="px300n">Last Name: <%= mark_required(@crna, :lname) %></label> 
+		<label class="px300n">First Name: <%= mark_required(@crna, :fname) %></label>
+        <br></br>
+		<%= f.text_field :lname, {:class => "px300n"} %>
+		<%= f.text_field :fname, {:class => "px300n"} %>
+		<br></br>
+		<br></br>
+		
+		<label class="px130n">TMM Number: <%= mark_required(@crna, :cat1) %></label> 
+		<%= f.text_field :cat1, {:class => "px150n"}%>
+		<br></br>
+		
+ 		<label class="px130n">NPI Number:</label>
+		<%= f.text_field :cat3, {:class => "px150n"}%>
+		<br></br>	
+ 
+		<label class="px130n">Frequent List:</label>
+		<%= f.text_field :cat2, {:class => "px150n"}%>
+		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
 
-		<label class="pxpxfull">Reserved 5:</label> 
-		<%= f.text_field :cat5, {:class => "pxfull"}%>
 
+		
 		<div class="actions">
-			<%= f.submit %><%= link_to 'Delete', @crna, :remote => true, :method => :delete, :class => 'button' %> 
-		</div>  
+			<%= f.submit %>
+			<% if ! @crna.new_record?  %>
+				<%= link_to 'Delete', @crna, :remote => true, :method => :delete, :class => 'button' %> 
+			<% end %>
+		</div>      
+		
 	</div>
   </div>
  

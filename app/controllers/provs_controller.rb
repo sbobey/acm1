@@ -52,8 +52,11 @@ class ProvsController < ApplicationController
         format.js
         format.xml  { render :xml => @prov, :status => :created, :location => @prov }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @prov.errors, :status => :unprocessable_entity }
+	    puts "ERRORS ! ! ! ! ! ! : "
+	    puts @prov.errors.count
+		puts @prov.errors.full_messages
+        format.js { render :controller => "application", :action => "errdisplay" }
+	    format.xml  { render :xml => @prov.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -68,7 +71,7 @@ class ProvsController < ApplicationController
         format.js
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.js { render :controller => "application", :action => "errdisplay" }
         format.xml  { render :xml => @prov.errors, :status => :unprocessable_entity }
       end
     end

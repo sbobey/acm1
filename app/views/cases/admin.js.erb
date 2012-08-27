@@ -34,6 +34,7 @@ function setusernav(){
     $.get("/cases/setuser");	
 }
 
+
 function dlogmain2close(){
    $('#dialogmaindiv2').dialog('destroy').remove();
 }
@@ -47,7 +48,7 @@ function dlogmain2(){
                 title: '',
                 position: 'center',
                 height: 500,
-                width: 940,
+                width: 960,
 				modal: true,
 				resizable: true,
                 open: function(event, ui) { jQuery('.ui-dialog-titlebar-close').hide(); 

@@ -52,8 +52,11 @@ class CrnasController < ApplicationController
         format.js
         format.xml  { render :xml => @crna, :status => :created, :location => @crna }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @crna.errors, :status => :unprocessable_entity }
+	    puts "ERRORS ! ! ! ! ! ! : "
+	    puts @crna.errors.count
+		puts @crna.errors.full_messages
+        format.js { render :controller => "application", :action => "errdisplay" }
+	    format.xml  { render :xml => @crna.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -68,7 +71,7 @@ class CrnasController < ApplicationController
         format.js
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.js { render :controller => "application", :action => "errdisplay" }
         format.xml  { render :xml => @crna.errors, :status => :unprocessable_entity }
       end
     end

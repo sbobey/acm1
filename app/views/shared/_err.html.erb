@@ -12,7 +12,7 @@
   </div>
 <% if target.errors.any? %>
     <div id="error_explanation" class= "error_modal">
-      <h4><%= pluralize(target.errors.count, "error") %> prohibited this loc from being saved:</h4>
+      <h4><%= pluralize(target.errors.count, "error") %> prohibited this record from being saved:</h4>
       <ul>
       <% target.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>

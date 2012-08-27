@@ -47,7 +47,10 @@ class SurgsController < ApplicationController
         format.js
         format.xml  { render :xml => @surg, :status => :created, :location => @surg }
       else
-        format.html { render :action => "new" }
+	    puts "ERRORS ! ! ! ! ! ! : "
+	    puts @surg.errors.count
+		puts @surg.errors.full_messages
+        format.js { render :controller => "application", :action => "errdisplay" }
         format.xml  { render :xml => @surg.errors, :status => :unprocessable_entity }
       end
     end
@@ -63,7 +66,7 @@ class SurgsController < ApplicationController
         format.js
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.js { render :controller => "application", :action => "errdisplay" }
         format.xml  { render :xml => @surg.errors, :status => :unprocessable_entity }
       end
     end

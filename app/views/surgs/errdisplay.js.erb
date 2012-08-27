@@ -1,0 +1,26 @@
+function dlogerr1close(){
+   $('#dialogerrdiv1').dialog('destroy').remove();
+}
+
+
+function dlogerr1(){
+   var $dialogerr1 = $('<div id=dialogerrdiv1></div>')
+        .html('\
+        ')
+                .dialog({
+                autoOpen: false,
+                title: '',
+                position: 'center',
+                height: 200,
+                width: 500,
+				modal: true,
+				resizable: false,
+                open: function(event, ui) { jQuery('.ui-dialog-titlebar-close').hide(); 
+                                          },
+                });
+
+   $dialogerr1.dialog('open');
+}
+dlogerr1();
+$('#dialogerrdiv1').html("<%= escape_javascript( render "shared/err", :target => @surg )%>");
+

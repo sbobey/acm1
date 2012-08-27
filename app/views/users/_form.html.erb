@@ -112,37 +112,43 @@ window.onload=init;
 </script>
 </head>
 
+
 <% stats = [['Active',1], %>
 <%          ['Inactive',0]] %>
 
+<div class="modal_header">
+  <div class="detail_header">
+	<ul>
+		<li>ADMIN - User</li>
+	</ul>
+  </div>
+  <div class="action_buttons">
+    <!--<button onclick=""><span class="icofont_alpha">p</span>PRINT</button>--><button onclick="edit_back_button();" class="close">X</button>
+  </div>
+</div>
+
 
 <%= form_for(@user, :remote => true) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 <div>
     <%= f.hidden_field :id, :id => 'usersid' %>
+	<br>
+	<br>
+	<br>
 
-    <label for="userid">UserID:</label>
-    <%= f.text_field :userid %>
-
-    <label for="password">Password: </label>
-    <%= f.text_field :password %>
-
-    <label for="name">Last Name: </label>
-    <%= f.text_field :name %>
+    <label class="px300n">UserID: <%= mark_required(@user, :userid) %></label>
+    <label class="px300n">Password: <%= mark_required(@user, :password) %></label>
+	<br></br>
+    <%= f.text_field :userid, :class => "px300n" %>
+    <%= f.text_field :password, :class => "px300n" %>
+	<br></br>
 	
-    <label for="res6">First Name: </label>
-    <%= f.text_field :res6 %>
-
+	<label class="px300n">Last Name: <%= mark_required(@user, :name) %></label>
+    <label class="px300n">First Name: <%= mark_required(@user, :res6) %></label>
+	<br></br>
+    <%= f.text_field :name, :class => "px300n" %>
+    <%= f.text_field :res6, :class => "px300n" %>
+    <br></br>
+	
     <%= f.hidden_field :customer_code %>
 
     <span><label for="admincheck"><input type="checkbox" id="admincheck" name="admin" onchange="onchange_admin()"/>Admin User</label></span>
@@ -157,6 +163,7 @@ window.onload=init;
 
     <label for="email">Email: </label>
     <%= f.text_field :email %>
+	<br></br>
 
 
 	<!--<label>User Note Permissions:</label>
@@ -172,11 +179,15 @@ window.onload=init;
 
     <%= f.hidden_field :res5, :id => 'allow_del' %>
 
-    <p><%= f.submit %><%= link_to 'Delete', @user, :remote => true, :method => :delete, :class => 'button' %> <%= link_to_function 'Back', 'edit_back_button()', :class => 'button' %></p>
+    <p><%= f.submit %>
+	<% if ! @user.new_record?  %>
+	<%= link_to 'Delete', @user, :remote => true, :method => :delete, :class => 'button' %> 
+    <% end %>
+	<!--<%= link_to_function 'Back', 'edit_back_button()', :class => 'button' %>--></p>
    
-  <div class="modal_buttons" style="width: 150px">
+<!--<div class="modal_buttons" style="width: 150px">
      <button onclick="");">Save</button><button class="button" onclick="">Cancel</button>
-  </div>
+  </div>-->
     
   </div>
 </div>  

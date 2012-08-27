@@ -2,11 +2,16 @@
  
 				<tr>
 
- 					<td class="px250n">  <%= link_to crna.code, edit_crna_path(crna), :remote => true  %> </td>
-					<td class="px100n"> <%= crna.lname      %> </td>
-					<td class="px100n"> <%= crna.fname        %> </td>
-					<td class="px250n">  <%= crna.cat1       %> </td>
-					<td class="px100n">  <%= crna.cat2        %> </td>
-
+ 
+ 					<td class="px100n">  <%= link_to crna.id, edit_crna_path(crna), :remote => true  %> </td>
+					<td class="px200n"> <%= crna.lname        %> </td>
+					<td class="px200n"> <%= crna.fname        %> </td>
+					<td class="px100n"> <%= crna.cat1         %> </td>
+					<td class="px100n"> <%= crna.cat3         %> </td>
+					<td class="px100n"> <%= crna.cat2         %> </td>
+					
+					
+					
+					
 				</tr>
 

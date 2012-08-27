@@ -155,7 +155,10 @@ def auth
 	    format.js  
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
-        format.html { render :action => "new" }
+	    puts "ERRORS ! ! ! ! ! ! : "
+	    puts @user.errors.count
+		puts @user.errors.full_messages
+        format.js { render :controller => "application", :action => "errdisplay" }
         format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
     end
