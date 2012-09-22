@@ -21,6 +21,7 @@ function checkTab(myfield,e){
     }else if (e.which){
 	  code = e.which;      // Other browsers
 	}
+
 	myid = myfield.id
 
 	if (code == 9){
@@ -38,7 +39,6 @@ function checkTab(myfield,e){
 			$('#case_cpt_surg').focus();
 			return false;
 		}else if (myid == 'case_postop_block_req'){
-			$('#casescrolldiv').scrollTop(1310);
 			return false;
 		}else if (myid == 'case_addproc14_days'){
 			$('#casescrolldiv').scrollTop(2225);
@@ -93,8 +93,16 @@ function load_proc_section2(arg){
 	var myvar = document.activeElement;
 }
 
+function load_qa_section(arg){
+	$('#casescrolldiv').scrollTop(2390);
+	if (arg == 1){
+		$('#case_addproc13').focus();
+	}	
+	var myvar = document.activeElement;
+}
+
 function load_code_section(arg){
-	$('#casescrolldiv').scrollTop(2320);
+	$('#casescrolldiv').scrollTop(2830);
 	if (arg == 1){
 		$('#case_cpt_surg').focus();
 	}	

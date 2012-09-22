@@ -14,10 +14,6 @@ function checkEnter(myfield,e){
 
 
 
-	
-	 
-
-
 function checkTab(myfield,e){
     if (!e){
       var e = window.event;
@@ -27,8 +23,8 @@ function checkTab(myfield,e){
     }else if (e.which){
 	  code = e.which;      // Other browsers
 	}
-	myid = myfield.id
-	
+	myid = myfield.id;
+
 	if (code == 9){
 	    if (myid == "case_inpatient"){
 			$('#case_patid1').focus();
@@ -44,7 +40,6 @@ function checkTab(myfield,e){
 			$('#case_cpt_surg').focus();
 			return false;
 		}else if (myid == 'case_postop_block_req'){
-			$('#casescrolldiv').scrollTop(1310);
 			return false;
 		}else if (myid == 'case_addproc14_days'){
 			$('#casescrolldiv').scrollTop(2225);
@@ -85,8 +80,14 @@ function load_proc_section2(){
 	var myvar = document.activeElement;
 }
 
+function load_qa_section(){
+	$('#casescrolldiv').scrollTop(2390);
+	$('#case_QAcode').focus();
+	var myvar = document.activeElement;
+}
+
 function load_code_section(){
-	$('#casescrolldiv').scrollTop(2320);
+	$('#casescrolldiv').scrollTop(2830);
 	$('#case_cpt_surg').focus();
 	var myvar = document.activeElement;
 }

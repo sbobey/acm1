@@ -1,3 +1,103 @@
+
+function checkEnter(myfield,e){
+    if (!e){
+      var e = window.event;
+    } 
+    if (e.keyCode){
+      code = e.keyCode;    // IE   
+    }else if (e.which){
+	  code = e.which;      // Other browsers
+	}
+	if (code == 13){
+	    return false;
+	}	
+}	
+
+
+
+function checkTab(myfield,e){
+    if (!e){
+      var e = window.event;
+    } 
+    if (e.keyCode){
+      code = e.keyCode;    // IE   
+    }else if (e.which){
+	  code = e.which;      // Other browsers
+	}
+	myid = myfield.id;
+
+	if (code == 9){
+	    if (myid == "case_inpatient"){
+			$('#case_patid1').focus();
+			return false;
+		}else if (myid == "case_emergency"){
+			$('#case_anes_sid').focus();
+			return false;
+		}else if (myid == 'case_otherproc2_desc'){
+			$('#casescrolldiv').scrollTop(1790);
+			$('#require_addp_check').focus();
+			return false;
+		}else if (myid == 'case_surgical_amount'){
+			$('#case_cpt_surg').focus();
+			return false;
+		}else if (myid == 'case_postop_block_req'){
+			return false;
+		}else if (myid == 'case_addproc14_days'){
+			$('#casescrolldiv').scrollTop(2225);
+		}
+		return true;
+	}
+}	
+
+
+
+function load_pat_section(){
+ 	$('#casescrolldiv').scrollTop(0);
+	$('#case_patid1').focus();
+	var myvar = document.activeElement;
+}
+
+function load_surg_section(){
+	$('#casescrolldiv').scrollTop(470);
+	$('#case_anes_sid').focus();
+	var myvar = document.activeElement;
+}
+
+function load_block_section(){
+	$('#casescrolldiv').scrollTop(895);
+	$('#post_op_block_check').focus();
+	var myvar = document.activeElement;
+}
+
+function load_proc_section(){
+	$('#casescrolldiv').scrollTop(1350);
+	$('#require_addp_check').focus();
+	var myvar = document.activeElement;
+}
+
+function load_proc_section2(){
+	$('#casescrolldiv').scrollTop(1780);
+	$('#case_addproc12').focus();
+	var myvar = document.activeElement;
+}
+
+function load_qa_section(){
+	$('#casescrolldiv').scrollTop(2390);
+	$('#case_QAcode').focus();
+	var myvar = document.activeElement;
+}
+
+function load_code_section(){
+	$('#casescrolldiv').scrollTop(2830);
+	$('#case_cpt_surg').focus();
+	var myvar = document.activeElement;
+}
+
+
+
+
+
+
 $('#dialogmaindiv').html("<%= escape_javascript(render :partial => 'cases/editcase')%>");
 $('#casescrolldiv').html("<%= escape_javascript(render :partial => 'cases/form')%>");
 $('#case_patid1').focus();

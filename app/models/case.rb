@@ -59,7 +59,33 @@ class Case < ActiveRecord::Base
 			self.crna_sid = ""
 			self.crna_provider = ""
 		end
-				
+		
+		myreq = Integer self.postop_block_req rescue nil
+		if (! myreq.nil?)
+			myprov = Surg.find(self.postop_block_req)
+			myname = myprov.lname + ", " + myprov.fname
+			puts "REQ NAME: "
+			puts myname
+			self.req_provider = myname
+		end
+		
+		myqa = Integer self.QAcode rescue nil
+		if myqa == 0
+			self.QAdesc = "No Indications"
+	    elsif myqa == 1
+			self.QAdesc = "Airway - Dental Trauma (A1)"
+	    elsif myqa == 2
+			self.QAdesc = "Airway - Laryngospasm (A2)"
+	    elsif myqa == 3
+			self.QAdesc = "Re-intubation intra-op (A3)"
+	    elsif myqa == 12
+			self.QAdesc = "CV - Prolonged hypotension: SBP < 100 for > 30 min, not including pt's within 20% of pre-po baseline for SBP (A12)"
+	    elsif myqa == 15
+			self.QAdesc = "Regional - Failed Block (A15)"
+	    elsif myqa == 999
+			self.QAdesc = "Other"
+		end	
+		
 	end	
 
 end

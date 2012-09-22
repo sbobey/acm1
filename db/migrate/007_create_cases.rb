@@ -114,6 +114,11 @@ class CreateCases < ActiveRecord::Migration
       t.string :tap, :limit => 10
       t.string :tap_cat, :limit => 10
       t.string :tap_sense, :limit => 10
+      t.string :QAcode, :limit => 10
+      t.string :QAdesc, :limit => 50
+      t.string :QAtext1, :limit => 255
+      t.string :QAtext2, :limit => 255
+      t.string :req_provider, :limit => 50
       t.timestamps
     end
   end
