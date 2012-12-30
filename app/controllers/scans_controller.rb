@@ -1,5 +1,42 @@
 class ScansController < ApplicationController
  
+	def upload
+		puts "UPLOAD FILE: ! ! ! ! !"
+		puts "UPLOAD FILE: ! ! ! ! !"
+		puts "UPLOAD FILE: ! ! ! ! !"
+		puts params
+		puts "UPLOAD FILE: ! ! ! ! !"
+		puts "UPLOAD FILE: ! ! ! ! !"
+		
+	
+		if params.has_key?(:RemoteFile)
+		
+			puts "GOOD ONE:"
+			puts params[:qwerty]
+			uploaded_io = params[:RemoteFile]
+			tmp = uploaded_io.original_filename
+			puts "TMP: "
+			puts tmp
+			tmp2 = tmp.gsub("-","/")
+			puts tmp2
+	#		File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+			File.open(tmp2, 'wb') do |file|
+				file.write(uploaded_io.read)
+			end
+		else
+			puts "BAD ONE ! ! !"
+		end	
+		
+		puts "LEAVING: "
+		puts "LEAVING: "
+		puts "LEAVING: "
+		
+		respond_to do |format|
+			format.html  
+		end
+	end  
+ 
+ 
    def saveaspdf
 	 puts "BEGIN saveaspdf:"
 	 mycaseid = params[:caseid]
@@ -18,13 +55,14 @@ class ScansController < ApplicationController
 	 puts @myscan.time_sqequence
 	 tmp = @myscan.id
 	 @myid = tmp.to_s.rjust(8, '0')
-	 @remotename = @myid[0,2] + "/" + @myid[2,2] + "/" + @myid[4,2] + "/" + @myid[6,2]
-     @localname = @myid + "-" + mycaseid + ".pdf"
+	 @remotename = "-data-" + @myid[0,2] + "-" + @myid[2,2] + "-" + @myid[4,2] + "-" + @myid[6,2]
+	 @catalogname = @remotename.gsub("-","/")
+ 	 @localname = @myid + "-" + mycaseid + ".pdf"
      puts "FILE NAMES: "
      puts @remotename
      puts @localname
      @myscan.orig_filename = @localname 
-     @myscan.final_filename = @remotename   	 
+     @myscan.final_filename = @catalogname   	 
 	 @myscan.update_attributes(@myscan)
 	 
      puts "MYID: "
@@ -36,7 +74,7 @@ class ScansController < ApplicationController
  
   def viewscan
  	 @fname = params[:myfile]
-	 @fname = "/data/acmscans/" + @fname
+#	 @fname = "/data/acmscans/" + @fname
 	 puts "FILENAME: "
 	 puts @fname
 	 puts "EXISTS ?"

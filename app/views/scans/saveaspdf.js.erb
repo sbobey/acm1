@@ -2,13 +2,27 @@
 
 
 	var name = '<%=@localname%>';
-	name = 'c:\\acmscans\\' + name;
+	var remotename = '<%=@remotename%>';
+	
+	alert(remotename);
 
+	name = 'c:\\acmscans\\' + name;
 
 	var buffct = WebTWAIN.HowManyImagesInBuffer;
 //	alert("BEFORE DUMP ALL BUFFER CT: " + buffct);
 
-    WebTWAIN.SaveAllAsPDF(name);
+//  WebTWAIN.SaveAllAsPDF(name);    
+
+	WebTWAIN.HTTPPort = 3000; 
+//	WebTWAIN.HTTPUploadAllThroughPostDirectly("10.1.1.10", name, "/scans/upload", "my400.pdf");
+	WebTWAIN.HTTPUploadAllThroughPostAsPDF("10.1.1.10", "/scans/upload", remotename);
+
+//	if (WebTWAIN.ErrorCode != 0){
+//		alert(WebTWAIN.ErrorString);
+//  }else{ 
+//		alert("Image Uploaded successfully!");
+//  }
+// See cURL notes - WebTwain needs work around and will always give error 
 
 	WebTWAIN.RemoveAllImages();
 			
