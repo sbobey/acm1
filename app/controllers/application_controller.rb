@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :redirect_to_https 
-#  before_filter :authorize 
+  before_filter :authorize 
   
     
   def redirect_to(options = {}, response_status = {})
