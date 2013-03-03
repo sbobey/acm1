@@ -4,18 +4,16 @@
 	var name = '<%=@localname%>';
 	var remotename = '<%=@remotename%>';
 	
-//	alert(remotename);
-
 	name = 'c:\\acmscans\\' + name;
 
 	var buffct = WebTWAIN.HowManyImagesInBuffer;
-//	alert("BEFORE DUMP ALL BUFFER CT: " + buffct);
 
-//  WebTWAIN.SaveAllAsPDF(name);    
 
-	WebTWAIN.HTTPPort = 3049; 
-//	WebTWAIN.HTTPUploadAllThroughPostDirectly("10.1.1.10", name, "/scans/upload", "my400.pdf");
-	WebTWAIN.HTTPUploadAllThroughPostAsPDF("98.226.53.193", "/scans/upload", remotename);
+//	WebTWAIN.HTTPUploadAllThroughPostAsPDF("98.226.53.193", "/scans/upload", remotename);
+
+
+	WebTWAIN.HTTPPort = 3000; 
+	WebTWAIN.HTTPUploadAllThroughPostAsPDF("10.1.1.10", "/scans/upload", remotename);
 
 //	if (WebTWAIN.ErrorCode != 0){
 //		alert(WebTWAIN.ErrorString);

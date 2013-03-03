@@ -1,4 +1,25 @@
 class ScansController < ApplicationController
+
+        def uploadc
+
+           puts "UPLOAD FILE: ! ! ! ! !"
+           puts "UPLOAD FILE: ! ! ! ! !"
+           puts "UPLOAD FILE: ! ! ! ! !"
+           puts "UPLOAD FILE: ! ! ! ! !"
+           puts "UPLOAD FILE: ! ! ! ! !"
+
+           uploaded_io = params[:myfile]
+
+           File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'w') do |file|
+              file.write(uploaded_io.read)
+           end
+
+           respond_to do |format|
+		format.html  
+           end
+
+        end
+
  
 	def upload
 		puts "UPLOAD FILE: ! ! ! ! !"

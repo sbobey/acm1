@@ -47,6 +47,7 @@ Acm1::Application.routes.draw do
   match "/scans/viewscan"	  => "scans#viewscan"
   
   match "/scans/upload"		  => "scans#upload"
+  match "/scans/uploadc"	  => "scans#uploadc"
   
   
   

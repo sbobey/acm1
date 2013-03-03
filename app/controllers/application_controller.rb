@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
 	puts self.controller_name
 	puts self.action_name
 	return if self.action_name == 'upload'
+	return if self.action_name == 'uploadc'
   
 	unless User.find_by_id(session[:uid]) || session[:uid] == 9999
 		redirect_to users_login_path
